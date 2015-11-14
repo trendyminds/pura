@@ -5,11 +5,10 @@ class MyModule {
 
   constructor () {
     $('body').append(Template());
-    console.log('constructor: MyModule with template');
   }
 
 }
 
-MyModule
+MyModule;
 
-module.exports = MyModule
+module.exports = MyModule;

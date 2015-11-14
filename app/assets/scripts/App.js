@@ -9,6 +9,6 @@ class App {
 
 }
 
-App
+App;
 
-new App
+new App;
