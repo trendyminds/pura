@@ -1,0 +1,9 @@
+require('./tasks/clean');
+require('./tasks/copy');
+require('./tasks/styles');
+require('./tasks/scripts');
+require('./tasks/modernizr');
+require('./tasks/images');
+require('./tasks/usemin');
+require('./tasks/default');
+require('./tasks/watch');
