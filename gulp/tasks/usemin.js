@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 gulp.task('usemin', function () {
   return gulp.src(assetPaths.allTemplateFiles)
     .pipe(usemin({
-      outputRelativePath: '../',
+      outputRelativePath: assetPaths.assetsRelToTemplateFile,
       css: [rev()],
       js: [uglify(), rev()]
     }))

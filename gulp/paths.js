@@ -7,6 +7,7 @@ var paths = {
   scripts: 'scripts',
   images: 'images',
   templates: 'templates',
+  assetsRelToTemplateFile: '../',
   bower: 'bower_components',
   icons: 'icons'
 };
@@ -39,7 +40,8 @@ var assetPaths = {
   allImages: paths.app + paths.assets + '/{' + paths.images + ',' + paths.images + '/**}',
   allBower: paths.app + '/{' + paths.bower + ',' + paths.bower + '/**}',
   allTmp: paths.app + '/{' + paths.tmp + ',' + paths.tmp + '/**}',
-  distTemplateFiles: paths.dist + '/' + paths.templates
+  distTemplateFiles: paths.dist + '/' + paths.templates,
+  assetsRelToTemplateFile: paths.assetsRelToTemplateFile
 };
 
 module.exports = assetPaths;
