@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 
 gulp.task('watch', function () {
   runSequence(
-    ['styles', 'scripts'],
+    ['styles', 'scripts', 'icons'],
     'modernizr'
   )
 
@@ -13,7 +13,7 @@ gulp.task('watch', function () {
 
   gulp.watch([assetPaths.tmpCSS, assetPaths.tmpJSMain]).on('change', livereload.changed);
 
-  gulp.watch(assetPaths.appStyles, [
+  gulp.watch(assetPaths.appStylesAll, [
     'styles'
   ]);
 

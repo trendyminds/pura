@@ -4,8 +4,8 @@ var gulp = require('gulp'),
 gulp.task('default', function () {
   runSequence(
     'clean',
-    ['styles', 'scripts'],
+    ['styles', 'scripts', 'icons'],
     'modernizr',
     ['copy', 'images', 'usemin']
-  )
+  );
 });

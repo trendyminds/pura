@@ -7,8 +7,9 @@ var paths = {
   scripts: 'scripts',
   images: 'images',
   templates: 'templates',
-  bower: 'bower_components'
-}
+  bower: 'bower_components',
+  icons: 'icons'
+};
 
 var assetPaths = {
   app: paths.app,
@@ -21,12 +22,15 @@ var assetPaths = {
   tmpJSMain: paths.app + '/' + paths.tmp + '/' + paths.scripts + '/app.js',
   appStylesDir: paths.app + paths.assets + '/' + paths.styles,
   appStyles: paths.app + paths.assets + '/' + paths.styles + '/*.styl',
+  appStylesAll: paths.app + paths.assets + '/' + paths.styles + '/**/*.styl',
   appScripts: paths.app + paths.assets + '/' + paths.scripts + '/App.js',
   appScriptsDir: paths.app + paths.assets + '/' + paths.scripts,
   appScriptsAll: paths.app + paths.assets + '/' + paths.scripts + '/**/*.js',
   appHBS: paths.app + paths.assets + '/' + paths.scripts + '/**/*.hbs',
   appImages: paths.app + paths.assets + '/' + paths.images + '/**/*',
   appImagesDir: paths.app + paths.assets + '/' + paths.images,
+  appIconsDir: paths.app + paths.assets + '/' + paths.images + '/' + paths.icons + '/app/',
+  appIconsDirCompiled: paths.app + paths.assets + '/' + paths.images + '/' + paths.icons + '/dist/',
   distImages: paths.dist + paths.assets + '/' + paths.images,
   allTemplates: paths.app + '/{' + paths.templates + ',' + paths.templates + '/**}',
   allTemplateFiles: paths.app + '/' + paths.templates + '/**/*.*',
