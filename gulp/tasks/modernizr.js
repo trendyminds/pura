@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     modernizr = require('gulp-modernizr'),
-    uglify = require('gulp-uglify'),
     assetPaths = require('../paths');
 
 gulp.task('modernizr', function () {
@@ -14,6 +13,5 @@ gulp.task('modernizr', function () {
         "fnBind"
       ]
     }))
-    .pipe(uglify())
     .pipe(gulp.dest('./app/_tmp/scripts/'));
 });

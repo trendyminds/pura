@@ -15,5 +15,5 @@ gulp.task('copy', function() {
     '!' + assetPaths.allTmp
   ];
 
-  gulp.src(paths).pipe(gulp.dest(assetPaths.dist));
+  return gulp.src(paths).pipe(gulp.dest(assetPaths.dist));
 });
