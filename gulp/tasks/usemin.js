@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     usemin = require('gulp-usemin'),
-    minifyCSS = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
     rev = require('gulp-rev'),
     assetPaths = require('../paths');

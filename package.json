@@ -21,7 +21,6 @@
     "gulp-livereload": "3.8.1",
     "gulp-minify-css": "1.2.1",
     "gulp-modernizr": "0.0.0",
-    "gulp-pixrem": "1.0.0",
     "gulp-rev": "6.0.1",
     "gulp-stylus": "2.1.0",
     "gulp-svg-sprite": "1.2.14",

@@ -33,6 +33,8 @@ var assetPaths = {
   appIconsDir: paths.app + paths.assets + '/' + paths.images + '/' + paths.icons + '/app/',
   appIconsDirCompiled: paths.app + paths.assets + '/' + paths.images + '/' + paths.icons + '/dist/',
   distImages: paths.dist + paths.assets + '/' + paths.images,
+  distStyles: paths.dist + paths.assets + '/' + paths.styles,
+  distCSS: paths.dist + paths.assets + '/' + paths.styles + '/*.css',
   allTemplates: paths.app + '/{' + paths.templates + ',' + paths.templates + '/**}',
   allTemplateFiles: paths.app + '/' + paths.templates + '/**/*.*',
   allStyles: paths.app + paths.assets + '/{' + paths.styles + ',' + paths.styles + '/**}',

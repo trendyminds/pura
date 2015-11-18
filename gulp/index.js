@@ -1,6 +1,7 @@
 require('./tasks/clean');
 require('./tasks/copy');
 require('./tasks/styles');
+require('./tasks/minifyStyles');
 require('./tasks/scripts');
 require('./tasks/icons');
 require('./tasks/modernizr');
