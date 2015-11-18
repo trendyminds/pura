@@ -1,0 +1,15 @@
+{{#shapes}}
+{{#first}}
+.icon-img {
+  background: url('/assets/images/sprites/{{#removePath}}{{{sprite}}}{{/removePath}}') no-repeat;
+}
+.no-svg .icon-img {
+  background-image: url('/assets/images/sprites/{{#removePath}}{{#fallback}}{{{sprite}}}{{/fallback}}{{/removePath}}');
+}
+{{/first}}
+{{#selector.shape}}.icon-img--{{base}}{{/selector.shape}} {
+  background-position: {{position.relative.xy}};
+  width: {{width.outer}}px;
+  height: {{height.outer}}px;
+}
+{{/shapes}}

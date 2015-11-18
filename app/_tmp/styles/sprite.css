@@ -1,0 +1,26 @@
+.icon-img {
+  background: url('/assets/images/sprites/sprite-20eeddc5.svg') no-repeat;
+}
+.no-svg .icon-img {
+  background-image: url('/assets/images/sprites/sprite-20eeddc5.png');
+}
+.icon-img--helmet {
+  background-position: 0 27.00729927007299%;
+  width: 100px;
+  height: 100px;
+}
+.icon-img--luggage {
+  background-position: 100% 0;
+  width: 100px;
+  height: 100px;
+}
+.icon-img--tie {
+  background-position: 0 100%;
+  width: 100px;
+  height: 100px;
+}
+.icon-img--trendyminds {
+  background-position: 0 0;
+  width: 157px;
+  height: 37px;
+}

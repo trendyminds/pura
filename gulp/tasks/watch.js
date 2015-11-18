@@ -5,9 +5,9 @@ var gulp = require('gulp'),
 
 gulp.task('watch', function () {
   runSequence(
-    ['styles', 'scripts', 'icons'],
-    'modernizr'
-  )
+    ['styles', 'scripts'],
+    ['modernizr', 'icons']
+  );
 
   livereload.listen();
 
