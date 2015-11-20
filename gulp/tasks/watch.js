@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     runSequence = require('run-sequence'),
-    assetPaths = require('../paths');
+    paths = require('../paths');
 
 gulp.task('watch', function () {
   runSequence(
@@ -11,13 +11,13 @@ gulp.task('watch', function () {
 
   livereload.listen();
 
-  gulp.watch([assetPaths.tmpCSS, assetPaths.tmpJSMain]).on('change', livereload.changed);
+  gulp.watch([paths.app.tmpCSS, paths.app.tmpJSMain]).on('change', livereload.changed);
 
-  gulp.watch(assetPaths.appStylesAll, [
+  gulp.watch(paths.app.stylesAll, [
     'styles'
   ]);
 
-  gulp.watch([assetPaths.appScriptsAll, assetPaths.appHBS], [
+  gulp.watch([paths.app.scriptsAll, paths.app.hbsAll], [
     'scripts'
   ]);
 });

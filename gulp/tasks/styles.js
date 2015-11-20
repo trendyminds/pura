@@ -2,17 +2,11 @@ var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     prefix = require('gulp-autoprefixer'),
     minifyCSS = require('gulp-minify-css'),
-    assetPaths = require('../paths');
+    paths = require('../paths');
 
 gulp.task('styles', function () {
-  return gulp.src(assetPaths.appStyles)
+  return gulp.src(paths.app.stylesMain)
     .pipe(stylus())
     .pipe(prefix())
-    .pipe(gulp.dest(assetPaths.tmpStyles));
-});
-
-gulp.task('minifyStyles', function () {
-  return gulp.src(assetPaths.distCSS)
-    .pipe(minifyCSS())
-    .pipe(gulp.dest(assetPaths.distStyles));
+    .pipe(gulp.dest(paths.app.tmpCSSDir));
 });

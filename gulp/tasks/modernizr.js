@@ -1,9 +1,9 @@
 var gulp = require('gulp'),
     modernizr = require('gulp-modernizr'),
-    assetPaths = require('../paths');
+    paths = require('../paths');
 
 gulp.task('modernizr', function () {
-  return gulp.src([assetPaths.tmpCSS, assetPaths.tmpJSMain])
+  return gulp.src([paths.app.tmpCSS, paths.app.tmpJSMain])
     .pipe(modernizr({
       "options": [
         "setClasses",
@@ -13,5 +13,5 @@ gulp.task('modernizr', function () {
         "fnBind"
       ]
     }))
-    .pipe(gulp.dest('./app/_tmp/scripts/'));
+    .pipe(gulp.dest(paths.app.tmpJSDir));
 });

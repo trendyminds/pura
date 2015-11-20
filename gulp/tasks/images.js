@@ -1,11 +1,11 @@
 var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
-    assetPaths = require('../paths');
+    paths = require('../paths');
 
 gulp.task('images', function () {
-  return gulp.src(assetPaths.appImages)
+  return gulp.src(paths.app.imagesAll)
     .pipe(imagemin({
       progressive: true
     }))
-    .pipe(gulp.dest(assetPaths.distImages));
+    .pipe(gulp.dest(paths.dist.imageDir));
 });

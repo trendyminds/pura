@@ -1,19 +1,21 @@
 var gulp = require('gulp'),
     del = require('del'),
-    assetPaths = require('../paths');
+    paths = require('../paths');
 
-gulp.task('copy', function() {
-  var paths = [
-    assetPaths.app + '/**/*.*',
-    assetPaths.app + '/.*',
-    assetPaths.app + '/**/.htaccess',
-    '!' + assetPaths.allTemplates,
-    '!' + assetPaths.allStyles,
-    '!' + assetPaths.allScripts,
-    '!' + assetPaths.allImages,
-    '!' + assetPaths.allBower,
-    '!' + assetPaths.allTmp
+gulp.task('copy', function () {
+
+  var copyPaths = [
+    paths.app.dir + '/**/*.*',
+    paths.app.dir + '/.*',
+    paths.app.dir + '/**/.htaccess',
+    '!' + paths.app.templates,
+    '!' + paths.app.styles,
+    '!' + paths.app.scripts,
+    '!' + paths.app.images,
+    '!' + paths.app.bower,
+    '!' + paths.app.tmp,
   ];
 
-  return gulp.src(paths).pipe(gulp.dest(assetPaths.dist));
+  return gulp.src(copyPaths).pipe(gulp.dest(paths.dist.dir));
+
 });

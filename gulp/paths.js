@@ -1,49 +1,33 @@
+var config = require('./config');
+
 var paths = {
-  app: './app',
-  dist: './dist',
-  assets: '/assets',
-  tmp: '_tmp',
-  styles: 'styles',
-  scripts: 'scripts',
-  images: 'images',
-  templates: 'templates',
-  assetsRelToTemplateFile: '../',
-  bower: 'bower_components',
-  icons: 'icons'
+  app: {
+    dir: './app',
+    styles: './app/assets/{styles,styles/**}',
+    scripts: './app/assets/{scripts,scripts/**}',
+    images: './app/assets/{images,images/**}',
+    imagesAll: './app/assets/images/**/*',
+    bower: './app/{bower_components,bower_components/**}',
+    stylesMain: './app/assets/styles/*.styl',
+    stylesAll: './app/assets/styles/**/*.styl',
+    scriptsMain: './app/assets/scripts/App.js',
+    scriptsAll: './app/assets/scripts/**/*.js',
+    hbsAll: './app/assets/scripts/**/*.hbs',
+    tmp: './app/{_tmp,_tmp/**}',
+    tmpCSS: './app/_tmp/styles/*.css',
+    tmpCSSDir: './app/_tmp/styles',
+    tmpJSMain: './app/_tmp/scripts/app.js',
+    tmpJSDir: './app/_tmp/scripts/',
+    templates: './app' + config.templateDir + config.templateFiles,
+    assetsRelativeToTemplates: config.assetsRelativeToTemplates
+  },
+  dist: {
+    dir: './dist',
+    css: './dist/assets/styles/*.css',
+    cssDir: './dist/assets/styles',
+    imageDir: './dist/assets/images',
+    templatesDir: './dist' + config.templateDir
+  }
 };
 
-var assetPaths = {
-  app: paths.app,
-  dist: paths.dist,
-  tmp: paths.app + '/' + paths.tmp,
-  tmpStyles: paths.app + '/' + paths.tmp + '/' + paths.styles,
-  tmpScripts: paths.app + '/' + paths.tmp + '/' + paths.scripts,
-  tmpCSS: paths.app + '/' + paths.tmp + '/' + paths.styles + '/*.css',
-  tmpJSAll: paths.app + '/' + paths.tmp + '/' + paths.scripts + '/**/*.js',
-  tmpJSMain: paths.app + '/' + paths.tmp + '/' + paths.scripts + '/app.js',
-  appStylesDir: paths.app + paths.assets + '/' + paths.styles,
-  appStyles: paths.app + paths.assets + '/' + paths.styles + '/*.styl',
-  appStylesAll: paths.app + paths.assets + '/' + paths.styles + '/**/*.styl',
-  appScripts: paths.app + paths.assets + '/' + paths.scripts + '/App.js',
-  appScriptsDir: paths.app + paths.assets + '/' + paths.scripts,
-  appScriptsAll: paths.app + paths.assets + '/' + paths.scripts + '/**/*.js',
-  appHBS: paths.app + paths.assets + '/' + paths.scripts + '/**/*.hbs',
-  appImages: paths.app + paths.assets + '/' + paths.images + '/**/*',
-  appImagesDir: paths.app + paths.assets + '/' + paths.images,
-  appIconsDir: paths.app + paths.assets + '/' + paths.images + '/' + paths.icons + '/app/',
-  appIconsDirCompiled: paths.app + paths.assets + '/' + paths.images + '/' + paths.icons + '/dist/',
-  distImages: paths.dist + paths.assets + '/' + paths.images,
-  distStyles: paths.dist + paths.assets + '/' + paths.styles,
-  distCSS: paths.dist + paths.assets + '/' + paths.styles + '/*.css',
-  allTemplates: paths.app + '/{' + paths.templates + ',' + paths.templates + '/**}',
-  allTemplateFiles: paths.app + '/' + paths.templates + '/**/*.*',
-  allStyles: paths.app + paths.assets + '/{' + paths.styles + ',' + paths.styles + '/**}',
-  allScripts: paths.app + paths.assets + '/{' + paths.scripts + ',' + paths.scripts + '/**}',
-  allImages: paths.app + paths.assets + '/{' + paths.images + ',' + paths.images + '/**}',
-  allBower: paths.app + '/{' + paths.bower + ',' + paths.bower + '/**}',
-  allTmp: paths.app + '/{' + paths.tmp + ',' + paths.tmp + '/**}',
-  distTemplateFiles: paths.dist + '/' + paths.templates,
-  assetsRelToTemplateFile: paths.assetsRelToTemplateFile
-};
-
-module.exports = assetPaths;
+module.exports = paths;

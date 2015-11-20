@@ -1,9 +1,9 @@
 var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
-    assetPaths = require('../paths');
+    paths = require('../paths');
 
 gulp.task('minifyStyles', function () {
-  return gulp.src(assetPaths.distCSS)
+  return gulp.src(paths.dist.css)
     .pipe(minifyCSS())
-    .pipe(gulp.dest(assetPaths.distStyles));
+    .pipe(gulp.dest(paths.dist.cssDir));
 });
