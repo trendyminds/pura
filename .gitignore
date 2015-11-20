@@ -28,3 +28,7 @@ nbproject
 .komodotools
 _notes
 dwsync.xml
+
+# Craft directories
+**/craft/storage/
+**/uploads/
