@@ -13,9 +13,19 @@ A [major shift away from Bower](https://gofore.com/ohjelmistokehitys/stop-using-
 
 #### Using NPM instead of Bower
 ```sh
-// Install packages with --save-dev or --save
-// --save-dev is for packages you use in the build process and --save is for front-end packages like jquery or Picturefill
+# Install packages with --save-dev or --save
+# --save-dev is for packages you use in the build process and --save is for front-end packages like jQuery or Picturefill
 npm install a-package --save-dev
-```
 
-lways use `npm install a-package --save` and `require('a-package')` in `assets/scripts/App,js`. However, there are some scripts that need to be in the `<head>` so placing a require statement in App.js will not work. In cases like these, you can now add require statements to Vendor.js. Vendor.js is a single file that sits in the `<head>` and handles JS that must be run before the document loads (like Modernizr and Picturefill).
+# Require the package in App.js
+require('a-package');
+```
+Sometimes, there are scripts that need to be in the `<head>` so placing a require statement in App.js will not work. To place these in the `<head>` simply:
+
+```sh
+# Install your package and use --save for front-end packages
+npm install picturefill --save
+
+# Require the package in Vendor.js
+require('picturefill');
+```
