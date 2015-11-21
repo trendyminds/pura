@@ -30,6 +30,14 @@ npm install picturefill --save
 require('picturefill');
 ```
 
+### Automatic sprite generator
+This is one of the most exciting parts of the new generator. It's very tedious to create a spritesheet and map all the coordinates correctly in the CSS. Now to add to the spritesheet you simply do the following:
+
+1. Drop an SVG file in assets/images/icons/
+2. Use `<div class="icon-img icon-img--FILENAME"></div>`
+
+An SVG sprite will be created for you as well as the PNG fallback for browsers without SVG support.
+
 ### Switch from Stylus to PostCSS
 Stylus suits our needs fine, but with the push to NPM it's difficult to include styles from an NPM plugin. PostCSS makes this much easier and works very closely to `require()`.
 
