@@ -29,3 +29,16 @@ npm install picturefill --save
 # Require the package in Vendor.js
 require('picturefill');
 ```
+
+### Switch from Stylus to PostCSS
+Stylus suits our needs fine, but with the push to NPM it's difficult to include styles from an NPM plugin. PostCSS makes this much easier and works very closely to `require()`.
+
+```sh
+# Install Normalize.css
+npm install normalize.css --save
+
+# Include it in the main stylesheet
+@import "normalize.css";
+```
+
+With PostCSS, all the things you are used to still work: nesting, media queries, variables, etc. You can continue to author your CSS the same, but all files end with `.css` now.
