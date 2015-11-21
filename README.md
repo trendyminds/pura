@@ -48,6 +48,9 @@ A new Modernizr task will now scrub through your CSS and JS styles to determine 
 
 Caveat: To prevent this task from running upon each save of your CSS and JS, any _new_ Modernizr rules will only get picked up after you restart `gulp watch`.
 
+### Faster builds/watches
+Gulp's power (and Node's) is in running parallel tasks. The new generator uses a plugin called `runSequence()` which makes it easier to fire parallel and sequential tasks. Now many more tasks run in parallel to maximize the amount of work that can happen at once.
+
 ### gulp vs. gulp watch
 Our previous generator had two tasks:
 
