@@ -12,7 +12,6 @@ gulp.task('copy', function () {
     '!' + paths.app.styles,
     '!' + paths.app.scripts,
     '!' + paths.app.images,
-    '!' + paths.app.bower,
     '!' + paths.app.tmp,
   ];
 

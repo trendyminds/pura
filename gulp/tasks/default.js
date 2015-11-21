@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 gulp.task('default', function () {
   runSequence(
     'clean',
-    ['copy', 'styles', 'scripts', 'modernizr', 'icons', 'usemin'],
-    ['images', 'minifyStyles']
+    ['copy', 'styles', 'scripts:app', 'scripts:vendor', 'icons', 'usemin'],
+    ['modernizr', 'images', 'minifyStyles']
   );
 });

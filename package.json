@@ -38,6 +38,7 @@
   "dependencies": {
     "handlebars": "4.0.4",
     "jquery": "2.1.4",
-    "normalize.css": "3.0.3"
+    "normalize.css": "3.0.3",
+    "picturefill": "3.0.1"
   }
 }

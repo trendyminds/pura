@@ -5,13 +5,13 @@ var gulp = require('gulp'),
 
 gulp.task('watch', function () {
   runSequence(
-    ['styles', 'scripts'],
+    ['styles', 'scripts:app', 'scripts:vendor'],
     ['modernizr', 'icons']
   );
 
   livereload.listen();
 
-  gulp.watch([paths.app.tmpCSS, paths.app.tmpJSMain]).on('change', livereload.changed);
+  gulp.watch([paths.app.tmpCSS, paths.app.tmpJSMain, paths.app.tmpJSVendor]).on('change', livereload.changed);
 
   gulp.watch(paths.app.stylesAll, [
     'styles'

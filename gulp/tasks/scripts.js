@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     paths = require('../paths');
 
-gulp.task('scripts', function () {
+gulp.task('scripts:app', function () {
   return browserify({
     entries: paths.app.scriptsMain,
     debug: true,
@@ -13,5 +13,15 @@ gulp.task('scripts', function () {
   .transform('babelify', { presets: ['es2015'] })
   .bundle()
   .pipe(source('app.js'))
+  .pipe(gulp.dest(paths.app.tmpJSDir));
+});
+
+gulp.task('scripts:vendor', function () {
+  return browserify({
+    entries: paths.app.scriptsVendor
+  })
+  .transform('babelify', { presets: ['es2015'] })
+  .bundle()
+  .pipe(source('vendor.js'))
   .pipe(gulp.dest(paths.app.tmpJSDir));
 });
