@@ -8,10 +8,13 @@ The new TrendyMinds project generator (or project starter kit). Powered heavily 
 ## Improvements over previous generator
 
 ### No longer tied to Yeoman
-Using Yeoman made the generator a bit more convoluted. It gained nothing from it, and it discouraged collaboration because Yeoman had a learning curve to work around. Now the generator can be installed one of two ways:
+Using Yeoman made the generator a bit more convoluted. It gained nothing from it, and it discouraged collaboration because Yeoman had a learning curve to work around. Now the generator can be installed using the "Download Zip" button or
 
-1. Clicking "Download Zip"
-2. Running `git clone git@github.com:trendyminds/project-generator.git && cd project-generator && rm -rf .git/`
+```sh
+$ git clone git@github.com:trendyminds/project-generator.git
+$ cd project-generator
+$ rm -rf .git/
+```
 
 ### Removed Bower in favor of NPM
 A [major shift away from Bower](https://gofore.com/ohjelmistokehitys/stop-using-bower/) has been happening for a while now. Many developers are favoring NPM because it's tedious to maintain OSS on both Bower and NPM and Bower doesn't support nested dependencies.
@@ -20,7 +23,7 @@ A [major shift away from Bower](https://gofore.com/ohjelmistokehitys/stop-using-
 ```sh
 # Install packages with --save-dev or --save
 # --save-dev is for packages you use in the build process and --save is for front-end packages like jQuery or Picturefill
-npm install a-package --save-dev
+$ npm install a-package --save-dev
 
 # Require the package in App.js
 require('a-package');
@@ -29,7 +32,7 @@ Sometimes, there are scripts that need to be in the `<head>` so placing a requir
 
 ```sh
 # Install your package and use --save for front-end packages
-npm install picturefill --save
+$ npm install picturefill --save
 
 # Require the package in Vendor.js
 require('picturefill');
@@ -48,7 +51,7 @@ Stylus suits our needs fine, but with the push to NPM it's difficult to include 
 
 ```sh
 # Install Normalize.css
-npm install normalize.css --save
+$ npm install normalize.css --save
 
 # Include it in the main stylesheet
 @import "normalize.css";
