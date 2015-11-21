@@ -16,6 +16,17 @@ $ cd project-generator
 $ rm -rf .git/
 ```
 
+### Easily configure where your templates live
+In previous generators it was difficult to tell Gulp where your template files lived. It usually involved editing the gulpfiles which is something we strongly discourage. Now there's a safe way to specify your template directory in `gulp/config.js`;
+
+```js
+var config = {
+  templateDir: '/',               // Relative to the app directory
+  templateFiles: '*.html',
+  assetsRelativeToTemplates: './'
+};
+```
+
 ### Removed Bower in favor of NPM
 A [major shift away from Bower](https://gofore.com/ohjelmistokehitys/stop-using-bower/) has been happening for a while now. Many developers are favoring NPM because it's tedious to maintain OSS on both Bower and NPM and Bower doesn't support nested dependencies.
 
