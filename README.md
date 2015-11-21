@@ -75,3 +75,6 @@ However, these tasks are backwards and are a-typical of other Gulp projects. The
 | gulp build | Build the project to the `dist/` directory.       |
 | gulp watch | Watch for changes to new files; the "dev" task.   |
 | gulp dev   | Watch for changes to new files; the "dev" task.   |
+
+### ESLint
+Because we now favor ES2015 (through Babel), the generator now uses ESLint to lint the JavaScript you author. It will warn you when using classes, imports, require, and more in an incorrect fashion.
