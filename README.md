@@ -6,7 +6,12 @@ The new TrendyMinds project generator (or project starter kit). Powered heavily 
 * Gulp
 
 ## Improvements over previous generator
-The previous generator was built on top of Yeoman and many things have changed in this latest build.
+
+### No longer tied to Yeoman
+Using Yeoman made the generator a bit more convoluted. It gained nothing from it, and it discouraged collaboration because Yeoman had a learning curve to work around. Now the generator can be installed one of two ways:
+
+1. Clicking "Download Zip"
+2. Running `git clone git@github.com:trendyminds/project-generator.git && cd project-generator && rm -rf .git/`
 
 ### Removed Bower in favor of NPM
 A [major shift away from Bower](https://gofore.com/ohjelmistokehitys/stop-using-bower/) has been happening for a while now. Many developers are favoring NPM because it's tedious to maintain OSS on both Bower and NPM and Bower doesn't support nested dependencies.
