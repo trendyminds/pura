@@ -1,12 +1,22 @@
 var gulp = require('gulp'),
-    stylus = require('gulp-stylus'),
-    prefix = require('gulp-autoprefixer'),
-    minifyCSS = require('gulp-minify-css'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    fileImport = require('postcss-import'),
+    nested = require('postcss-nested'),
+    mixins = require('postcss-mixins'),
+    vars = require('postcss-simple-vars'),
     paths = require('../paths');
 
 gulp.task('styles', function () {
+  var processors = [
+    fileImport,
+    vars,
+    mixins,
+    nested,
+    autoprefixer
+  ];
+
   return gulp.src(paths.app.stylesMain)
-    .pipe(stylus())
-    .pipe(prefix())
+    .pipe(postcss(processors))
     .pipe(gulp.dest(paths.app.tmpCSSDir));
 });

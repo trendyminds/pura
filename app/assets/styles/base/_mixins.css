@@ -1,0 +1,26 @@
+/**
+ * Mixins
+ *
+ * These are top-level functions and re-usable styles that can be used
+ *  in any Stylus partial
+ */
+
+/**
+ * Clearfix
+ *
+ * Example usage:
+ *   div {
+ *     @mixin clearfix;
+ *   }
+ */
+@define-mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
