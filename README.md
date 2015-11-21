@@ -42,3 +42,25 @@ npm install normalize.css --save
 ```
 
 With PostCSS, all the things you are used to still work: nesting, media queries, variables, etc. You can continue to author your CSS the same, but all files end with `.css` now.
+
+### Custom Modernizr builds
+A new Modernizr task will now scrub through your CSS and JS styles to determine what tests to bundle for you. This will greatly reduce the amount of JavaScript being used on this plugin.
+
+Caveat: To prevent this task from running upon each save of your CSS and JS, any _new_ Modernizr rules will only get picked up after you restart `gulp watch`.
+
+### gulp vs. gulp watch
+Our previous generator had two tasks:
+
+| Task       | Role                                              |
+|------------|---------------------------------------------------|
+| gulp       | Watch for changes to new files; the "dev" task.   |
+| gulp build | Build the project to the `dist/` directory.       |
+
+However, these tasks are backwards and are a-typical of other Gulp projects. These are the new tasks:
+
+| Task       | Role                                              |
+|------------|---------------------------------------------------|
+| gulp       | Build the project to the `dist/` directory.       |
+| gulp build | Build the project to the `dist/` directory.       |
+| gulp watch | Watch for changes to new files; the "dev" task.   |
+| gulp dev   | Watch for changes to new files; the "dev" task.   |

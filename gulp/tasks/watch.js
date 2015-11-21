@@ -21,3 +21,7 @@ gulp.task('watch', function () {
     'scripts'
   ]);
 });
+
+gulp.task('dev', function () {
+  gulp.start('watch');
+});

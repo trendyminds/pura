@@ -8,3 +8,7 @@ gulp.task('default', function () {
     ['modernizr', 'images', 'minifyStyles']
   );
 });
+
+gulp.task('build', function () {
+  gulp.start('default');
+});
