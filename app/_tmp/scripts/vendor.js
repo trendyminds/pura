@@ -5,7 +5,7 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
 
 /*!
  * modernizr v3.2.0
- * Build http://modernizr.com/download?-sizes-srcset-supports-svg-addtest-fnbind-printshiv-testprop-dontmin
+ * Build http://modernizr.com/download?-svg-addtest-fnbind-printshiv-testprop-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -1391,96 +1391,6 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
   */
 
   Modernizr.addTest('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
-
-  /*!
-  {
-    "name": "CSS Supports",
-    "property": "supports",
-    "caniuse": "css-featurequeries",
-    "tags": ["css"],
-    "builderAliases": ["css_supports"],
-    "notes": [{
-      "name": "W3 Spec",
-      "href": "http://dev.w3.org/csswg/css3-conditional/#at-supports"
-    },{
-      "name": "Related Github Issue",
-      "href": "github.com/Modernizr/Modernizr/issues/648"
-    },{
-      "name": "W3 Info",
-      "href": "http://dev.w3.org/csswg/css3-conditional/#the-csssupportsrule-interface"
-    }]
-  }
-  !*/
-
-  var newSyntax = 'CSS' in window && 'supports' in window.CSS;
-  var oldSyntax = 'supportsCSS' in window;
-  Modernizr.addTest('supports', newSyntax || oldSyntax);
-
-  /*!
-  {
-    "name": "sizes attribute",
-    "async": true,
-    "property": "sizes",
-    "tags": ["image"],
-    "authors": ["Mat Marquis"],
-    "notes": [{
-      "name": "Spec",
-      "href": "http://picture.responsiveimages.org/#parse-sizes-attr"
-      },{
-      "name": "Usage Details",
-      "href": "http://ericportis.com/posts/2014/srcset-sizes/"
-      }]
-  }
-  !*/
-  /* DOC
-  Test for the `sizes` attribute on images
-  */
-
-  Modernizr.addAsyncTest(function () {
-    var width1, width2, test;
-    var image = createElement('img');
-    // in a perfect world this would be the test...
-    var isSizes = 'sizes' in image;
-
-    // ... but we need to deal with Safari 9...
-    if (!isSizes && 'srcset' in image) {
-      width2 = 'data:image/gif;base64,R0lGODlhAgABAPAAAP///wAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==';
-      width1 = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
-
-      test = function () {
-        addTest('sizes', image.width == 2);
-      };
-
-      image.onload = test;
-      image.onerror = test;
-      image.setAttribute('sizes', '9px');
-
-      image.srcset = width1 + ' 1w,' + width2 + ' 8w';
-      image.src = width1;
-    } else {
-      addTest('sizes', isSizes);
-    }
-  });
-
-  /*!
-  {
-    "name": "srcset attribute",
-    "property": "srcset",
-    "tags": ["image"],
-    "notes": [{
-      "name": "Smashing Magazine Article",
-      "href": "http://en.wikipedia.org/wiki/APNG"
-      },{
-      "name": "Generate multi-resolution images for srcset with Grunt",
-      "href": "http://addyosmani.com/blog/generate-multi-resolution-images-for-srcset-with-grunt/"
-      }]
-  }
-  !*/
-  /* DOC
-  Test for the srcset attribute of images
-  */
-
-  Modernizr.addTest('srcset', 'srcset' in createElement('img'));
 
   // Run each test
   testRunner();
