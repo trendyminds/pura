@@ -1,8 +1,8 @@
 .icon-img {
-  background: url('/assets/images/sprites/sprite-20eeddc5.svg') no-repeat;
+  background: url('/assets/images/sprites/sprite-cc22dd5f.svg') no-repeat;
 }
 .no-svg .icon-img {
-  background-image: url('/assets/images/sprites/sprite-20eeddc5.png');
+  background-image: url('/assets/images/sprites/sprite-cc22dd5f.png');
 }
 .icon-img--helmet {
   background-position: 0 27.00729927007299%;
