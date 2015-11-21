@@ -1,10 +1,12 @@
 let $ = require('jquery');
 let MyModule = require('./modules/MyModule');
+let SVGInjector = require('./modules/SVGInjector');
 
 class App {
 
   constructor () {
-    let myModule = new MyModule();
+    new SVGInjector();
+    new MyModule();
   }
 
 }

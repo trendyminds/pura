@@ -57,6 +57,30 @@ This is one of the most exciting parts of the new generator. It's very tedious t
 
 An SVG sprite will be created for you as well as the PNG fallback for browsers without SVG support.
 
+### Dynamic SVG injection
+Using [SVGInjector](https://github.com/iconic/SVGInjector), we can easily use JavaScript to inject an inline SVG into the DOM. This is exceedingly powerful. Here's an example of it in action,
+
+```html
+<!--
+  Use our normal, spritesheet classes for fallbacks when JS is disabled or too slow
+-->
+<div class="icon-img icon-img--tie">
+  <!--
+    Use [data-svg] and [data-src] to inject the tie.svg in between our .icon-img div.
+  -->
+  <div data-src="/assets/images/icons/tie.svg" data-svg></div>
+</div>
+```
+
+Now that our SVG is inline, we can use CSS to style it.
+
+```css
+// Set all the .stripe paths in the tie.svg to green
+.icon-img--tie path.stripe {
+  fill: green;
+}
+```
+
 ### Switch from Stylus to PostCSS
 Stylus suits our needs fine, but with the push to NPM it's difficult to include styles from an NPM plugin. PostCSS makes this much easier and works very closely to `require()`.
 
