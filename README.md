@@ -86,7 +86,7 @@ Our previous generator had two tasks:
 | gulp       | Watch for changes to new files; the "dev" task.   |
 | gulp build | Build the project to the `dist/` directory.       |
 
-However, these tasks are backwards and are a-typical of other Gulp projects. These are the new tasks:
+However, these tasks are backwards and are atypical of other Gulp projects. These are the new tasks:
 
 | Task       | Role                                              |
 |------------|---------------------------------------------------|
