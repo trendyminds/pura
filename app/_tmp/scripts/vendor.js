@@ -5,7 +5,7 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
 
 /*!
  * modernizr v3.2.0
- * Build http://modernizr.com/download?-svg-addtest-fnbind-printshiv-testprop-dontmin
+ * Build http://modernizr.com/download?-addtest-fnbind-printshiv-testprop-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -1367,30 +1367,6 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
   }
 
   ;
-  /*!
-  {
-    "name": "SVG",
-    "property": "svg",
-    "caniuse": "svg",
-    "tags": ["svg"],
-    "authors": ["Erik Dahlstrom"],
-    "polyfills": [
-      "svgweb",
-      "raphael",
-      "amplesdk",
-      "canvg",
-      "svg-boilerplate",
-      "sie",
-      "dojogfx",
-      "fabricjs"
-    ]
-  }
-  !*/
-  /* DOC
-  Detects support for SVG in `<embed>` or `<object>` elements.
-  */
-
-  Modernizr.addTest('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
 
   // Run each test
   testRunner();
