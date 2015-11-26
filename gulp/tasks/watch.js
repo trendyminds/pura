@@ -5,8 +5,8 @@ var gulp = require('gulp'),
 
 gulp.task('watch', function () {
   runSequence(
-    ['styles', 'scripts:app', 'scripts:vendor'],
-    ['modernizr', 'icons']
+    ['modernizr', 'icons'],
+    ['styles', 'scripts:app', 'scripts:vendor']
   );
 
   livereload.listen();
@@ -18,7 +18,8 @@ gulp.task('watch', function () {
   ]);
 
   gulp.watch([paths.app.scriptsAll, paths.app.hbsAll], [
-    'scripts'
+    'scripts:app',
+    'scripts:vendor'
   ]);
 });
 

@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     paths = require('../paths');
 
 gulp.task('modernizr', function () {
-  return gulp.src([paths.app.tmpCSS, paths.app.tmpJSMain])
+  return gulp.src([paths.app.stylesAll, paths.app.scriptsAll])
     .pipe(modernizr({
       "options": [
         "setClasses",

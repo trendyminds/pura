@@ -3,9 +3,9 @@ var gulp = require('gulp'),
 
 gulp.task('default', function () {
   runSequence(
-    'clean',
-    ['copy', 'styles', 'scripts:app', 'scripts:vendor', 'icons', 'usemin'],
-    ['modernizr', 'images', 'minifyStyles']
+    ['clean', 'modernizr'],
+    ['copy', 'styles', 'scripts:app', 'scripts:vendor', 'icons'],
+    ['usemin', 'images', 'minifyStyles']
   );
 });
 
