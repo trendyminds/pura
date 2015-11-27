@@ -5,7 +5,10 @@ let SVGInjector = require('./modules/SVGInjector');
 class App {
 
   constructor () {
-    new SVGInjector();
+    if (Modernizr.svg) {
+      new SVGInjector();
+    }
+
     new MyModule();
   }
 

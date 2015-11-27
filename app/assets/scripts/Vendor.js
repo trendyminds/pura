@@ -1,5 +1,5 @@
-require('picturefill');
 require('../../_tmp/scripts/modernizr');
+require('picturefill');
 
 class Vendor {
 
