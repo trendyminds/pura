@@ -7,7 +7,8 @@
     "selector-no-id": 2,
     "number-zero-length-no-unit": 2,
     "selector-pseudo-element-colon-notation": [2, "single"],
+    "at-rule-empty-line-before": 0,
     "indentation": [2],
-    "declaration-no-important": [1]
+    "declaration-no-important": 1
   }
 }
