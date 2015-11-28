@@ -125,5 +125,5 @@ However, these tasks are backwards and are atypical of other Gulp projects. Thes
 | gulp watch | Watch for changes to new files; the "dev" task.   |
 | gulp dev   | Watch for changes to new files; the "dev" task.   |
 
-### ESLint
-Because we now favor ES2015 (through Babel), the generator now uses ESLint to lint the JavaScript you author. It will warn you when using classes, imports, require, and more in an incorrect fashion.
+### ESLint + Stylelint
+We now use Stylelint and ESLint to ensure code is authored the same across all developers. These linters will warn you when using classes, imports, selectors, require, and more in an incorrect fashion.

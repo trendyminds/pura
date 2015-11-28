@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "number-leading-zero": [2, "never"],
+    "color-hex-case": [2, "lower"],
+    "color-hex-length": [2, "short"],
+    "value-no-vendor-prefix": 2,
+    "selector-no-id": 2,
+    "number-zero-length-no-unit": 2,
+    "selector-pseudo-element-colon-notation": [2, "single"],
+    "indentation": [2],
+    "declaration-no-important": [1]
+  }
+}

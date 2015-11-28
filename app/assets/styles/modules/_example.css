@@ -1,11 +1,13 @@
 .example {
+  margin: 2rem;
+  padding: 1rem;
 }
 
 @keyframes backgroundRotate {
-  0% {}
   20% {
     fill: #8577b9;
   }
+
   70% {
     fill: #efc75e;
   }
@@ -15,15 +17,19 @@
   0% {
     transform: translate3d(0, 0, 0);
   }
+
   30% {
     transform: translate3d(4rem, -4rem, 0);
   }
+
   31% {
     transform: translate3d(5rem, 5rem, 0);
   }
+
   32% {
     transform: translate3d(-5rem, 5rem, 0);
   }
+
   50% {
     transform: translate3d(0, 0, 0);
   }
