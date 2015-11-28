@@ -75,6 +75,9 @@ $ npm install normalize.css --save
 
 With PostCSS, all the things you are used to still work: nesting, media queries, variables, etc. You can continue to author your CSS the same, but all files end with `.css` now.
 
+### Ignored `_tmp/` directory in app folder
+The biggest source of merge conflicts is from the `_tmp/` directory that contains the compiled styles and scripts for the `app/` version of the site. This directory is now ignored by Git so we should have far fewer merge conflicts. The caveat is that we'll need to run `gulp` and `gulp watch` when new style and script changes occur so our local `_tmp/` folders match each others.
+
 ### Removed Bower in favor of NPM
 A [major shift away from Bower](https://gofore.com/ohjelmistokehitys/stop-using-bower/) has been happening for a while now. Many developers are favoring NPM because it's tedious to maintain OSS on both Bower and NPM and Bower doesn't support nested dependencies.
 
