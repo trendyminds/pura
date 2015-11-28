@@ -7,7 +7,8 @@ gulp.task('default', function () {
   runSequence(
     ['clean', 'modernizr'],
     ['copy', 'styles', 'scripts:app', 'scripts:vendor', 'icons'],
-    ['usemin', 'images', 'minifyStyles'],
+    'usemin',
+    ['images', 'minifyStyles'],
     function () {
       clear();
       console.log(
