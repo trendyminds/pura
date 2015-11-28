@@ -28,6 +28,9 @@ nbproject
 _notes
 dwsync.xml
 
+# Build directories
+app/_tmp/
+
 # Craft directories
 **/craft/storage/
 **/uploads/
