@@ -27,27 +27,8 @@ var config = {
 };
 ```
 
-### Removed Bower in favor of NPM
-A [major shift away from Bower](https://gofore.com/ohjelmistokehitys/stop-using-bower/) has been happening for a while now. Many developers are favoring NPM because it's tedious to maintain OSS on both Bower and NPM and Bower doesn't support nested dependencies.
-
-#### Using NPM instead of Bower
-```sh
-# Install packages with --save-dev or --save
-# --save-dev is for packages you use in the build process and --save is for front-end packages like jQuery or Picturefill
-$ npm install a-package --save-dev
-
-# Require the package in App.js
-require('a-package');
-```
-Sometimes, there are scripts that need to be in the `<head>` so placing a require statement in App.js will not work. To place these in the `<head>` simply:
-
-```sh
-# Install your package and use --save for front-end packages
-$ npm install picturefill --save
-
-# Require the package in Vendor.js
-require('picturefill');
-```
+### Watch for new files
+`gulp.watch()` has been replaced with the `gulp-watch` plugin. This allows for the watch task to pick up new CSS and JS files so you no longer need to start and stop the watch task when new files are added to the project.
 
 ### Automatic sprite generator
 This is one of the most exciting parts of the new generator. It's very tedious to create a spritesheet and map all the coordinates correctly in the CSS. Now to add to the spritesheet you simply do the following:
@@ -93,6 +74,28 @@ $ npm install normalize.css --save
 ```
 
 With PostCSS, all the things you are used to still work: nesting, media queries, variables, etc. You can continue to author your CSS the same, but all files end with `.css` now.
+
+### Removed Bower in favor of NPM
+A [major shift away from Bower](https://gofore.com/ohjelmistokehitys/stop-using-bower/) has been happening for a while now. Many developers are favoring NPM because it's tedious to maintain OSS on both Bower and NPM and Bower doesn't support nested dependencies.
+
+#### Using NPM instead of Bower
+```sh
+# Install packages with --save-dev or --save
+# --save-dev is for packages you use in the build process and --save is for front-end packages like jQuery or Picturefill
+$ npm install a-package --save-dev
+
+# Require the package in App.js
+require('a-package');
+```
+Sometimes, there are scripts that need to be in the `<head>` so placing a require statement in App.js will not work. To place these in the `<head>` simply:
+
+```sh
+# Install your package and use --save for front-end packages
+$ npm install picturefill --save
+
+# Require the package in Vendor.js
+require('picturefill');
+```
 
 ### Custom Modernizr builds
 A new Modernizr task will now scrub through your CSS and JS styles to determine what tests to bundle for you. This will greatly reduce the amount of JavaScript being used on this plugin.
