@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 
 gulp.task('styles', function () {
   var processors = [
-    fileImport,
+    fileImport({ glob: true }),
     vars,
     mixins,
     nested,

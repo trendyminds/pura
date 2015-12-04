@@ -75,6 +75,21 @@ $ npm install normalize.css --save
 
 With PostCSS, all the things you are used to still work: nesting, media queries, variables, etc. You can continue to author your CSS the same, but all files end with `.css` now.
 
+### Style globbing
+CSS @imports are now [glob-driven](https://camo.githubusercontent.com/d0cccd8d3b074fd523d8de7d126994b6f87b718a/687474703a2f2f692e696d6775722e636f6d2f37766a4f326d462e676966) so you no longer need to go into the styles.css file to add your new modules. This means we've replaced this structure:
+
+```scss
+@import "modules/_module-one";
+@import "modules/_module-two";
+@import "modules/_module-three";
+```
+
+With the new globbed version:
+
+```scss
+@import "modules/*";
+```
+
 ### Ignored `_tmp/` directory in app folder
 The biggest source of merge conflicts is from the `_tmp/` directory that contains the compiled styles and scripts for the `app/` version of the site. This directory is now ignored by Git so we should have far fewer merge conflicts. The caveat is that we'll need to run `gulp` and `gulp watch` when new style and script changes occur so our local `_tmp/` folders match each others.
 
