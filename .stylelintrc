@@ -1,5 +1,9 @@
 {
+  "plugins": {
+    "statement-max-nesting-depth": "stylelint-statement-max-nesting-depth"
+  },
   "rules": {
+    "statement-max-nesting-depth": [2, 1, { "atRulesDontCount": true }],
     "number-leading-zero": [2, "never"],
     "color-hex-case": [2, "lower"],
     "color-hex-length": [2, "short"],

@@ -37,6 +37,7 @@
     "postcss-simple-vars": "1.1.0",
     "run-sequence": "1.1.4",
     "stylelint": "2.3.5",
+    "stylelint-statement-max-nesting-depth": "1.0.0",
     "vinyl-source-stream": "1.1.0"
   },
   "dependencies": {
