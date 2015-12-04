@@ -18,6 +18,10 @@ gulp.task('watch', function () {
     gulp.start('styles');
   });
 
+  watch(paths.imagesSrcAll, function () {
+    gulp.start('icons');
+  });
+
   runSequence(
     ['modernizr', 'icons'],
     ['styles', 'scripts:app', 'scripts:vendor'],

@@ -7,6 +7,7 @@ var paths = {
     scripts: './app/assets/{scripts,scripts/**}',
     images: './app/assets/{images,images/**}',
     imagesAll: './app/assets/images/**/*',
+    imagesSrcAll: './app/assets/images/icons/*.svg',
     stylesMain: './app/assets/styles/*.css',
     stylesAll: './app/assets/styles/**/*.css',
     scriptsMain: './app/assets/scripts/App.js',
