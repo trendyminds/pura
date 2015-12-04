@@ -18,7 +18,7 @@ gulp.task('watch', function () {
     gulp.start('styles');
   });
 
-  watch(paths.imagesSrcAll, function () {
+  watch(paths.app.imagesSrcAll, function () {
     gulp.start('icons');
   });
 
