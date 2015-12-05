@@ -15,18 +15,16 @@ config = {
         },
         removePath: function () {
           return function (sprite, render) {
-            var fileRegex = /sprite-.{8}.{4}/g;
+            var fileRegex = /sprite.{8}.{5}/g;
             var spriteFile = fileRegex.exec(render(sprite));
             return spriteFile;
           };
         }
       },
-      dest: '/_tmp/styles',
-      sprite: '/assets/images/sprites/sprite.svg',
+      sprite: 'svg/sprite.svg',
       render: {
         css: {
-          template: './gulp/templates/sprite.css',
-          css: '../../sprite.css'
+          template: './gulp/templates/sprite.css'
         }
       }
     }
@@ -34,19 +32,39 @@ config = {
 };
 
 gulp.task('cleanSprite', function () {
-  return del('./app/assets/images/sprites/');
+  return del(['./app/_tmp/sprites/', './app/assets/images/sprites/']);
 });
 
 gulp.task('createSprite', ['cleanSprite'], function () {
   return gulp.src('./app/assets/images/icons/**/*.svg')
     .pipe(svgSprite(config))
-    .pipe(gulp.dest('./app/assets/images/icons/sprite/'));
+    .pipe(gulp.dest('./app/_tmp/sprites/'));
 });
 
 gulp.task('spritePNG', ['createSprite'], function () {
-  return gulp.src('./app/assets/images/sprites/*.svg')
+  return gulp.src('./app/_tmp/sprites/css/svg/*.svg')
     .pipe(svg2png())
-    .pipe(gulp.dest('./app/assets/images/sprites/'));
+    .pipe(gulp.dest('./app/_tmp/sprites/css/svg/'));
 });
 
-gulp.task('icons', ['cleanSprite', 'createSprite', 'spritePNG']);
+gulp.task('copySprites', ['spritePNG'], function () {
+  var copyPaths = [
+    './app/_tmp/sprites/css/svg/**'
+  ];
+
+  return gulp.src(copyPaths).pipe(gulp.dest('./app/assets/images/sprites/'));
+});
+
+gulp.task('copyStyles', ['copySprites'], function () {
+  var copyPaths = [
+    './app/_tmp/sprites/css/*.css'
+  ];
+
+  return gulp.src(copyPaths).pipe(gulp.dest('./app/_tmp/styles/'));
+});
+
+gulp.task('deleteTmpSprites', ['copyStyles'], function () {
+  return del('./app/_tmp/sprites/');
+});
+
+gulp.task('icons', ['cleanSprite', 'createSprite', 'spritePNG', 'copySprites', 'copyStyles', 'deleteTmpSprites']);
