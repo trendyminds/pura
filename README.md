@@ -1,9 +1,9 @@
-# Project Generator
-The new TrendyMinds project generator (or project starter kit). Powered heavily by:
+# Project Starter
+The new TrendyMinds project starting point. Powered heavily by:
 
 * Babel/ES2015
 * Node.js + NPM
 * Gulp
 
-## Improvements over previous generator
-This is a _massive_ overhaul of the previous generator. See [what's new here](https://github.com/trendyminds/project-starter/wiki/Improvements-from-previous-generator).
+## Improvements over previous version
+This is a _massive_ overhaul of the previous iteration. See [what's new here](https://github.com/trendyminds/project-starter/wiki/Improvements-from-previous-generator).
