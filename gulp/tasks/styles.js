@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     fileImport = require('postcss-import'),
     nested = require('postcss-nested'),
     mixins = require('postcss-mixins'),
+    colors = require('postcss-color-function'),
     vars = require('postcss-simple-vars'),
     paths = require('../paths');
 
@@ -13,6 +14,7 @@ gulp.task('styles', function () {
     vars,
     mixins,
     nested,
+    colors,
     autoprefixer
   ];
 
