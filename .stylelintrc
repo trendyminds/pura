@@ -1,20 +1,19 @@
 {
-  "plugins": {
-    "statement-max-nesting-depth": "stylelint-statement-max-nesting-depth"
-  },
+  "plugins": [
+    "stylelint-statement-max-nesting-depth"
+  ],
   "rules": {
-    "statement-max-nesting-depth": [2, 1, { "atRulesDontCount": true }],
-    "number-leading-zero": [2, "never"],
-    "color-hex-case": [2, "lower"],
-    "color-hex-length": [2, "short"],
-    "value-no-vendor-prefix": 2,
-    "selector-no-id": 2,
-    "number-zero-length-no-unit": 2,
-    "selector-pseudo-element-colon-notation": [2, "single"],
-    "at-rule-empty-line-before": 0,
-    "indentation": [2],
-    "declaration-no-important": 1,
-    "at-rule-empty-line-before": 0,
-    "string-quotes": 0
+    "statement-max-nesting-depth": [ 1, { countAtRules: false } ],
+    "selector-no-id": true,
+    "number-leading-zero": "never",
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "value-no-vendor-prefix": true,
+    "property-no-vendor-prefix": true,
+    "number-zero-length-no-unit": true,
+    "selector-pseudo-element-colon-notation": "single",
+    "at-rule-empty-line-before": "always",
+    "indentation": 2,
+    "declaration-no-important": true
   }
 }
