@@ -20,5 +20,9 @@ gulp.task('styles', function () {
 
   return gulp.src(paths.app.stylesMain)
     .pipe(postcss(processors))
+    .on('error', function (err) {
+      console.log(err.toString());
+      this.emit('end');
+    })
     .pipe(gulp.dest(paths.app.tmpCSSDir));
 });
