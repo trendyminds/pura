@@ -12,6 +12,10 @@ gulp.task('scripts:app', function () {
   })
   .transform('babelify', { presets: ['es2015'] })
   .bundle()
+  .on('error', function (err) {
+    console.log(err.toString());
+    this.emit('end');
+  })
   .pipe(source('app.js'))
   .pipe(gulp.dest(paths.app.tmpJSDir));
 });
@@ -22,6 +26,10 @@ gulp.task('scripts:vendor', function () {
   })
   .transform('babelify', { presets: ['es2015'] })
   .bundle()
+  .on('error', function (err) {
+    console.log(err.toString());
+    this.emit('end');
+  })
   .pipe(source('vendor.js'))
   .pipe(gulp.dest(paths.app.tmpJSDir));
 });
