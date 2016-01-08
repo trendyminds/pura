@@ -461,6 +461,12 @@ img {
 body {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
+
+blockquote,
+li,
+p {
+  line-height: 1.35;
+}
 /**
  * Variables
  */
