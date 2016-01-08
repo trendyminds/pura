@@ -1,5 +1,5 @@
-let $ = require('jquery');
-let injector = require('svg-injector');
+const $ = require('jquery');
+const injector = require('svg-injector');
 
 class SVGInjector {
 

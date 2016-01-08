@@ -1,6 +1,6 @@
-let $ = require('jquery');
-let MyModule = require('./modules/MyModule');
-let SVGInjector = require('./modules/SVGInjector');
+const $ = require('jquery');
+const MyModule = require('./modules/MyModule');
+const SVGInjector = require('./modules/SVGInjector');
 
 class App {
 

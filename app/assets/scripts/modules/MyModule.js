@@ -1,4 +1,4 @@
-let $ = require('jquery');
+const $ = require('jquery');
 
 class MyModule {
 
