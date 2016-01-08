@@ -11,7 +11,7 @@
     "value-no-vendor-prefix": true,
     "property-no-vendor-prefix": true,
     "number-zero-length-no-unit": true,
-    "selector-pseudo-element-colon-notation": "single",
+    "selector-pseudo-element-colon-notation": "double",
     "indentation": 2,
     "declaration-no-important": true
   }

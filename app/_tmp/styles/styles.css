@@ -512,27 +512,66 @@ p {
 /**
  * Variables
  */
-.bolt-heading--icon {
-  padding-left: 1.25rem;
+body {
+  margin: 2rem auto;
+  max-width: 71.25rem;
+  width: 90%;
+}
+
+.bolt-icon {
   position: relative;
 }
-.bolt-heading--icon::before {
+
+.bolt-icon::before,
+  .bolt-icon::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.bolt-icon--before {
+  padding-left: 1rem;
+}
+
+.bolt-icon--before::before {
   background: url('/assets/images/sprites/sprite-cb2cba20.svg') no-repeat;
   background-position: 64.60905349794238% 46.728971962616825%;
   content: "";
   display: inline-block;
   height: 23px;
   width: 14px;
-  position: absolute;
   left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
-.no-svg .bolt-heading--icon::before {
+
+.no-svg .bolt-icon--before::before {
   background-image: url('/assets/images/sprites/sprite-cb2cba20.png');
 }
-.bolt-heading__icon {
+
+.bolt-icon--after {
+  padding-right: 1.25rem;
+}
+
+.bolt-icon--after::after {
+  background: url('/assets/images/sprites/sprite-cb2cba20.svg') no-repeat;
+  background-position: 64.60905349794238% 46.728971962616825%;
+  content: "";
+  display: inline-block;
+  height: 23px;
+  width: 14px;
+  right: 0;
+}
+
+.no-svg .bolt-icon--after::after {
+  background-image: url('/assets/images/sprites/sprite-cb2cba20.png');
+}
+
+.bolt-dom {
+  display: inline-block;
+}
+
+.icon--helmet,
+.icon--tie {
   display: inline-block;
 }
 

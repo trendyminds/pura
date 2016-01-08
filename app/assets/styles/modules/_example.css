@@ -1,20 +1,45 @@
-.bolt-heading {
-  &--icon {
-    padding-left: 1.25rem;
-    position: relative;
-  }
+body {
+  margin: 2rem auto;
+  max-width: 71.25rem;
+  width: 90%;
+}
 
-  &--icon::before {
-    @mixin icon--bolt;
+.bolt-icon {
+  position: relative;
+
+  &::before,
+  &::after {
     position: absolute;
-    left: 0;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  &__icon {
-    display: inline-block;
+  &--before {
+    padding-left: 1rem;
   }
+
+  &--before::before {
+    @mixin icon--bolt;
+    left: 0;
+  }
+
+  &--after {
+    padding-right: 1.25rem;
+  }
+
+  &--after::after {
+    @mixin icon--bolt;
+    right: 0;
+  }
+}
+
+.bolt-dom {
+  display: inline-block;
+}
+
+.icon--helmet,
+.icon--tie {
+  display: inline-block;
 }
 
 @keyframes backgroundRotate {
