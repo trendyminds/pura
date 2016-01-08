@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     svg2png = require('gulp-svg2png'),
     del = require('del'),
+    rename = require('gulp-rename'),
     svgSprite = require('gulp-svg-sprite'),
     runSequence = require('run-sequence');
 
@@ -60,7 +61,9 @@ gulp.task('copyStyles', ['copySprites'], function () {
     './app/_tmp/sprites/css/*.css'
   ];
 
-  return gulp.src(copyPaths).pipe(gulp.dest('./app/_tmp/styles/'));
+  return gulp.src(copyPaths)
+          .pipe(rename('_sprite.css'))
+          .pipe(gulp.dest('./app/assets/styles/base'));
 });
 
 gulp.task('deleteTmpSprites', ['copyStyles'], function () {
