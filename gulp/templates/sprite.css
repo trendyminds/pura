@@ -3,13 +3,29 @@
 .icon-img {
   background: url('/assets/images/sprites/{{#removePath}}{{{sprite}}}{{/removePath}}') no-repeat;
 }
+
 .no-svg .icon-img {
   background-image: url('/assets/images/sprites/{{#removePath}}{{#fallback}}{{{sprite}}}{{/fallback}}{{/removePath}}');
 }
+
 {{/first}}
 {{#selector.shape}}.icon-img--{{base}}{{/selector.shape}} {
   background-position: {{position.relative.xy}};
-  width: {{width.outer}}px;
   height: {{height.outer}}px;
+  width: {{width.outer}}px;
 }
+
+{{#selector.shape}}@define-mixin icon--{{base}}{{/selector.shape}} {
+  background: url('/assets/images/sprites/{{#removePath}}{{{sprite}}}{{/removePath}}') no-repeat;
+  background-position: {{position.relative.xy}};
+  content: "";
+  display: inline-block;
+  height: {{height.outer}}px;
+  width: {{width.outer}}px;
+
+  .no-svg & {
+    background-image: url('/assets/images/sprites/{{#removePath}}{{#fallback}}{{{sprite}}}{{/fallback}}{{/removePath}}');
+  }
+}
+
 {{/shapes}}

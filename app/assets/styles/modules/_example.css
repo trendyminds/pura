@@ -1,6 +1,20 @@
-.example {
-  margin: 2rem;
-  padding: 1rem;
+.bolt-heading {
+  &--icon {
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  &--icon::before {
+    @mixin icon--bolt;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__icon {
+    display: inline-block;
+  }
 }
 
 @keyframes backgroundRotate {
