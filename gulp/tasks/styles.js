@@ -15,7 +15,7 @@ gulp.task('styles', function () {
     mixins,
     nested,
     colors,
-    autoprefixer
+    autoprefixer({ browsers: ['last 2 versions', 'Explorer >= 9'] })
   ];
 
   return gulp.src(paths.app.stylesMain)
