@@ -1,6 +1,6 @@
 /*!
- * modernizr v3.2.0
- * Build http://modernizr.com/download?-svg-addtest-fnbind-printshiv-testprop-dontmin
+ * modernizr v3.3.1
+ * Build http://modernizr.com/download?-svg-addtest-fnbind-printshiv-setclasses-testprop-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -36,15 +36,15 @@
 
   var ModernizrProto = {
     // The current version, dummy
-    _version: '3.2.0',
+    _version: '3.3.1',
 
     // Any settings that don't work as separate modules
     // can go in here as configuration.
     _config: {
-      'classPrefix' : '',
-      'enableClasses' : true,
-      'enableJSClass' : true,
-      'usePrefixes' : true
+      'classPrefix': '',
+      'enableClasses': true,
+      'enableJSClass': true,
+      'usePrefixes': true
     },
 
     // Queue of tests
@@ -65,11 +65,11 @@
     },
 
     addTest: function(name, fn, options) {
-      tests.push({name : name, fn : fn, options : options});
+      tests.push({name: name, fn: fn, options: options});
     },
 
     addAsyncTest: function(fn) {
-      tests.push({name : null, fn : fn});
+      tests.push({name: null, fn: fn});
     }
   };
 
@@ -1059,7 +1059,7 @@
    */
 
   var modElem = {
-    elem : createElement('modernizr')
+    elem: createElement('modernizr')
   };
 
   // Clean up this element
@@ -1070,7 +1070,7 @@
   
 
   var mStyle = {
-    style : modElem.elem.style
+    style: modElem.elem.style
   };
 
   // kill ref for gc, must happen before mod.elem is removed, so we unshift on to
@@ -1210,7 +1210,7 @@
 
   // Accepts a list of property names and a single value
   // Returns `undefined` if native detection not available
-  function nativeTestProps (props, value) {
+  function nativeTestProps(props, value) {
     var i = props.length;
     // Start with the JS API: http://www.w3.org/TR/css3-conditional/#the-css-interface
     if ('CSS' in window && 'supports' in window.CSS) {
