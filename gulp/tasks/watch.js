@@ -8,13 +8,15 @@ var gulp = require('gulp'),
     config = require('../config');
 
 gulp.task('watch', function () {
-  gulp.watch(paths.app.stylesAll, ['styles', 'inject-css']);
-
-  gulp.watch([paths.app.scriptsAll, paths.app.hbsAll], function () {
+  watch([paths.app.scriptsAll, paths.app.hbsAll], function () {
     runSequence('scripts:app', 'scripts:vendor', 'reload');
   });
 
-  gulp.watch(paths.app.imagesSrcAll, function () {
+  watch(paths.app.stylesAll, function () {
+    gulp.start('styles', 'inject-css');
+  });
+
+  watch(paths.app.imagesSrcAll, function () {
     runSequence('icons', 'reload');
   });
 
