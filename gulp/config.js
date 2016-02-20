@@ -1,7 +1,17 @@
 var config = {
-  templateDir: '/',               // Relative to the app directory
+  templateDir: '/', // Relative to the app directory
   templateFiles: '*.html',
-  assetsRelativeToTemplates: './'
+  assetsRelativeToTemplates: './',
+  browserSync: {
+    notify: false,
+    xip: true,
+    // Use the "server" option to browserSync an HTML site
+    server: {
+      baseDir: 'app'
+    }
+    // ..or use the "proxy" option to serve up a PHP site
+    // proxy: 'project-starter.app'
+  }
 };
 
 module.exports = config;

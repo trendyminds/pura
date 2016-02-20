@@ -1,11 +1,11 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
-function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
 /*!
- * modernizr v3.2.0
- * Build http://modernizr.com/download?-svg-addtest-fnbind-printshiv-testprop-dontmin
+ * modernizr v3.3.1
+ * Build http://modernizr.com/download?-svg-addtest-fnbind-printshiv-setclasses-testprop-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -40,7 +40,7 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
 
   var ModernizrProto = {
     // The current version, dummy
-    _version: '3.2.0',
+    _version: '3.3.1',
 
     // Any settings that don't work as separate modules
     // can go in here as configuration.
@@ -239,16 +239,16 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
   var hasOwnProp;
 
   (function () {
-    var _hasOwnProperty = ({}).hasOwnProperty;
+    var _hasOwnProperty = {}.hasOwnProperty;
     /* istanbul ignore else */
     /* we have no way of testing IE 5.5 or safari 2,
      * so just assume the else gets hit */
     if (!is(_hasOwnProperty, 'undefined') && !is(_hasOwnProperty.call, 'undefined')) {
-      hasOwnProp = function (object, property) {
+      hasOwnProp = function hasOwnProp(object, property) {
         return _hasOwnProperty.call(object, property);
       };
     } else {
-      hasOwnProp = function (object, property) {
+      hasOwnProp = function hasOwnProp(object, property) {
         /* yes, this can give false positives/negatives, but most of the time we don't care about those */
         return property in object && is(object.constructor.prototype[property], 'undefined');
       };
@@ -510,12 +510,12 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
           //if the hidden property is implemented we can assume, that the browser supports basic HTML5 Styles
           supportsHtml5Styles = 'hidden' in a;
 
-          supportsUnknownElements = a.childNodes.length == 1 || (function () {
+          supportsUnknownElements = a.childNodes.length == 1 || function () {
             // assign a false positive if unable to shiv
             document.createElement('a');
             var frag = document.createDocumentFragment();
             return typeof frag.cloneNode == 'undefined' || typeof frag.createDocumentFragment == 'undefined' || typeof frag.createElement == 'undefined';
-          })();
+          }();
         } catch (e) {
           // assign a false positive if detection fails => unable to shiv
           supportsHtml5Styles = true;
@@ -790,11 +790,11 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
       var shivNamespace = 'html5shiv';
 
       /** Detect whether the browser supports shivable style sheets */
-      var supportsShivableSheets = !supportsUnknownElements && (function () {
+      var supportsShivableSheets = !supportsUnknownElements && function () {
         // assign a false negative if unable to shiv
         var docEl = document.documentElement;
         return !(typeof document.namespaces == 'undefined' || typeof document.parentWindow == 'undefined' || typeof docEl.applyElement == 'undefined' || typeof docEl.removeNode == 'undefined' || typeof window.attachEvent == 'undefined');
-      })();
+      }();
 
       /*--------------------------------------------------------------------------*/
 

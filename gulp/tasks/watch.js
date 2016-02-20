@@ -1,37 +1,53 @@
 var gulp = require('gulp'),
-    livereload = require('gulp-livereload'),
     runSequence = require('run-sequence'),
     clear = require('clear'),
     chalk = require('chalk'),
     watch = require('gulp-watch'),
-    paths = require('../paths');
+    browserSync = require('browser-sync').create(),
+    paths = require('../paths'),
+    config = require('../config');
 
 gulp.task('watch', function () {
-  livereload.listen({ 'quiet': true });
-  gulp.watch([paths.app.tmpCSS, paths.app.tmpJSMain, paths.app.tmpJSVendor]).on('change', livereload.changed);
-
   watch([paths.app.scriptsAll, paths.app.hbsAll], function () {
-    gulp.start(['scripts:app', 'scripts:vendor']);
+    runSequence('scripts:app', 'scripts:vendor', 'reload');
   });
 
   watch(paths.app.stylesAll, function () {
-    gulp.start('styles');
+    gulp.start('styles', 'inject-css');
   });
 
   watch(paths.app.imagesSrcAll, function () {
-    gulp.start('icons');
+    runSequence('icons', 'reload');
   });
+
+  gulp.watch(paths.app.templates).on('change', browserSync.reload);
 
   runSequence(
     ['modernizr', 'icons'],
     ['styles', 'scripts:app', 'scripts:vendor'],
+
     function () {
+      // If Browsersync is enabled, run it in either proxy mode or flat HTML mode
+      if (config.browserSync) {
+        browserSync.init(config.browserSync);
+      }
+
       clear();
+
       console.log(
         chalk.yellow('Gulp is watching for new changes...')
       );
     }
   );
+});
+
+gulp.task('inject-css', function () {
+  gulp.src([paths.app.tmpCSS])
+    .pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('reload', function() {
+    browserSync.reload();
 });
 
 gulp.task('dev', function () {
