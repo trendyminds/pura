@@ -25,9 +25,15 @@ gulp.task('watch', function () {
   runSequence(
     ['modernizr', 'icons'],
     ['styles', 'scripts:app', 'scripts:vendor'],
+
     function () {
-      browserSync.init({ proxy: config.proxy });
+      // If Browsersync is enabled, run it in either proxy mode or flat HTML mode
+      if (config.browserSync) {
+        browserSync.init(config.browserSync);
+      }
+
       clear();
+
       console.log(
         chalk.yellow('Gulp is watching for new changes...')
       );
