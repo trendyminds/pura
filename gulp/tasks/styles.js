@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
+    sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('autoprefixer'),
     fileImport = require('postcss-import'),
     nested = require('postcss-nested'),
@@ -19,10 +20,12 @@ gulp.task('styles', function () {
   ];
 
   return gulp.src(paths.app.stylesMain)
+    .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .on('error', function (err) {
       console.log(err.toString());
       this.emit('end');
     })
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.app.tmpCSSDir));
 });
