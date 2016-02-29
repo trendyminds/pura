@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "handlebars": "4.0.4",
+    "jquery": "2.2.1",
     "normalize.css": "3.0.3",
     "picturefill": "3.0.1",
     "svg-injector": "1.1.3"
