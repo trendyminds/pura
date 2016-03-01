@@ -1,4 +1,3 @@
-const $ = require('jquery');
 const MyModule = require('./modules/MyModule');
 const SVGInjector = require('./modules/SVGInjector');
 

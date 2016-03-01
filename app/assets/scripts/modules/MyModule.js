@@ -1,5 +1,3 @@
-const $ = require('jquery');
-
 class MyModule {
 
   constructor () {
