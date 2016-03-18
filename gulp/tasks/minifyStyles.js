@@ -4,6 +4,6 @@ var gulp = require('gulp'),
 
 gulp.task('minifyStyles', function () {
   return gulp.src(paths.dist.css)
-    .pipe(cssnano())
+    .pipe(cssnano({ autoprefixer: false }))
     .pipe(gulp.dest(paths.dist.cssDir));
 });
