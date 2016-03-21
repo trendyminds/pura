@@ -10,7 +10,7 @@ gulp.task('scripts:app', function () {
     debug: true,
     transform: ['browserify-handlebars']
   })
-  .transform('babelify')
+  .transform(babelify)
   .bundle()
   .on('error', function (err) {
     console.log(err.toString());
