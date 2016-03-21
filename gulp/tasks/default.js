@@ -1,7 +1,7 @@
-var gulp = require('gulp'),
-    clear = require('clear'),
-    chalk = require('chalk'),
-    runSequence = require('run-sequence');
+import gulp from 'gulp';
+import clear from 'clear';
+import chalk from 'chalk';
+import runSequence from 'run-sequence';
 
 gulp.task('default', function () {
   runSequence(

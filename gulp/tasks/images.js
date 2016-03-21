@@ -1,6 +1,6 @@
-var gulp = require('gulp'),
-    imagemin = require('gulp-imagemin'),
-    paths = require('../paths');
+import gulp from 'gulp';
+import imagemin from 'gulp-imagemin';
+import paths from '../paths';
 
 gulp.task('images', function () {
   return gulp.src(paths.app.imagesAll)

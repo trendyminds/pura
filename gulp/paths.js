@@ -1,6 +1,6 @@
-var config = require('./config');
+import config from './config';
 
-var paths = {
+let paths = {
   app: {
     dir: './app',
     styles: './app/assets/{styles,styles/**}',
@@ -32,4 +32,4 @@ var paths = {
   }
 };
 
-module.exports = paths;
+export default paths;
