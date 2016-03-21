@@ -1,14 +1,37 @@
 {
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "blockBindings": true,
-    "classes": true,
-    "forOf": true,
-    "jsx": true,
-    "modules": true,
-    "templateStrings": true
-  },
   "rules": {
-    "semi": 2
-  }
+    "indent": [
+      2,
+      2
+    ],
+    "quotes": [
+      2,
+      "single"
+    ],
+    "linebreak-style": [
+      2,
+      "unix"
+    ],
+    "semi": [
+      2,
+      "always"
+    ],
+    "no-undef": 1
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: "module"
+  },
+  "extends": "eslint:recommended",
+  "ecmaFeatures": {
+    "jsx": true,
+    "experimentalObjectRestSpread": true
+  },
+  "plugins": [
+    "react"
+  ]
 }
