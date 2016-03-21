@@ -1,6 +1,6 @@
-var gulp = require('gulp'),
-    cssnano = require('gulp-cssnano'),
-    paths = require('../paths');
+import gulp from 'gulp';
+import cssnano from 'gulp-cssnano';
+import paths from '../paths';
 
 gulp.task('minifyStyles', function () {
   return gulp.src(paths.dist.css)

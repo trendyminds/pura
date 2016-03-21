@@ -1,8 +1,8 @@
-var gulp = require('gulp'),
-    usemin = require('gulp-usemin'),
-    uglify = require('gulp-uglify'),
-    rev = require('gulp-rev'),
-    paths = require('../paths');
+import gulp from 'gulp';
+import usemin from 'gulp-usemin';
+import uglify from 'gulp-uglify';
+import rev from 'gulp-rev';
+import paths from '../paths';
 
 gulp.task('usemin', function () {
   return gulp.src(paths.app.templates)

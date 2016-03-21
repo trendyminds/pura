@@ -1,11 +1,13 @@
-var gulp = require('gulp'),
-    runSequence = require('run-sequence'),
-    clear = require('clear'),
-    chalk = require('chalk'),
-    watch = require('gulp-watch'),
-    browserSync = require('browser-sync').create(),
-    paths = require('../paths'),
-    config = require('../config');
+import gulp from 'gulp';
+import runSequence from 'run-sequence';
+import clear from 'clear';
+import chalk from 'chalk';
+import watch from 'gulp-watch';
+import {create as bsCreate} from 'browser-sync';
+import paths from '../paths';
+import config from '../config';
+
+const browserSync = bsCreate();
 
 gulp.task('watch', function () {
   watch([paths.app.scriptsAll, paths.app.hbsAll], function () {
@@ -47,7 +49,7 @@ gulp.task('inject-css', function () {
 });
 
 gulp.task('reload', function() {
-    browserSync.reload();
+  browserSync.reload();
 });
 
 gulp.task('dev', function () {

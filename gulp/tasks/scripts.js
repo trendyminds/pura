@@ -1,8 +1,8 @@
-var gulp = require('gulp'),
-    browserify = require('browserify'),
-    babelify = require('babelify'),
-    source = require('vinyl-source-stream'),
-    paths = require('../paths');
+import gulp from 'gulp';
+import browserify from 'browserify';
+import babelify from 'babelify';
+import source from 'vinyl-source-stream';
+import paths from '../paths';
 
 gulp.task('scripts:app', function () {
   return browserify({
@@ -10,7 +10,7 @@ gulp.task('scripts:app', function () {
     debug: true,
     transform: ['browserify-handlebars']
   })
-  .transform('babelify', { presets: ['es2015'] })
+  .transform('babelify')
   .bundle()
   .on('error', function (err) {
     console.log(err.toString());

@@ -1,4 +1,4 @@
-var config = {
+let config = {
   templateDir: '/', // Relative to the app directory
   templateFiles: '*.html',
   assetsRelativeToTemplates: './',
@@ -14,4 +14,4 @@ var config = {
   }
 };
 
-module.exports = config;
+export default config;

@@ -1,11 +1,10 @@
-var gulp = require('gulp'),
-    svg2png = require('gulp-svg2png'),
-    del = require('del'),
-    rename = require('gulp-rename'),
-    svgSprite = require('gulp-svg-sprite'),
-    runSequence = require('run-sequence');
+import gulp from 'gulp';
+import svg2png from 'gulp-svg2png';
+import del from 'del';
+import rename from 'gulp-rename';
+import svgSprite from 'gulp-svg-sprite';
 
-config = {
+let config = {
   mode: {
     css: {
       variables: {
