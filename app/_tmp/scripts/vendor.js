@@ -1415,18 +1415,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 },{}],2:[function(require,module,exports){
 'use strict';
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 require('../../_tmp/scripts/modernizr');
+
 require('picturefill');
-
-var Vendor = function Vendor() {
-  _classCallCheck(this, Vendor);
-};
-
-Vendor;
-
-new Vendor();
 
 },{"../../_tmp/scripts/modernizr":1,"picturefill":3}],3:[function(require,module,exports){
 /*! Picturefill - v3.0.1 - 2015-09-30

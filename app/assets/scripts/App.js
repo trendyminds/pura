@@ -1,18 +1,8 @@
-const MyModule = require('./modules/MyModule');
-const SVGInjector = require('./modules/SVGInjector');
+import SVGInjector from './modules/SVGInjector';
+import MyModule from './modules/MyModule';
 
-class App {
-
-  constructor () {
-    if (Modernizr.svg) {
-      new SVGInjector();
-    }
-
-    new MyModule();
-  }
-
+if (Modernizr.svg) {
+  new SVGInjector();
 }
 
-App;
-
-new App;
+new MyModule();
