@@ -1,22 +1,18 @@
-const injector = require('svg-injector');
+import injector from 'svg-injector';
 
 class SVGInjector {
-
   constructor () {
     // Grab the elements that should be swapped with the embedded SVG
     let docSVGs = document.querySelectorAll('[data-svg]');
 
     // Set the background-image to none so we no longer use the sprite image
-    Array.from(docSVGs).forEach(function (el) {
-      el.parentNode.style.backgroundImage = 'none';
-    });
+    for (let i = 0, len = docSVGs.length; i < len; i++) {
+      docSVGs[i].parentNode.style.backgroundImage = 'none';
+    }
 
     // Inject the SVGs inline
     injector(docSVGs);
   }
-
 }
 
-SVGInjector;
-
-module.exports = SVGInjector;
+export default SVGInjector;

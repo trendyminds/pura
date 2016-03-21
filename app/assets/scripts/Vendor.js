@@ -1,13 +1,2 @@
-require('../../_tmp/scripts/modernizr');
-require('picturefill');
-
-class Vendor {
-
-  constructor () {
-  }
-
-}
-
-Vendor;
-
-new Vendor;
+import '../../_tmp/scripts/modernizr';
+import 'picturefill';
