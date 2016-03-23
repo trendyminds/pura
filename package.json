@@ -1,6 +1,6 @@
 {
   "name": "project-generator",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,6 @@
     "clear": "0.0.1",
     "del": "2.1.0",
     "eslint": "2.4.0",
-    "eslint-plugin-react": "4.2.3",
     "gulp": "3.9.0",
     "gulp-cssnano": "2.1.0",
     "gulp-imagemin": "2.4.0",
