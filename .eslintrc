@@ -18,7 +18,6 @@
       2,
       "always"
     ],
-    "no-undef": 1,
     "no-console": 0
   },
   "env": {
@@ -32,5 +31,8 @@
   "extends": "eslint:recommended",
   "ecmaFeatures": {
     "experimentalObjectRestSpread": true
+  },
+  "globals": {
+    "Modernizr": true
   }
 }
