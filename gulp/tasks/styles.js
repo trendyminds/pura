@@ -6,6 +6,7 @@ import fileImport from 'postcss-import';
 import nested from 'postcss-nested';
 import mixins from 'postcss-mixins';
 import colors from 'postcss-color-function';
+import hexrgba from 'postcss-hexrgba';
 import vars from 'postcss-simple-vars';
 import paths from '../paths';
 
@@ -16,6 +17,7 @@ gulp.task('styles', function () {
     mixins,
     nested,
     colors,
+    hexrgba,
     autoprefixer({ browsers: ['last 2 versions'] })
   ];
 
