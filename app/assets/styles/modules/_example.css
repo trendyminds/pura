@@ -1,11 +1,29 @@
 body {
+  background: red;
   margin: 2rem auto;
   max-width: 71.25rem;
   width: 90%;
 }
 
+input::-moz-placeholder {
+  content: "asdf asdf"
+}
+
 .bolt-icon {
   position: relative;
+
+  .another {
+    padding: 1px 1px 1px 0;
+    color: #ff0;
+
+    .lkjasd {
+      padding: 1px;
+    }
+
+    @media (min-width: 30em) {
+      padding: 1rem;
+    }
+  }
 
   &::before,
   &::after {
@@ -72,6 +90,12 @@ body {
   50% {
     transform: translate3d(0, 0, 0);
   }
+}
+
+a {
+  padding: 20px;
+  padding-left: 10px;
+
 }
 
 .icon--luggage {
