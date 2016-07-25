@@ -1,22 +1,22 @@
 .a-thing {
-
   color: red;
-
   margin: 1rem;
-
   @media (max-width: 100em) {
     padding: 1rem;
   }
 
   .a-nested-thing {
-
+    @mixin icon--test;
+    color: green;
+    margin: 1rem;
     padding: 1rem;
+    z-index: 2;
 
     .another-nested {
-      margin: 1rem;
       box-shadow:
         0 1rem 1rem rgba(#fff, .2),
         0 1rem 1rem rgba(#fff, .2);
+      margin: 1rem;
     }
 
     @media (min-width: 50em) {
@@ -24,9 +24,7 @@
       line-height: 1;
       transform: translate(1rem);
     }
-
   }
-
 }
 
 .another {

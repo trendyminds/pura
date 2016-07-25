@@ -45,7 +45,9 @@
     "at-rule-no-vendor-prefix": true,
     "block-no-empty": true,
     "at-rule-empty-line-before": ["always", {
-      except: ["first-nested"]
+      except: ["first-nested"],
+      ignore: ["after-comment"],
+      ignoreAtRules: ["mixin", "import"]
     }],
     "rule-non-nested-empty-line-before": "always",
     "rule-nested-empty-line-before": ["always", {
@@ -72,6 +74,7 @@
     },
     "max-empty-lines": 1,
     "max-nesting-depth": 2,
+    "no-eol-whitespace": true,
     "no-extra-semicolons": true
   }
 }
