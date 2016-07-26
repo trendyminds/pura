@@ -1,37 +1,88 @@
-.a-thing {
-  color: red;
-  margin: 1rem;
+body {
+  margin: 2rem auto;
+  max-width: 71.25rem;
+  width: 90%;
+}
 
-  @media (min-width: 100em) {
-    padding: 1rem;
+.bolt-icon {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
-  &__taco {
-    padding: 1rem;
+  &--before {
+    padding-left: 1rem;
   }
 
-  .a-nested-thing {
-    @mixin icon--test;
-    color: green;
-    margin: 1rem;
-    padding: 1rem;
-    z-index: 2;
+  &--before::before {
+    @mixin icon--bolt;
+    left: 0;
+  }
 
-    .another-nested {
-      box-shadow:
-        0 1rem 1rem rgba(#fff, .2),
-        0 1rem 1rem rgba(#fff, .2);
-      margin: 1rem;
-    }
+  &--after {
+    padding-right: 1.25rem;
+  }
 
-    @media (min-width: 50em) {
-      color: red;
-      line-height: 1;
-      transform: translate(1rem);
-    }
+  &--after::after {
+    @mixin icon--bolt;
+    right: 0;
   }
 }
 
-.another {
-  padding: 100rem;
+.bolt-dom {
+  display: inline-block;
+}
+
+.icon--helmet,
+.icon--tie {
+  display: inline-block;
+}
+
+@keyframes backgroundRotate {
+  20% {
+    fill: #8577b9;
+  }
+
+  70% {
+    fill: #efc75e;
+  }
+}
+
+@keyframes takeoff {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  30% {
+    transform: translate3d(4rem, -4rem, 0);
+  }
+
+  31% {
+    transform: translate3d(5rem, 5rem, 0);
+  }
+
+  32% {
+    transform: translate3d(-5rem, 5rem, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.icon--luggage {
+  border-radius: 100%;
+  overflow: hidden;
+
+  .background {
+    animation: backgroundRotate 5s infinite .5s;
+  }
+
+  .plane {
+    animation: takeoff 5s infinite .5s;
+  }
 }
