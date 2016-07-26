@@ -6,7 +6,8 @@
   ],
   "rules": {
     "tmi/max-width-query": [true, {
-      "severity": "warning"
+      "severity": "warning",
+      "message": "Expected 'min-width' query because we build with a mobile-first approach. A 'max-width' query should only be used in rare occasions."
     }],
     "tmi/em-media-query": true,
     "color-hex-case": "lower",
@@ -35,6 +36,13 @@
     "declaration-colon-space-before": "never",
     "declaration-block-trailing-semicolon": "always",
     "declaration-block-no-duplicate-properties": true,
+    "declaration-property-value-blacklist": [
+      { "/margin/": ["/-/"] },
+      {
+        "severity": "warning",
+        "message": "Using a negative margin to pull an element closer to another can be unreliable and cause browser consistency issues. If possible, consider an alternative approach to position this."
+      }
+    ],
     "declaration-block-no-shorthand-property-overrides": true,
     "indentation": 2,
     "block-closing-brace-space-before": "always-single-line",
