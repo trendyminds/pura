@@ -7,7 +7,7 @@
   "rules": {
     "tmi/max-width-query": [true, {
       "severity": "warning",
-      "message": "Expected 'min-width' query because we build with a mobile-first approach. A 'max-width' query should only be used in rare occasions."
+      "message": "Expected 'min-width' query because we build with a mobile-first approach. A 'max-width' query should only be used in very rare occasions."
     }],
     "tmi/em-media-query": true,
     "color-hex-case": "lower",
