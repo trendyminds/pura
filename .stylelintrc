@@ -1,5 +1,11 @@
 {
+  "plugins": [
+    "stylelint-max-width-query"
+  ],
   "rules": {
+    "tmi/max-width-query": [true, {
+      "severity": "warning"
+    }],
     "color-hex-case": "lower",
     "color-hex-length": "short",
     "declaration-no-important": [true, {

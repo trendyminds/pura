@@ -1,7 +1,12 @@
 .a-thing {
   color: red;
   margin: 1rem;
-  @media (max-width: 100em) {
+
+  @media (min-width: 100em) {
+    padding: 1rem;
+  }
+
+  &__taco {
     padding: 1rem;
   }
 
