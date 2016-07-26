@@ -1,4 +1,5 @@
 {
+  "ignoreFiles": "./app/assets/styles/base/_sprite.css",
   "plugins": [
     "stylelint-max-width-query"
   ],
@@ -65,8 +66,8 @@
     "declaration-colon-newline-after": "always-multi-line",
     "declaration-property-unit-blacklist": {
       "font-size": ["px"],
-      "width": ["px"],
-      "height": ["px"],
+      "/width/": ["px"],
+      "/height/": ["px"],
       "top": ["px"],
       "right": ["px"],
       "bottom": ["px"],

@@ -5,6 +5,7 @@ import runSequence from 'run-sequence';
 
 gulp.task('default', function () {
   runSequence(
+    ['lintCSS'],
     ['clean', 'modernizr'],
     ['copy', 'styles', 'scripts:app', 'scripts:vendor', 'icons'],
     'usemin',
