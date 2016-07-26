@@ -1,12 +1,14 @@
 {
   "ignoreFiles": "./app/assets/styles/base/_sprite.css",
   "plugins": [
-    "stylelint-max-width-query"
+    "stylelint-max-width-query",
+    "stylelint-em-media-query"
   ],
   "rules": {
     "tmi/max-width-query": [true, {
       "severity": "warning"
     }],
+    "tmi/em-media-query": true,
     "color-hex-case": "lower",
     "color-hex-length": "short",
     "declaration-no-important": [true, {
