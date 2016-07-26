@@ -1,6 +1,6 @@
 {
   "name": "project-generator",
-  "version": "1.6.5",
+  "version": "1.7.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "gulp-rename": "1.2.2",
     "gulp-rev": "6.0.1",
     "gulp-sourcemaps": "1.6.0",
+    "gulp-stylelint": "3.0.0",
     "gulp-svg-sprite": "1.2.14",
     "gulp-svg2png": "0.3.0",
     "gulp-uglify": "1.5.1",
@@ -41,8 +42,9 @@
     "postcss-nested": "1.0.0",
     "postcss-simple-vars": "1.1.0",
     "run-sequence": "1.1.4",
-    "stylelint": "3.1.4",
-    "stylelint-statement-max-nesting-depth": "2.0.0",
+    "stylelint": "7.0.3",
+    "stylelint-em-media-query": "1.0.2",
+    "stylelint-max-width-query": "1.0.1",
     "vinyl-source-stream": "1.1.0"
   },
   "dependencies": {

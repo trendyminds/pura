@@ -1,3 +1,4 @@
+import './tasks/lintCSS';
 import './tasks/clean';
 import './tasks/copy';
 import './tasks/styles';
