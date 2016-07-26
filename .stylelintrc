@@ -13,7 +13,8 @@
     "color-hex-case": "lower",
     "color-hex-length": "short",
     "declaration-no-important": [true, {
-      "severity": "warning"
+      "severity": "warning",
+      "message": "Using !important is often a patch on a larger specificity issue. Only use !important in very rare occasions."
     }],
     "number-leading-zero": "never",
     "number-no-trailing-zeros": true,
@@ -29,7 +30,7 @@
     "selector-pseudo-element-colon-notation": "double",
     "selector-max-empty-lines": 0,
     "property-case": "lower",
-    "property-blacklist": ['font-smoothing', 'text-rendering'],
+    "property-blacklist": ['font-smoothing', 'text-rendering', 'osx-font-smoothing'],
     "declaration-bang-space-before": "always",
     "declaration-bang-space-after": "never",
     "declaration-colon-space-after": "always-single-line",
@@ -66,9 +67,12 @@
       ignore: ["after-comment"],
       ignoreAtRules: ["mixin", "import"]
     }],
-    "rule-non-nested-empty-line-before": "always",
-    "rule-nested-empty-line-before": ["always", {
-      except: ["first-nested"]
+    "rule-non-nested-empty-line-before": ["always-multi-line", {
+      ignore: ["after-comment"]
+    }],
+    "rule-nested-empty-line-before": ["always-multi-line", {
+      except: ["first-nested"],
+      ignore: ["after-comment"]
     }],
     "function-parentheses-space-inside": "never",
     "function-comma-space-after": "always",
@@ -76,16 +80,7 @@
     "declaration-colon-newline-after": "always-multi-line",
     "declaration-property-unit-blacklist": {
       "font-size": ["px"],
-      "/width/": ["px"],
-      "/height/": ["px"],
-      "top": ["px"],
-      "right": ["px"],
-      "bottom": ["px"],
-      "left": ["px"],
-      "/margin/": ["px"],
-      "/padding/": ["px"],
       "border-radius": ["px"],
-      "box-shadow": ["px"],
       "line-height": ["px"],
       "transform": ["px"]
     },
