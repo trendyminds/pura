@@ -18,7 +18,8 @@
       2,
       "always"
     ],
-    "no-console": 0
+    "no-console": 0,
+    "no-unsafe-finally": "off"
   },
   "env": {
     "es6": true,
@@ -33,6 +34,7 @@
     "experimentalObjectRestSpread": true
   },
   "globals": {
-    "Modernizr": true
+    "Modernizr": true,
+    "require": false
   }
 }

@@ -1,4 +1,5 @@
 import './tasks/lintCSS';
+import './tasks/lintJS';
 import './tasks/clean';
 import './tasks/copy';
 import './tasks/styles';
