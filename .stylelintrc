@@ -89,7 +89,9 @@
       "transform": ["px"]
     },
     "max-empty-lines": 1,
-    "max-nesting-depth": 2,
+    "max-nesting-depth": [1, {
+      ignoreAtRules: ["media"]
+    }],
     "no-eol-whitespace": true,
     "no-extra-semicolons": true
   }

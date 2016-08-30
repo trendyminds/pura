@@ -991,7 +991,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
    */
 
   function contains(str, substr) {
-    return !! ~('' + str).indexOf(substr);
+    return !!~('' + str).indexOf(substr);
   }
 
   ;

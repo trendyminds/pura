@@ -1,6 +1,6 @@
 {
   "name": "project-generator",
-  "version": "1.7.3",
+  "version": "1.7.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -43,7 +43,7 @@
     "postcss-nested": "1.0.0",
     "postcss-simple-vars": "1.1.0",
     "run-sequence": "1.1.4",
-    "stylelint": "7.0.3",
+    "stylelint": "7.2.0",
     "stylelint-bem-no-element-nesting": "1.0.3",
     "stylelint-em-media-query": "1.0.2",
     "stylelint-max-width-query": "1.0.1",
