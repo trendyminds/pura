@@ -10,12 +10,9 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "6.1.0",
-    "babel": "6.1.18",
-    "babel-preset-es2015": "6.1.18",
-    "babelify": "7.2.0",
+    "babel-loader": "6.2.5",
+    "babel-preset-es2015": "6.14.0",
     "browser-sync": "2.11.1",
-    "browserify": "12.0.1",
-    "browserify-handlebars": "1.0.0",
     "chalk": "1.1.1",
     "clear": "0.0.1",
     "del": "2.1.0",
@@ -47,10 +44,10 @@
     "stylelint-bem-no-element-nesting": "1.0.3",
     "stylelint-em-media-query": "1.0.2",
     "stylelint-max-width-query": "1.0.1",
-    "vinyl-source-stream": "1.1.0"
+    "vinyl-source-stream": "1.1.0",
+    "webpack": "1.13.2"
   },
   "dependencies": {
-    "handlebars": "4.0.4",
     "jquery": "2.2.1",
     "normalize.css": "4.0.0",
     "picturefill": "3.0.1",

@@ -1,3 +1,5 @@
+console.log('test');
+/*
 import gulp from 'gulp';
 import browserify from 'browserify';
 import babelify from 'babelify';
@@ -33,3 +35,4 @@ gulp.task('scripts:vendor', function () {
   .pipe(source('vendor.js'))
   .pipe(gulp.dest(paths.app.tmpJSDir));
 });
+*/
