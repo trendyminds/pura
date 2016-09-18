@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "modernizr": "./node_modules/.bin/customizr -c ./tasks/modernizr.json",
+    "cleanAssets": "rm -rf ./app/assets/_compiled",
     "scripts": "./node_modules/.bin/webpack",
     "scripts:watch": "npm run scripts -- -w",
     "scripts:prod": "npm run scripts -- -p",
@@ -16,14 +17,14 @@
     "sprite:move": "parallelshell 'mv ./_sprite/_sprite.css ./app/assets/styles/base/_sprite.css' 'mv ./_sprite/sprite.svg ./app/assets/images/sprites/sprite.svg'",
     "sprite": "npm run sprite:clean && npm run sprite:build && npm run sprite:move && npm run sprite:clean",
     "browsersync": "browser-sync start --config ./tasks/browsersync.js",
-    "watch": "parallelshell 'npm run modernizr' 'npm run styles:watch' 'npm run scripts:watch' 'npm run browsersync'",
+    "watch": "npm run cleanAssets && parallelshell 'npm run modernizr' 'npm run styles:watch' 'npm run scripts:watch' 'npm run browsersync'",
     "clean": "rm -rf ./dist/",
     "copy": "cp -r ./app/ ./dist/",
     "versionAssets": "node ./tasks/versionSprite.js && node ./tasks/versionAssets.js",
     "cleanUp": "rm -rf ./dist/assets/scripts && rm -rf ./dist/assets/styles",
     "start:pre": "parallelshell 'npm run scripts:prod' 'npm run styles:prod' 'npm run sprite' 'npm run clean'",
     "start:post": "parallelshell 'npm run versionAssets' 'npm run cleanUp'",
-    "start": "npm run modernizr && npm run start:pre && npm run copy && npm run start:post"
+    "start": "npm run cleanAssets && npm run modernizr && npm run start:pre && npm run copy && npm run start:post"
   },
   "author": "",
   "license": "ISC",
