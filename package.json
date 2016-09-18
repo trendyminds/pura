@@ -18,9 +18,9 @@
     "watch": "npm run styles:watch & npm run scripts:watch & npm run browsersync",
     "clean": "rm -rf ./dist/",
     "copy": "cp -r ./app/ ./dist/",
-    "versionAssets": "node ./tasks/versionAssets.js",
+    "versionAssets": "node ./tasks/versionSprite.js && node ./tasks/versionAssets.js",
     "cleanUp": "rm -rf ./dist/assets/scripts && rm -rf ./dist/assets/styles",
-    "start:pre": "parallelshell 'npm run scripts:prod' 'npm run styles:prod' 'npm run clean'",
+    "start:pre": "parallelshell 'npm run scripts:prod' 'npm run styles:prod' 'npm run sprite' 'npm run clean'",
     "start:post": "parallelshell 'npm run versionAssets' 'npm run cleanUp'",
     "start": "npm run start:pre && npm run copy && npm run start:post"
   },

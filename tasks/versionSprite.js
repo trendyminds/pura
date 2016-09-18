@@ -1,15 +1,14 @@
 const Version = require("node-version-assets");
 const globby = require("globby");
 const assets = [
-  'dist/assets/_compiled/*.css',
-  'dist/assets/_compiled/*.js',
+  'dist/assets/images/sprites/*.svg',
 ];
 
-globby(assets).then(paths => {
+globby(assets).then(path => {
   new Version({
-    assets: paths,
+    assets: path,
     grepFiles: [
-      './dist/index.html'
+      './dist/assets/_compiled/*.css'
     ]
   }).run();
 });
