@@ -10,6 +10,10 @@
     "styles": "postcss -c ./tasks/postcss.js",
     "styles:watch": "npm run styles -- -w",
     "styles:prod": "npm run styles",
+    "sprite:clean": "rm -rf ./_sprite",
+    "sprite:build": "./node_modules/.bin/svg-sprite --config ./tasks/sprite.json ./app/assets/images/icons/*.svg",
+    "sprite:move": "parallelshell 'mv ./_sprite/_sprite.css ./app/assets/styles/base/_sprite.css' 'mv ./_sprite/sprite.svg ./app/assets/images/sprites/sprite.svg'",
+    "sprite": "npm run sprite:clean && npm run sprite:build && npm run sprite:move && npm run sprite:clean",
     "browsersync": "browser-sync start --config ./tasks/browsersync.js",
     "watch": "npm run styles:watch & npm run scripts:watch & npm run browsersync",
     "clean": "rm -rf ./dist/",
@@ -42,6 +46,7 @@
     "stylelint-bem-no-element-nesting": "1.0.3",
     "stylelint-em-media-query": "1.0.2",
     "stylelint-max-width-query": "1.0.1",
+    "svg-sprite": "1.3.6",
     "webpack": "1.13.2"
   },
   "dependencies": {

@@ -455,7 +455,7 @@ img {
  */
 
 .icon {
-  background: url('/assets/images/sprites/sprite-cb2cba20.svg') no-repeat;
+  background: url('/assets/images/sprites/sprite.svg') no-repeat;
 }
 
 .icon--bolt {
@@ -530,7 +530,7 @@ body {
 }
 
 .bolt-icon--before::before {
-  background: url('/assets/images/sprites/sprite-cb2cba20.svg') no-repeat;
+  background: url('/assets/images/sprites/sprite.svg') no-repeat;
   background-position: 64.60905349794238% 46.728971962616825%;
   content: "";
   display: inline-block;
@@ -544,7 +544,7 @@ body {
 }
 
 .bolt-icon--after::after {
-  background: url('/assets/images/sprites/sprite-cb2cba20.svg') no-repeat;
+  background: url('/assets/images/sprites/sprite.svg') no-repeat;
   background-position: 64.60905349794238% 46.728971962616825%;
   content: "";
   display: inline-block;
