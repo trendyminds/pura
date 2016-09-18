@@ -35,7 +35,7 @@ gulp.task('createSprite', ['cleanSprite'], function () {
     .pipe(gulp.dest('./app/_tmp/sprites/'));
 });
 
-gulp.task('copySprites', function () {
+gulp.task('copySprites', ['createSprite'], function () {
   var copyPaths = [
     './app/_tmp/sprites/css/svg/**'
   ];

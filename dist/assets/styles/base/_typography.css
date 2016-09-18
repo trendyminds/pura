@@ -1,0 +1,16 @@
+/**
+ * Typography
+ *
+ * These are top-level styles for the site typography. Styles for h1-h6
+ *  body copy, paragraphs and more.
+ */
+
+body {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+blockquote,
+li,
+p {
+  line-height: 1.35;
+}

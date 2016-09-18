@@ -1,0 +1,88 @@
+body {
+  margin: 2rem auto;
+  max-width: 71.25rem;
+  width: 90%;
+}
+
+.bolt-icon {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--before {
+    padding-left: 1rem;
+  }
+
+  &--before::before {
+    @mixin icon--bolt;
+    left: 0;
+  }
+
+  &--after {
+    padding-right: 1.25rem;
+  }
+
+  &--after::after {
+    @mixin icon--bolt;
+    right: 0;
+  }
+}
+
+.bolt-dom {
+  display: inline-block;
+}
+
+.icon--helmet,
+.icon--tie {
+  display: inline-block;
+}
+
+@keyframes backgroundRotate {
+  20% {
+    fill: #8577b9;
+  }
+
+  70% {
+    fill: #efc75e;
+  }
+}
+
+@keyframes takeoff {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  30% {
+    transform: translate3d(4rem, -4rem, 0);
+  }
+
+  31% {
+    transform: translate3d(5rem, 5rem, 0);
+  }
+
+  32% {
+    transform: translate3d(-5rem, 5rem, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.icon--luggage {
+  border-radius: 100%;
+  overflow: hidden;
+
+  .background {
+    animation: backgroundRotate 5s infinite .5s;
+  }
+
+  .plane {
+    animation: takeoff 5s infinite .5s;
+  }
+}

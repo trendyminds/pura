@@ -7,10 +7,6 @@
   background: url('/assets/images/sprites/sprite-cb2cba20.svg') no-repeat;
 }
 
-.no-svg .icon {
-  background-image: url('/assets/images/sprites/sprite-cb2cba20.png');
-}
-
 .icon--bolt {
   background-position: 64.60905349794238% 46.728971962616825%;
   height: 23px;
@@ -24,10 +20,6 @@
   display: inline-block;
   height: 23px;
   width: 14px;
-
-  .no-svg & {
-    background-image: url('/assets/images/sprites/sprite-cb2cba20.png');
-  }
 }
 
 .icon--helmet {
@@ -43,10 +35,6 @@
   display: inline-block;
   height: 100px;
   width: 100px;
-
-  .no-svg & {
-    background-image: url('/assets/images/sprites/sprite-cb2cba20.png');
-  }
 }
 
 .icon--luggage {
@@ -62,10 +50,6 @@
   display: inline-block;
   height: 100px;
   width: 100px;
-
-  .no-svg & {
-    background-image: url('/assets/images/sprites/sprite-cb2cba20.png');
-  }
 }
 
 .icon--tie {
@@ -81,10 +65,6 @@
   display: inline-block;
   height: 100px;
   width: 100px;
-
-  .no-svg & {
-    background-image: url('/assets/images/sprites/sprite-cb2cba20.png');
-  }
 }
 
 .icon--trendyminds {
@@ -100,9 +80,5 @@
   display: inline-block;
   height: 37px;
   width: 157px;
-
-  .no-svg & {
-    background-image: url('/assets/images/sprites/sprite-cb2cba20.png');
-  }
 }
 

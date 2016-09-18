@@ -6,11 +6,8 @@ gulp.task('copy', function () {
     paths.app.dir + '/**/*.*',
     paths.app.dir + '/.*',
     paths.app.dir + '/**/.htaccess',
-    '!' + paths.app.templates,
     '!' + paths.app.styles,
-    '!' + paths.app.scripts,
-    '!' + paths.app.images,
-    '!' + paths.app.tmp
+    '!' + paths.app.scripts
   ];
 
   return gulp.src(copyPaths).pipe(gulp.dest(paths.dist.dir));
