@@ -14,7 +14,7 @@
     "copy": "cp -r ./app/ ./dist/",
     "versionAssets": "node ./tasks/versionAssets.js",
     "cleanUp": "rm -rf ./dist/assets/scripts && rm -rf ./dist/assets/styles",
-    "build": "npm run clean && npm run copy && npm run versionAssets && npm run cleanUp"
+    "start": "npm run clean && npm run copy && npm run versionAssets && npm run cleanUp"
   },
   "author": "",
   "license": "ISC",

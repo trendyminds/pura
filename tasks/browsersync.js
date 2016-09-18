@@ -1,7 +1,7 @@
 module.exports = {
    files: [
-    './app/_compiled/styles/styles.css',
-    './app/_compiled/scripts/*.js'
+    './app/assets/_compiled/styles.css',
+    './app/assets/_compiled/*.js'
   ],
   server: 'app',
   notify: false,

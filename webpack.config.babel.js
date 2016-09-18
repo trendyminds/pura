@@ -7,8 +7,8 @@ module.exports = {
     home: './app/assets/scripts/Home.js'
   },
   output: {
-    path: __dirname + '/app/_compiled/scripts',
-    publicPath: '/app/_compiled/scripts',
+    path: __dirname + '/app/assets/_compiled',
+    publicPath: '/app/assets/_compiled',
     filename: '[name].js',
     chunkFilename: '[name]_[chunkhash].js'
   },

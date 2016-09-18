@@ -9,7 +9,7 @@ module.exports = {
     "autoprefixer"
   ],
   "input": "./app/assets/styles/styles.css",
-  "output": "./app/_compiled/styles/styles.css",
+  "output": "./app/assets/_compiled/styles.css",
   "autoprefixer": {
     "browsers": "last 3 versions"
   },

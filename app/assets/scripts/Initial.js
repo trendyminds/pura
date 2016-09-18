@@ -1,2 +1,2 @@
-import '../../_tmp/scripts/modernizr';
+import '../_compiled/modernizr';
 import 'picturefill';

@@ -24,7 +24,7 @@
 
 ;(function(window, document, undefined){
   var tests = [];
-  
+
 
   /**
    *
@@ -73,7 +73,7 @@
     }
   };
 
-  
+
 
   // Fake some of Object.create so we can force non test results to be non "own" properties.
   var Modernizr = function() {};
@@ -83,10 +83,10 @@
   // Overwrite name so constructor name is nicer :D
   Modernizr = new Modernizr();
 
-  
+
 
   var classes = [];
-  
+
 
   /**
    * is returns a boolean if the typeof an obj is exactly type.
@@ -182,7 +182,7 @@
    */
 
   var docElement = document.documentElement;
-  
+
 
   /**
    * A convenience helper to check if the document we are running in is an SVG document
@@ -192,7 +192,7 @@
    */
 
   var isSVG = docElement.nodeName.toLowerCase() === 'svg';
-  
+
 
   /**
    * setClasses takes an array of class names and adds them to the root element
@@ -260,7 +260,7 @@
     }
   })();
 
-  
+
 
 
    // _l tracks listeners for async tests, as well as tests that execute after the initial run
@@ -470,7 +470,7 @@
     ModernizrProto.addTest = addTest;
   });
 
-  
+
 
 
 /**
@@ -1067,7 +1067,7 @@
     delete modElem.elem;
   });
 
-  
+
 
   var mStyle = {
     style: modElem.elem.style
@@ -1079,7 +1079,7 @@
     delete mStyle.style;
   });
 
-  
+
 
   /**
    * getBody returns the body of a document, or an element that can stand in for
@@ -1385,7 +1385,7 @@
   var testProp = ModernizrProto.testProp = function(prop, value, useValue) {
     return testProps([prop], undefined, value, useValue);
   };
-  
+
 
   /**
    * fnBind is a super small [bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) polyfill.
