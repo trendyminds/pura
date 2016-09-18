@@ -1,0 +1,18 @@
+{
+  "cache" : true,
+  "dest" : "./app/assets/_compiled/modernizr.js",
+  "options" : [
+    "setClasses",
+    "addTest",
+    "html5printshiv",
+    "testProp",
+    "fnBind"
+  ],
+  "uglify" : true,
+  "files" : {
+    "src": [
+      "./app/assets/scripts/**/*.js",
+      "./app/assets/styles/**/*.css"
+    ]
+  }
+}
