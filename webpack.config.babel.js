@@ -1,6 +1,8 @@
 import path from 'path';
 import webpack from 'webpack';
 
+const PROD = process.env.NODE_ENV || 0;
+
 module.exports = {
   entry: {
     initial: './app/assets/scripts/Initial.js',
@@ -12,18 +14,13 @@ module.exports = {
     filename: '[name].js',
     chunkFilename: '[name]_[chunkhash].js'
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
+  plugins: PROD ? [
     new webpack.optimize.UglifyJsPlugin({
       output: {
         comments: false
       }
     })
-  ],
+  ] : [],
   module: {
     loaders: [
       {

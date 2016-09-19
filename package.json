@@ -8,7 +8,7 @@
     "cleanAssets": "rm -rf ./app/assets/_compiled",
     "scripts": "./node_modules/.bin/webpack",
     "scripts:watch": "npm run scripts -- -w",
-    "scripts:prod": "npm run scripts -- -p",
+    "scripts:prod": "NODE_ENV=production npm run scripts -- -p",
     "styles": "postcss -c ./tasks/postcss.js",
     "styles:watch": "npm run styles -- -w",
     "styles:prod": "npm run styles && ./node_modules/.bin/cleancss -o ./app/assets/_compiled/styles.css ./app/assets/_compiled/styles.css --safe",
