@@ -30,8 +30,9 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "6.4.1",
+    "babel-core": "6.16.0",
     "babel-loader": "6.2.5",
-    "babel-preset-es2015": "6.14.0",
+    "babel-preset-es2015": "6.16.0",
     "browser-sync": "2.16.0",
     "clean-css": "3.4.19",
     "cssnano-cli": "1.0.4",
