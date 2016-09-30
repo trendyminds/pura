@@ -9,10 +9,6 @@
   background: url('/assets/images/sprites/{{#removePath}}{{{sprite}}}{{/removePath}}') no-repeat;
 }
 
-.no-svg .icon {
-  background-image: url('/assets/images/sprites/{{#removePath}}{{#fallback}}{{{sprite}}}{{/fallback}}{{/removePath}}');
-}
-
 {{/first}}
 {{#selector.shape}}.icon--{{base}}{{/selector.shape}} {
   background-position: {{position.relative.xy}};
@@ -27,10 +23,6 @@
   display: inline-block;
   height: {{height.outer}}px;
   width: {{width.outer}}px;
-
-  .no-svg & {
-    background-image: url('/assets/images/sprites/{{#removePath}}{{#fallback}}{{{sprite}}}{{/fallback}}{{/removePath}}');
-  }
 }
 
 {{/shapes}}
