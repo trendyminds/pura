@@ -20,3 +20,4 @@ imagemin(['dist/assets/images/**/*.{jpg,jpeg,png,svg}'], '.', {
     })
   ]
 });
+
