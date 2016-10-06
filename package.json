@@ -4,13 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "modernizr": "./tasks/modernizr",
-    "cleanAssets": "rm -rf ./app/assets/_compiled",
-    "scripts": "./node_modules/.bin/webpack",
-    "scripts:watch": "npm run scripts -- -w",
-    "styles": "postcss -c ./tasks/postcss.js",
-    "styles:watch": "npm run styles -- -w",
-    "browsersync": "browser-sync start --config ./tasks/browsersync.js",
     "watch": "./tasks/watch.sh",
     "start": "./tasks/build.sh"
   },
