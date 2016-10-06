@@ -18,6 +18,9 @@
     "sprite": "npm run sprite:clean && npm run sprite:build && npm run sprite:move && npm run sprite:clean",
     "browsersync": "browser-sync start --config ./tasks/browsersync.js",
     "watch": "npm run cleanAssets && parallelshell 'npm run modernizr' 'npm run styles:watch' 'npm run scripts:watch' 'npm run browsersync'",
+    "lint:css": "stylelint './app/assets/styles/**/*.css'",
+    "lint:js": "eslint './app/assets/scripts/**/*.js'",
+    "lint": "npm run -s lint:css && npm run -s lint:js",
     "clean": "rm -rf ./dist/",
     "copy": "cp -r ./app/ ./dist/",
     "versionAssets": "node ./tasks/versionSprite.js && node ./tasks/versionAssets.js",
@@ -25,7 +28,8 @@
     "cleanUp": "rm -rf ./dist/assets/scripts && rm -rf ./dist/assets/styles",
     "start:pre": "parallelshell 'npm run scripts:prod' 'npm run styles:prod' 'npm run sprite' 'npm run clean'",
     "start:post": "parallelshell 'npm run versionAssets' 'npm run minifyImages' 'npm run cleanUp'",
-    "start": "npm run cleanAssets && npm run modernizr && npm run start:pre && npm run copy && npm run start:post"
+    "build": "npm run cleanAssets && npm run modernizr && npm run start:pre && npm run copy && npm run start:post",
+    "start": "npm run -s lint && npm run -s build"
   },
   "author": "",
   "license": "ISC",
