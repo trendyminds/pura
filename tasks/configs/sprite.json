@@ -6,7 +6,7 @@
       "bust": false,
       "render": {
         "css": {
-          "template": "./tasks/sprite.css",
+          "template": "./tasks/templates/sprite.css",
           "dest": "_sprite.css"
         }
       }
