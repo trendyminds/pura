@@ -69,7 +69,7 @@ $ npm i normalize.css -S
 @import "normalize.css";
 ```
 
-With PostCSS, all the things you are used to still work: nesting, media queries, variables, etc. You can continue to author your CSS the same, but all files end with `.css` now.
+With PostCSS, all the things you are used to still work: nesting, media queries, variables, etc. However, all PostCSS files use the .css file format as opposed to .styl, .scss, or .sass.
 
 ### CSS file globbing
 CSS @imports are [glob-driven](https://camo.githubusercontent.com/d0cccd8d3b074fd523d8de7d126994b6f87b718a/687474703a2f2f692e696d6775722e636f6d2f37766a4f326d462e676966) so you do not need to go into the styles.css file to add your new modules.
