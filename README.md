@@ -21,9 +21,8 @@ The new TrendyMinds project starting point. Powered heavily by:
 
 ## Features
 
-### Easily configure where your templates live (Coming soon)
-
-### Watch for new files (Coming soon)
+### Easily configure settings
+If you open `tasks/settings.js` you'll see a list of options that modify how Browsersync behaves and which templates are crawled to perform CSS & JS revving. These make it much simpler to modify the build and watch tasks without changing the script of the build tool.
 
 ### Automatic sprite generator
 It's very tedious to create a spritesheet and map all the coordinates correctly in the CSS. To add to the spritesheet you simply do the following:
@@ -70,9 +69,6 @@ $ npm i normalize.css -S
 ```
 
 With PostCSS, all the things you are used to still work: nesting, media queries, variables, etc. However, all PostCSS files use the .css file format as opposed to .styl, .scss, or .sass.
-
-### CSS file globbing
-CSS @imports are [glob-driven](https://camo.githubusercontent.com/d0cccd8d3b074fd523d8de7d126994b6f87b718a/687474703a2f2f692e696d6775722e636f6d2f37766a4f326d462e676966) so you do not need to go into the styles.css file to add your new modules.
 
 ### Custom Modernizr builds
 After running `npm start` or `npm run watch` Modernizr will crawl through your CSS and JS to determine what Modernizr tests are needed.

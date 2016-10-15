@@ -1,3 +1,4 @@
+const settings = require('../settings.js');
 const Version = require("node-version-assets");
 const globby = require("globby");
 const assets = [
@@ -9,7 +10,7 @@ globby(assets).then(paths => {
   new Version({
     assets: paths,
     grepFiles: [
-      './dist/index.html'
+      './dist' + settings.templatePath
     ]
   }).run();
 });
