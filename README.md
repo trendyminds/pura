@@ -6,7 +6,7 @@ The new TrendyMinds project starting point. Powered heavily by:
 * Webpack
 
 ## Requirements
-* Node 5.12+ (we highly encourage using [nvm](https://github.com/creationix/nvm) to manage your Node versions)
+* Node 6.8+ (we highly encourage using [nvm](https://github.com/creationix/nvm) to manage your Node versions)
 * [Yarn](https://yarnpkg.com/). Install using `npm i -g yarn`
 
 ## Setting up
