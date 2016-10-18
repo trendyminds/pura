@@ -33,30 +33,6 @@ It's very tedious to create a spritesheet and map all the coordinates correctly 
 
 An SVG sprite will be created for you as well as the PNG fallback for browsers without SVG support.
 
-### Dynamic SVG injection
-Using [SVGInjector](https://github.com/iconic/SVGInjector), we can use JavaScript to inject an inline SVG into the DOM. Here's an example of it in action,
-
-```html
-<!--
-  Use our normal, spritesheet classes for fallbacks when JS is disabled or too slow
--->
-<div class="icon icon--tie">
-  <!--
-    Use [data-svg] and [data-src] to inject the tie.svg in between our .icon div.
-  -->
-  <div data-src="/assets/images/icons/tie.svg" data-svg></div>
-</div>
-```
-
-Now that our SVG is inline, we can use CSS to style it.
-
-```css
-// Set all the .stripe paths in the tie.svg to green
-.icon--tie path.stripe {
-  fill: green;
-}
-```
-
 ### PostCSS
 PostCSS provides the power of preprocessors and makes it easy to `require()` third-party CSS.
 
