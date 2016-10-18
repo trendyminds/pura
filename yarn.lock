@@ -4912,10 +4912,6 @@ supports-color@^3.1.0, supports-color@^3.1.2:
   dependencies:
     has-flag "^1.0.0"
 
-svg-injector@1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/svg-injector/-/svg-injector-1.1.3.tgz#8fba18d7419e5f818e712c4f82d83ee357610e61"
-
 svg-sprite@1.3.6:
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/svg-sprite/-/svg-sprite-1.3.6.tgz#7933de073ff6671d2b13f2461e64df730eb8ab34"
