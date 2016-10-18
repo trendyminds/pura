@@ -4,7 +4,7 @@ import webpack from 'webpack';
 const PROD = process.env.NODE_ENV || 0;
 
 module.exports = {
-  devtool: PROD ? false : "source-map",
+  devtool: false,
 
   entry: {
     initial: './app/assets/scripts/Initial.js',
