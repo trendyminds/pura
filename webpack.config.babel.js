@@ -8,8 +8,8 @@ module.exports = {
   devtool: false,
 
   entry: {
-    'home': './app/assets/scripts/Home.js',
-    'common': [
+    home: './app/assets/scripts/Home.js',
+    common: [
       'picturefill',
       './app/assets/_compiled/modernizr'
     ]
