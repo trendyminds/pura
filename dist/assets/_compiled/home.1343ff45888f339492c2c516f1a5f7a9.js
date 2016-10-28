@@ -1,1 +1,0 @@
-webpackJsonp([1],[function(n,e,t){"use strict";function u(n){return n&&n.__esModule?n:{"default":n}}var a=t(2),o=u(a);new o["default"]},,function(n,e){"use strict";function t(n,e){if(!(n instanceof e))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(e,"__esModule",{value:!0});var u=function a(){t(this,a)};e["default"]=u}]);
