@@ -1,0 +1,1 @@
+webpackJsonp([2,3],{4:function(e,n,t){"use strict";document.querySelectorAll("[data-my-module]").length&&t.e(0).then(t.bind(null,2)).then(function(e){new e.default})}},[4]);

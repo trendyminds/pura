@@ -5,11 +5,11 @@ import CommonsChunkPlugin from 'webpack/lib/optimize/CommonsChunkPlugin';
 const PROD = process.env.NODE_ENV || 0;
 
 module.exports = {
-  devtool: false,
+  devtool: PROD ? false : 'eval',
 
   entry: {
-    home: './app/assets/scripts/Home.js',
-    common: [
+    app: './app/assets/scripts/App.js',
+    vendor: [
       'picturefill',
       './app/assets/_compiled/modernizr'
     ]
@@ -17,9 +17,9 @@ module.exports = {
 
   output: {
     path: __dirname + '/app/assets/_compiled',
-    publicPath: '/app/assets/_compiled',
+    publicPath: '/assets/_compiled/',
     filename: '[name].js',
-    chunkFilename: '[name]_[chunkhash].js'
+    chunkFilename: '_chunk/[name]_[chunkhash].js'
   },
 
   plugins: [
