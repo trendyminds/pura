@@ -31,8 +31,8 @@ module.exports = {
     }),
 
     new CommonsChunkPlugin({
-      name: "common",
-      minChunks: 3
+      children: true,
+      minChunks: 2
     })
   ],
 
