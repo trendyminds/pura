@@ -6,7 +6,7 @@ The new TrendyMinds project starting point. Powered heavily by:
 * Webpack
 
 ## Requirements
-* Node 7+ (we **highly** encourage using [nvm](https://github.com/creationix/nvm) to manage your Node versions)
+* Node 7+ (use [nvm](https://github.com/creationix/nvm) to manage your Node versions!)
 * [Yarn](https://yarnpkg.com/). Install using `npm i -g yarn`
 
 ## Setting up
@@ -114,14 +114,14 @@ Say you decide to use React for the blog of a website. You can optimely load thi
 ```js
 // If a DOM element with a data-blog attribute exists, load the blog application
 if (document.querySelectorAll('[data-blog]').length) {
-  System.import('./BlogApp').then(module => { new module.default() });
+  System.import('./BlogApp');
 };
 ```
 
 **BlogApp/index.js**
 ```js
-import BlogPagination from './BlogApp/BlogPagination'
-import BlogPost from './BlogApp/BlogPost'
+import BlogPagination from './BlogPagination'
+import BlogPost from './BlogPost'
 
 new BlogPagination();
 new BlogPost();
@@ -131,8 +131,8 @@ For even more control, use Example 2 to asynchronously load infrequently used bl
 
 **BlogApp/index.js**
 ```js
-import BlogPagination from './BlogApp/BlogPagination'
-import BlogPost from './BlogApp/BlogPost'
+import BlogPagination from './BlogPagination'
+import BlogPost from './BlogPost'
 
 new BlogPagination();
 new BlogPost();
