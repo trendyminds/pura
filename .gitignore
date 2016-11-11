@@ -26,6 +26,7 @@ nbproject
 *.komodoproject
 .komodotools
 _notes
+.vscode
 dwsync.xml
 
 # Craft directories

@@ -4,7 +4,7 @@
  */
 
 .icon {
-  background: url('/assets/images/sprites/sprite-cb2cba20.svg') no-repeat;
+  background: url('/assets/images/sprites/sprite.svg') no-repeat;
 }
 
 .icon--bolt {
@@ -14,7 +14,7 @@
 }
 
 @define-mixin icon--bolt {
-  background: url('/assets/images/sprites/sprite-cb2cba20.svg') no-repeat;
+  background: url('/assets/images/sprites/sprite.svg') no-repeat;
   background-position: 64.60905349794238% 46.728971962616825%;
   content: "";
   display: inline-block;
@@ -29,7 +29,7 @@
 }
 
 @define-mixin icon--helmet {
-  background: url('/assets/images/sprites/sprite-cb2cba20.svg') no-repeat;
+  background: url('/assets/images/sprites/sprite.svg') no-repeat;
   background-position: 0 27.00729927007299%;
   content: "";
   display: inline-block;
@@ -44,7 +44,7 @@
 }
 
 @define-mixin icon--luggage {
-  background: url('/assets/images/sprites/sprite-cb2cba20.svg') no-repeat;
+  background: url('/assets/images/sprites/sprite.svg') no-repeat;
   background-position: 100% 0;
   content: "";
   display: inline-block;
@@ -59,7 +59,7 @@
 }
 
 @define-mixin icon--tie {
-  background: url('/assets/images/sprites/sprite-cb2cba20.svg') no-repeat;
+  background: url('/assets/images/sprites/sprite.svg') no-repeat;
   background-position: 0 100%;
   content: "";
   display: inline-block;
@@ -74,7 +74,7 @@
 }
 
 @define-mixin icon--trendyminds {
-  background: url('/assets/images/sprites/sprite-cb2cba20.svg') no-repeat;
+  background: url('/assets/images/sprites/sprite.svg') no-repeat;
   background-position: 0 0;
   content: "";
   display: inline-block;

@@ -1,17 +1,18 @@
 {
   "ignoreFiles": "./app/assets/styles/base/_sprite.css",
   "plugins": [
-    "stylelint-max-width-query",
     "stylelint-em-media-query",
     "stylelint-bem-no-element-nesting"
   ],
   "rules": {
-    "tmi/max-width-query": [true, {
-      "severity": "warning",
-      "message": "Expected 'min-width' query because we build with a mobile-first approach. A 'max-width' query should only be used in very rare occasions."
-    }],
     "tmi/em-media-query": true,
     "tmi/bem-no-element-nesting": true,
+    "media-feature-name-blacklist": [
+      "max-width", {
+        "severity": "warning",
+        "message": "Expected 'min-width' query because we build with a mobile-first approach. A 'max-width' query should only be used in very rare occasions.",
+      }
+    ],
     "color-hex-case": "lower",
     "color-hex-length": "short",
     "declaration-no-important": [true, {

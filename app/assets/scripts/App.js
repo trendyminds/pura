@@ -1,8 +1,3 @@
-import SVGInjector from './modules/SVGInjector';
-import MyModule from './modules/MyModule';
-
-if (Modernizr.svg) {
-  new SVGInjector();
+if (document.querySelectorAll('[data-my-module]').length) {
+  System.import('./MyModule').then(module => { new module.default(); });
 }
-
-new MyModule();
