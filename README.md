@@ -7,32 +7,16 @@ The new TrendyMinds project starting point. Powered heavily by:
 
 ## Requirements
 * Node 6.9+ (use [nvm](https://github.com/creationix/nvm) to manage your Node versions!)
-* [Yarn](https://yarnpkg.com/). Install using `npm i -g yarn`
 
 ## Setting up
 1. Clone/download the starter to your machine
-2. Run `yarn` to install dependencies
+2. Run `npm i` to install dependencies
 
 ## Compiling
 | Task          | Role                                              |
 |:--------------|:--------------------------------------------------|
 | npm start     | Build the project to the `dist/` directory.       |
 | npm run watch | Watch for changes to new files.                   |
-
-## Using Yarn
-Yarn is now included and is the new standard for installing packages going forward. We are using Yarn for two reasons:
-
-1. It's extremely fast
-2. It sets up a `yarn.lock` file that ensures all devs use the same packages
-
-### Running Yarn instead of npm
-Because we are using Yarn you'll need to use the `yarn` command instead of `npm`. Below is a guide to the commands you will need to know and run most often.
-
-| Command           | Description                                                                       |
-|:------------------|:----------------------------------------------------------------------------------|
-| yarn              | Installs all packages in the `yarn.lock` file                                     |
-| yarn add [pkg]    | This will install one or more packages in your `dependencies`                     |
-| yarn add [pkg] -D | Using `--dev` or `-D` will install one or more packages in your `devDependencies` |
 
 ## Documentation
 
@@ -59,7 +43,7 @@ PostCSS provides features like mixins, variables and works very closely to `requ
 
 ```bash
 # Install Normalize.css and save it to package.json
-$ yarn add normalize.css
+$ npm i normalize.css -S
 ```
 
 ```css
