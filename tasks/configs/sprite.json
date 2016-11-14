@@ -1,0 +1,15 @@
+{
+  "mode": {
+    "css": {
+      "dest": "./_sprite",
+      "sprite": "sprite.svg",
+      "bust": false,
+      "render": {
+        "css": {
+          "template": "./tasks/templates/sprite.css",
+          "dest": "_sprite.css"
+        }
+      }
+    }
+  }
+}
