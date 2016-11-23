@@ -11,7 +11,7 @@ module.exports = {
   "input": "./app/assets/styles/styles.css",
   "output": "./app/assets/_compiled/styles.css",
   "autoprefixer": {
-    "browsers": "last 3 versions"
+    "browsers": "last 2 versions"
   },
   "postcss-import": {
     glob: true
