@@ -27,6 +27,7 @@
     "value-no-vendor-prefix": true,
     "length-zero-no-unit": true,
     "unit-case": "lower",
+    "selector-no-empty": true,
     "value-keyword-case": "lower",
     "shorthand-property-no-redundant-values": true,
     "selector-no-qualifying-type": [true, {
