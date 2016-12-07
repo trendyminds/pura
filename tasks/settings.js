@@ -1,16 +1,14 @@
-const templatePath = "/templates/**/*.html";
-
 module.exports = {
   "browsersync": {
     "files": [
       "./app/assets/_compiled/styles.css",
       "./app/assets/_compiled/*.js",
-      "./app" + templatePath
+      "./app/templates/**/*.html"
     ],
-    "proxy": "", // use this if it's NOT a static site, ex: app.trendyminds.dev
-    // "server": "app" // use this if it IS a static site
+    "server": "app", // use this if it IS a static site
+    // "proxy": "", // use this if it's NOT a static site, ex: app.mysite.dev
     "notify": false,
-    "open": true
+    "open": false
   },
-  "templatePath": templatePath // Relative to the app directory
+  "templatePath": "/*.html" // Relative to the app directory
 }
