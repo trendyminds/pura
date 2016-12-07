@@ -2,7 +2,8 @@ module.exports = {
   "browsersync": {
     "files": [
       "./app/assets/_compiled/styles.css",
-      "./app/assets/_compiled/*.js"
+      "./app/assets/_compiled/*.js",
+      "./app/templates/**/*.html"
     ],
     "server": "app",
     "notify": false,
