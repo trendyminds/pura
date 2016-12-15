@@ -1,8 +1,9 @@
 module.exports = {
   "use": [
     "postcss-import",
-    "postcss-simple-vars",
     "postcss-mixins",
+    "postcss-simple-vars",
+    "postcss-conditionals",
     "postcss-nested",
     "postcss-color-function",
     "postcss-hexrgba",
