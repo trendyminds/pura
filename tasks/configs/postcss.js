@@ -3,7 +3,6 @@ module.exports = {
     "postcss-import",
     "postcss-mixins",
     "postcss-simple-vars",
-    "postcss-conditionals",
     "postcss-nested",
     "postcss-color-function",
     "postcss-hexrgba",
