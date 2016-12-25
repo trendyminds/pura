@@ -1,8 +1,8 @@
 module.exports = {
   "use": [
     "postcss-import",
-    "postcss-simple-vars",
     "postcss-mixins",
+    "postcss-simple-vars",
     "postcss-nested",
     "postcss-color-function",
     "postcss-hexrgba",
@@ -11,7 +11,7 @@ module.exports = {
   "input": "./app/assets/styles/styles.css",
   "output": "./app/assets/_compiled/styles.css",
   "autoprefixer": {
-    "browsers": "last 3 versions"
+    "browsers": "last 2 versions"
   },
   "postcss-import": {
     glob: true
