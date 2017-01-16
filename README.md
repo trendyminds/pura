@@ -15,8 +15,9 @@ The new TrendyMinds project starting point. Powered heavily by:
 ## Compiling
 | Task          | Role                                              |
 |:--------------|:--------------------------------------------------|
-| npm start     | Build the project to the `dist/` directory.       |
-| npm run watch | Watch for changes to new files.                   |
+| npm start     | Watch for changes to new files.                   |
+| npm run dev   | Watch for changes to new files.                   |
+| npm run build | Build the project to the `dist/` directory.       |
 
 ## Documentation
 
