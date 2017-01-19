@@ -4,5 +4,6 @@
 ./tasks/subtasks/modernizr.sh
 ./tasks/subtasks/stylesWatch.sh &
 ./tasks/subtasks/scriptsWatch.sh &
+./tasks/subtasks/createSprite.sh &
 ./tasks/subtasks/browsersync.sh &
 wait
