@@ -20,7 +20,7 @@
     "customizr": "1.0.0-alpha",
     "eslint": "3.10.2",
     "globby": "6.1.0",
-    "imagemin": "5.1.1",
+    "imagemin": "5.1.2",
     "imagemin-mozjpeg": "6.0.0",
     "imagemin-pngquant": "5.0.0",
     "imagemin-svgo": "5.2.0",
