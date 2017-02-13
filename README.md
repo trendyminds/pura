@@ -150,10 +150,5 @@ To add to the spritesheet do the following:
 3. Use `@mixin icon--FILENAME` on a `::before` or `::after` pseudo selector
 4. An SVG sprite will be created for you as well as the PNG fallback for browsers without SVG support.
 
-### Customizr
-A Modernizr task will scrub through your CSS and JS styles to determine what tests to bundle for you. This will greatly reduce the amount of JavaScript being used on this plugin.
-
-Caveat: To prevent this task from running upon each save of your CSS and JS, any new Modernizr rules will only get picked up after you restart `npm run watch`.
-
 ### Linters
 We use Stylelint and ESLint to ensure code is authored the same across all developers. These linters will warn you when using classes, imports, selectors, require, and more in an incorrect fashion.
