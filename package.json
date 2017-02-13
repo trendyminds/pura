@@ -45,5 +45,8 @@
   },
   "browserslist": [
     "last 2 versions"
-  ]
+  ],
+  "babel": {
+    "presets": ["es2015"]
+  }
 }
