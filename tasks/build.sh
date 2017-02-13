@@ -5,7 +5,6 @@ set -e
 
 ./tasks/subtasks/lint.sh
 ./tasks/subtasks/cleanAssets.sh
-./tasks/subtasks/modernizr.sh
 
 ./tasks/subtasks/scriptsProd.sh &
 ./tasks/subtasks/stylesProd.sh &

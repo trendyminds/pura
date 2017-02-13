@@ -9,10 +9,7 @@ module.exports = {
 
   entry: {
     app: './app/assets/scripts/App.js',
-    vendor: [
-      'picturefill',
-      './app/assets/_compiled/modernizr'
-    ]
+    vendor: ['picturefill']
   },
 
   output: {
