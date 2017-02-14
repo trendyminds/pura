@@ -1,4 +1,5 @@
 export default class MyModule {
-  constructor () {
+  constructor() {
+    console.log('Hello from MyModule');
   }
 }

@@ -8,7 +8,7 @@ module.exports = {
   devtool: PROD ? false : 'eval-cheap-module-source-map',
 
   entry: {
-    app: './app/assets/scripts/App.js',
+    app: './app/assets/scripts/app.js',
     vendor: ['picturefill']
   },
 

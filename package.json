@@ -17,7 +17,6 @@
     "babel-preset-es2015": "6.22.0",
     "browser-sync": "2.18.7",
     "clean-css": "3.4.24",
-    "eslint": "3.15.0",
     "globby": "6.1.0",
     "imagemin": "5.1.2",
     "imagemin-mozjpeg": "6.0.0",
@@ -35,7 +34,8 @@
     "stylelint-bem-no-element-nesting": "1.0.6",
     "stylelint-em-media-query": "1.0.2",
     "svg-sprite": "1.3.6",
-    "webpack": "2.2.1"
+    "webpack": "2.2.1",
+    "xo": "0.17.1"
   },
   "dependencies": {
     "jquery": "3.1.1",
@@ -46,32 +46,23 @@
     "last 2 versions"
   ],
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "es2015"
+    ]
   },
-  "eslintConfig": {
+  "xo": {
+    "space": true,
+    "envs": [
+      "browser"
+    ],
     "rules": {
-      "indent": [2, 2, { "SwitchCase": 1 }],
-      "quotes": [2, "single"],
-      "linebreak-style": [2, "unix"],
-      "semi": [2, "always"],
-      "no-console": 0,
-      "no-unsafe-finally": "off"
-    },
-    "env": {
-      "es6": true,
-      "browser": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module"
-    },
-    "extends": "eslint:recommended",
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true
-    },
-    "globals": {
-      "Modernizr": true,
-      "require": false
+      "new-cap": [
+        "error",
+        {
+          "properties": false
+        }
+      ],
+      "no-new": 0
     }
   }
 }
