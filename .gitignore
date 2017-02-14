@@ -9,7 +9,6 @@
 *.vi
 *~
 *.sass-cache
-.eslintcache
 node_modules/
 .tmp/
 
