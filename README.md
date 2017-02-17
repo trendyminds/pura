@@ -48,7 +48,7 @@ $ npm i normalize.css -S
 ```
 
 ```css
-# Include it in the main stylesheet
+/* Include it in the main stylesheet */
 @import "normalize.css";
 ```
 
