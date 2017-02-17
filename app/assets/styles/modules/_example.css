@@ -7,6 +7,10 @@ body {
 .bolt-icon {
   position: relative;
 
+  @media (min-width: 100em) {
+    padding: 1px;
+  }
+
   &::before,
   &::after {
     position: absolute;
@@ -37,7 +41,6 @@ body {
   display: inline-block;
 }
 
-.icon--helmet,
 .icon--tie {
   display: inline-block;
 }
