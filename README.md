@@ -151,4 +151,4 @@ To add to the spritesheet do the following:
 4. An SVG sprite will be created for you as well as the PNG fallback for browsers without SVG support.
 
 ### Linters
-We use Stylelint and ESLint to ensure code is authored the same across all developers. These linters will warn you when using classes, imports, selectors, require, and more in an incorrect fashion.
+We use [Stylelint](https://github.com/stylelint/stylelint) and [XO](https://github.com/sindresorhus/xo) to ensure code is authored the same across all developers. These linters will warn you when using classes, imports, selectors, require, and more in an incorrect fashion.
