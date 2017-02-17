@@ -96,12 +96,12 @@ Accordions, tooltips, and similar modules are used infrequently. They might exis
 /**
  * Asynchronously load in infrequently used modules
  */
-if (document.querySelectorAll('[data-tooltip]').length) {
-  System.import('./Tooltip').then(module => { new module.default() });
+if (document.querySelectorAll('[data-tooltip]')) {
+  System.import('./Tooltip').then(module => new module.default());
 };
 
-if (document.querySelectorAll('[data-accordion]').length) {
-  System.import('./Accordion').then(module => { new module.default() });
+if (document.querySelectorAll('[data-accordion]')) {
+  System.import('./Accordion').then(module => new module.default());
 };
 ```
 
@@ -113,7 +113,7 @@ Say you decide to use React for the blog of a website. You can optimely load thi
 **App.js:**
 ```js
 // If a DOM element with a data-blog attribute exists, load the blog application
-if (document.querySelectorAll('[data-blog]').length) {
+if (document.querySelectorAll('[data-blog]')) {
   System.import('./BlogApp');
 };
 ```
@@ -137,8 +137,8 @@ import BlogPost from './BlogPost'
 new BlogPagination();
 new BlogPost();
 
-if (document.querySelectorAll('[data-blog-tags]').length) {
-  System.import('./BlogTags').then(module => { new module.default() });
+if (document.querySelectorAll('[data-blog-tags]')) {
+  System.import('./BlogTags').then(module => new module.default());
 };
 ```
 
