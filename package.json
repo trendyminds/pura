@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "./tasks/watch.sh",
-    "dev": "npm start",
-    "build": "./tasks/build.sh"
+    "build": "./tasks/build.sh",
+    "dev": "npm start"
   },
   "author": "",
   "license": "ISC",
@@ -61,7 +61,11 @@
           "properties": false
         }
       ],
-      "no-new": 0
+      "no-new": 0,
+      "unicorn/filename-case": 0,
+      "unicorn/explicit-length-check": 0,
+      "import/no-unassigned-import": 0,
+      "no-alert": 0
     }
   },
   "stylelint": {
