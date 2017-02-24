@@ -5,14 +5,11 @@ import CommonsChunkPlugin from 'webpack/lib/optimize/CommonsChunkPlugin';
 const PROD = process.env.NODE_ENV || 0;
 
 module.exports = {
-  devtool: PROD ? false : 'eval',
+  devtool: PROD ? false : 'eval-cheap-module-source-map',
 
   entry: {
-    app: './app/assets/scripts/App.js',
-    vendor: [
-      'picturefill',
-      './app/assets/_compiled/modernizr'
-    ]
+    app: './app/assets/scripts/app.js',
+    vendor: ['picturefill']
   },
 
   output: {

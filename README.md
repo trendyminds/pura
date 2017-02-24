@@ -48,7 +48,7 @@ $ npm i normalize.css -S
 ```
 
 ```css
-# Include it in the main stylesheet
+/* Include it in the main stylesheet */
 @import "normalize.css";
 ```
 
@@ -96,12 +96,12 @@ Accordions, tooltips, and similar modules are used infrequently. They might exis
 /**
  * Asynchronously load in infrequently used modules
  */
-if (document.querySelectorAll('[data-tooltip]').length) {
-  System.import('./Tooltip').then(module => { new module.default() });
+if (document.querySelectorAll('[data-tooltip]')) {
+  System.import('./Tooltip').then(module => new module.default());
 };
 
-if (document.querySelectorAll('[data-accordion]').length) {
-  System.import('./Accordion').then(module => { new module.default() });
+if (document.querySelectorAll('[data-accordion]')) {
+  System.import('./Accordion').then(module => new module.default());
 };
 ```
 
@@ -113,7 +113,7 @@ Say you decide to use React for the blog of a website. You can optimely load thi
 **App.js:**
 ```js
 // If a DOM element with a data-blog attribute exists, load the blog application
-if (document.querySelectorAll('[data-blog]').length) {
+if (document.querySelectorAll('[data-blog]')) {
   System.import('./BlogApp');
 };
 ```
@@ -137,8 +137,8 @@ import BlogPost from './BlogPost'
 new BlogPagination();
 new BlogPost();
 
-if (document.querySelectorAll('[data-blog-tags]').length) {
-  System.import('./BlogTags').then(module => { new module.default() });
+if (document.querySelectorAll('[data-blog-tags]')) {
+  System.import('./BlogTags').then(module => new module.default());
 };
 ```
 
@@ -150,10 +150,5 @@ To add to the spritesheet do the following:
 3. Use `@mixin icon--FILENAME` on a `::before` or `::after` pseudo selector
 4. An SVG sprite will be created for you as well as the PNG fallback for browsers without SVG support.
 
-### Customizr
-A Modernizr task will scrub through your CSS and JS styles to determine what tests to bundle for you. This will greatly reduce the amount of JavaScript being used on this plugin.
-
-Caveat: To prevent this task from running upon each save of your CSS and JS, any new Modernizr rules will only get picked up after you restart `npm run watch`.
-
 ### Linters
-We use Stylelint and ESLint to ensure code is authored the same across all developers. These linters will warn you when using classes, imports, selectors, require, and more in an incorrect fashion.
+We use [Stylelint](https://github.com/stylelint/stylelint) and [XO](https://github.com/sindresorhus/xo) to ensure code is authored the same across all developers. These linters will warn you when using classes, imports, selectors, require, and more in an incorrect fashion.
