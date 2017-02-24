@@ -6,6 +6,7 @@ module.exports = {
     "postcss-nested",
     "postcss-color-function",
     "postcss-hexrgba",
+    "postcss-math",
     "autoprefixer"
   ],
   "input": "./app/assets/styles/styles.css",

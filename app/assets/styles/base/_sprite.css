@@ -8,14 +8,14 @@
 }
 
 .icon--bolt {
-  background-position: 64.60905349794238% 46.728971962616825%;
+  background-position: resolve(-157px - resolve(14px - 14px)/2) resolve(-100px - resolve(23px - 23px)/2);
   height: 23px;
   width: 14px;
 }
 
 @define-mixin icon--bolt {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
-  background-position: 64.60905349794238% 46.728971962616825%;
+  background-position: resolve(-157px - resolve(14px - 14px)/2) resolve(-100px - resolve(23px - 23px)/2);
   content: "";
   display: inline-block;
   height: 23px;
@@ -23,14 +23,14 @@
 }
 
 .icon--helmet {
-  background-position: 0 27.00729927007299%;
+  background-position: resolve(0px - resolve(100px - 100px)/2) resolve(-37px - resolve(100px - 100px)/2);
   height: 100px;
   width: 100px;
 }
 
 @define-mixin icon--helmet {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
-  background-position: 0 27.00729927007299%;
+  background-position: resolve(0px - resolve(100px - 100px)/2) resolve(-37px - resolve(100px - 100px)/2);
   content: "";
   display: inline-block;
   height: 100px;
@@ -38,14 +38,14 @@
 }
 
 .icon--luggage {
-  background-position: 100% 0;
+  background-position: resolve(-157px - resolve(100px - 100px)/2) resolve(0px - resolve(100px - 100px)/2);
   height: 100px;
   width: 100px;
 }
 
 @define-mixin icon--luggage {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
-  background-position: 100% 0;
+  background-position: resolve(-157px - resolve(100px - 100px)/2) resolve(0px - resolve(100px - 100px)/2);
   content: "";
   display: inline-block;
   height: 100px;
@@ -53,14 +53,14 @@
 }
 
 .icon--tie {
-  background-position: 0 100%;
+  background-position: resolve(0px - resolve(100px - 100px)/2) resolve(-137px - resolve(100px - 100px)/2);
   height: 100px;
   width: 100px;
 }
 
 @define-mixin icon--tie {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
-  background-position: 0 100%;
+  background-position: resolve(0px - resolve(100px - 100px)/2) resolve(-137px - resolve(100px - 100px)/2);
   content: "";
   display: inline-block;
   height: 100px;
@@ -68,14 +68,14 @@
 }
 
 .icon--trendyminds {
-  background-position: 0 0;
+  background-position: resolve(0px - resolve(157px - 157px)/2) resolve(0px - resolve(37px - 37px)/2);
   height: 37px;
   width: 157px;
 }
 
 @define-mixin icon--trendyminds {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
-  background-position: 0 0;
+  background-position: resolve(0px - resolve(157px - 157px)/2) resolve(0px - resolve(37px - 37px)/2);
   content: "";
   display: inline-block;
   height: 37px;
