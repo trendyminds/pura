@@ -11,19 +11,19 @@ const tasks = new Listr([
     task: () => {
       return new Listr([
         {
-          title: 'Watch for new CSS changes',
+          title: 'Now watching for new CSS changes',
           task: () => execa.shell("./tasks/subtasks/stylesWatch.sh")
         },
         {
-          title: 'Watch for new JS changes',
+          title: 'Now watching for new JS changes',
           task: () => execa.shell("./tasks/subtasks/scriptsWatch.sh")
         },
         {
-          title: 'Watch for sprite changes',
+          title: 'Now watching for sprite changes',
           task: () => execa.shell("node ./tasks/subtasks/watchSprite.js")
         },
         {
-          title: 'Run Browsersync at http://localhost:3000',
+          title: 'Running Browsersync at http://localhost:3000',
           task: () => execa("./tasks/subtasks/browsersync.sh")
         }
       ], { concurrent: true });
