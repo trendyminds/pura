@@ -15,11 +15,11 @@ const tasks = new Listr([
     task: () => {
       return new Listr([
         {
-          title: 'Compile JavaScript using Webpack',
+          title: 'Compile JS',
           task: () => execa.shell("./tasks/subtasks/scriptsProd.sh")
         },
         {
-          title: 'Compile CSS using Node-sass',
+          title: 'Compile CSS',
           task: () => execa.shell("./tasks/subtasks/stylesProd.sh")
         },
         {
@@ -42,7 +42,7 @@ const tasks = new Listr([
     task: () => {
       return new Listr([
         {
-          title: 'Updating sprite version',
+          title: 'Update sprite version',
           task: () => execa.shell('node ./tasks/subtasks/versionSprite.js')
         },
         {
