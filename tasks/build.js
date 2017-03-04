@@ -3,6 +3,10 @@ const Listr = require('listr');
 
 const tasks = new Listr([
   {
+    title: '🐞  Lint all CSS and JS',
+    task: () => execa.shell("./tasks/subtasks/lint.sh")
+  },
+  {
     title: '🗑  Purge old assets',
     task: () => execa.shell("./tasks/subtasks/cleanAssets.sh")
   },
@@ -10,10 +14,6 @@ const tasks = new Listr([
     title: '🚧  Compile build',
     task: () => {
       return new Listr([
-        {
-          title: '🐞  Lint all CSS and JS',
-          task: () => execa.shell("./tasks/subtasks/lint.sh")
-        },
         {
           title: 'Compile JavaScript using Webpack',
           task: () => execa.shell("./tasks/subtasks/scriptsProd.sh")
