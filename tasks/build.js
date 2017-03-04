@@ -19,7 +19,7 @@ const tasks = new Listr([
           task: () => execa.shell("./tasks/subtasks/scriptsProd.sh")
         },
         {
-          title: 'Compile CSS using PostCSS',
+          title: 'Compile CSS using Node-sass',
           task: () => execa.shell("./tasks/subtasks/stylesProd.sh")
         },
         {

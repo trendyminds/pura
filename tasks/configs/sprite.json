@@ -9,7 +9,8 @@
           "template": "./tasks/templates/sprite.css",
           "dest": "_sprite.css"
         }
-      }
+      },
+      "layout": "diagonal"
     }
   }
 }

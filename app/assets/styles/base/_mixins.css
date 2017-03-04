@@ -2,7 +2,7 @@
  * Mixins
  *
  * These are top-level functions and re-usable styles that can be used
- *  in any Stylus partial
+ *  in any partial
  */
 
 /**
@@ -10,10 +10,10 @@
  *
  * Example usage:
  *   div {
- *     @mixin clearfix;
+ *     @include clearfix;
  *   }
  */
-@define-mixin clearfix {
+@mixin clearfix {
   &::after {
     clear: both;
     content: "";
