@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./tasks/watch.sh",
+    "start": "node ./tasks/watch.js",
     "build": "node ./tasks/build.js",
     "dev": "npm start"
   },
