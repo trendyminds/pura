@@ -3,6 +3,9 @@
   "version": "2.6.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "7.7.1"
+  },
   "scripts": {
     "start": "node ./tasks/watch.js",
     "build": "node ./tasks/build.js",
