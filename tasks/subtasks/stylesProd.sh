@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 ./node_modules/.bin/node-sass\
-  ./app/assets/styles/styles.css\
+  ./app/assets/styles/styles.scss\
   --importer node_modules/node-sass-import\
   --output-style compressed\
   app/assets/_compiled/styles.css;

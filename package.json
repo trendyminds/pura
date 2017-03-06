@@ -68,7 +68,7 @@
     }
   },
   "stylelint": {
-    "ignoreFiles": "./app/assets/styles/base/_sprite.css",
+    "ignoreFiles": "./app/assets/styles/base/_sprite.scss",
     "extends": "stylelint-trendyminds-standard"
   }
 }
