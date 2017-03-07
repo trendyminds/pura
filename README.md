@@ -12,12 +12,11 @@ An opinionated, but lightweight project starter kit. Powered by ES2015, Node.js,
 ## Adding new packages
 Do not use `npm` to install packages. Instead, use `yarn add [package]`. [Yarn CLI docs](https://yarnpkg.com/en/docs/cli/add#toc-adding-dependencies) on adding new dependencies.
 
-## Compiling
-| Task       | Role                                        |
-|:-----------|:--------------------------------------------|
-| yarn start | Watch for changes to new files.             |
-| yarn dev   | Watch for changes to new files.             |
-| yarn build | Build the project to the `dist/` directory. |
+## Tasks
+| Task                | Role                                        |
+|:--------------------|:--------------------------------------------|
+| yarn start/yarn dev | Watch for changes to new files.             |
+| yarn build          | Build the project to the `dist/` directory. |
 
 ## Documentation
 | Section                                                                                          | Description                                                           |
