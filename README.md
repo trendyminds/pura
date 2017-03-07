@@ -22,6 +22,6 @@ Do not use `npm` to install packages. Instead, use `yarn add [package]`. [Yarn C
 ## Documentation
 | Section                                           | Description                                                           |
 |:--------------------------------------------------|:----------------------------------------------------------------------|
-| [Settings](wiki/Settings)                         | When you need to change project-wide settings in your project         |
-| [Webpack & JS Modules](wiki/Webpack-&-JS-Modules) | How to utilize Webpack for functionality like code splitting and more |
-| [Icons & Sprites](wiki/Icons-&-Sprites)           | Add new icons to the spritesheet that can be used via HTML or CSS     |
+| [Settings](/wiki/Settings)                         | When you need to change project-wide settings in your project         |
+| [Webpack & JS Modules](/wiki/Webpack-&-JS-Modules) | How to utilize Webpack for functionality like code splitting and more |
+| [Icons & Sprites](/wiki/Icons-&-Sprites)           | Add new icons to the spritesheet that can be used via HTML or CSS     |
