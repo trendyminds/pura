@@ -1,5 +1,5 @@
 # Project Starter
-The new TrendyMinds project starting point. Powered by ES2015, Node.js, Webpack and more!
+An opinionated, but lightweight project starter kit. Powered by ES2015, Node.js, Webpack and more!
 
 ## Requirements
 * Node 7.7+ (use [nvm](https://github.com/creationix/nvm) to manage your Node versions!)
