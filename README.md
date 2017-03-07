@@ -20,8 +20,8 @@ Do not use `npm` to install packages. Instead, use `yarn add [package]`. [Yarn C
 | yarn build | Build the project to the `dist/` directory. |
 
 ## Documentation
-| Section                                           | Description                                                           |
-|:--------------------------------------------------|:----------------------------------------------------------------------|
-| [Settings](/wiki/Settings)                         | When you need to change project-wide settings in your project         |
-| [Webpack & JS Modules](/wiki/Webpack-&-JS-Modules) | How to utilize Webpack for functionality like code splitting and more |
-| [Icons & Sprites](/wiki/Icons-&-Sprites)           | Add new icons to the spritesheet that can be used via HTML or CSS     |
+| Section                                                                                          | Description                                                           |
+|:-------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------|
+| [Settings](https://github.com/trendyminds/project-starter/wiki/Settings)                         | When you need to change project-wide settings in your project         |
+| [Webpack & JS Modules](https://github.com/trendyminds/project-starter/wiki/Webpack-&-JS-Modules) | How to utilize Webpack for functionality like code splitting and more |
+| [Icons & Sprites](https://github.com/trendyminds/project-starter/wiki/Icons-&-Sprites)           | Add new icons to the spritesheet that can be used via HTML or CSS     |
