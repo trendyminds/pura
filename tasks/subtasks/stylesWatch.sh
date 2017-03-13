@@ -1,3 +1,7 @@
 #!/usr/bin/env sh
 
-./node_modules/.bin/node-sass app/assets/styles/styles.scss -w --importer node_modules/node-sass-import ./.tmp/styles.css | ./node_modules/.bin/postcss ./.tmp/styles.css -u autoprefixer -o ./app/assets/_compiled/styles.css -w
+./node_modules/.bin/postcss\
+  -c ./tasks/configs/postcss.config.js\
+  -o ./app/assets/_compiled/styles.css\
+  ./app/assets/styles/styles.css\
+  -w

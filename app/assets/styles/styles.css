@@ -34,7 +34,7 @@ body {
   }
 
   &--before::before {
-    @include icon--bolt;
+    @mixin icon--bolt;
     left: 0;
   }
 
@@ -43,7 +43,7 @@ body {
   }
 
   &--after::after {
-    @include icon--bolt;
+    @mixin icon--bolt;
     right: 0;
   }
 }

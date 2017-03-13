@@ -13,7 +13,7 @@
   width: 14px;
 }
 
-@mixin icon--bolt {
+@define-mixin icon--bolt {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
   background-position: (0px - (14px - 14px)/2) (0px - (23px - 23px)/2);
   content: "";
@@ -28,7 +28,7 @@
   width: 100px;
 }
 
-@mixin icon--helmet {
+@define-mixin icon--helmet {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
   background-position: (-14px - (100px - 100px)/2) (-23px - (100px - 100px)/2);
   content: "";
@@ -43,7 +43,7 @@
   width: 100px;
 }
 
-@mixin icon--luggage {
+@define-mixin icon--luggage {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
   background-position: (-114px - (100px - 100px)/2) (-123px - (100px - 100px)/2);
   content: "";
@@ -58,7 +58,7 @@
   width: 100px;
 }
 
-@mixin icon--tie {
+@define-mixin icon--tie {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
   background-position: (-214px - (100px - 100px)/2) (-223px - (100px - 100px)/2);
   content: "";
@@ -73,7 +73,7 @@
   width: 157px;
 }
 
-@mixin icon--trendyminds {
+@define-mixin icon--trendyminds {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
   background-position: (-314px - (157px - 157px)/2) (-323px - (37px - 37px)/2);
   content: "";
@@ -81,4 +81,3 @@
   height: 37px;
   width: 157px;
 }
-

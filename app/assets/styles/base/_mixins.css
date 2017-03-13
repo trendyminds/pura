@@ -10,10 +10,10 @@
  *
  * Example usage:
  *   div {
- *     @include clearfix;
+ *     @mixin clearfix;
  *   }
  */
-@mixin clearfix {
+@define-mixin clearfix {
   &::after {
     clear: both;
     content: "";
