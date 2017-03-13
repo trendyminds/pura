@@ -8,14 +8,14 @@
 }
 
 .icon--bolt {
-  background-position: (0px - (14px - 14px)/2) (0px - (23px - 23px)/2);
+  background-position: resolve(0px - resolve(14px - 14px)/2) resolve(0px - resolve(23px - 23px)/2);
   height: 23px;
   width: 14px;
 }
 
 @define-mixin icon--bolt {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
-  background-position: (0px - (14px - 14px)/2) (0px - (23px - 23px)/2);
+  background-position: resolve(0px - resolve(14px - 14px)/2) resolve(0px - resolve(23px - 23px)/2);
   content: "";
   display: inline-block;
   height: 23px;
@@ -23,14 +23,14 @@
 }
 
 .icon--helmet {
-  background-position: (-14px - (100px - 100px)/2) (-23px - (100px - 100px)/2);
+  background-position: resolve(-14px - resolve(100px - 100px)/2) resolve(-23px - resolve(100px - 100px)/2);
   height: 100px;
   width: 100px;
 }
 
 @define-mixin icon--helmet {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
-  background-position: (-14px - (100px - 100px)/2) (-23px - (100px - 100px)/2);
+  background-position: resolve(-14px - resolve(100px - 100px)/2) resolve(-23px - resolve(100px - 100px)/2);
   content: "";
   display: inline-block;
   height: 100px;
@@ -38,14 +38,14 @@
 }
 
 .icon--luggage {
-  background-position: (-114px - (100px - 100px)/2) (-123px - (100px - 100px)/2);
+  background-position: resolve(-114px - resolve(100px - 100px)/2) resolve(-123px - resolve(100px - 100px)/2);
   height: 100px;
   width: 100px;
 }
 
 @define-mixin icon--luggage {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
-  background-position: (-114px - (100px - 100px)/2) (-123px - (100px - 100px)/2);
+  background-position: resolve(-114px - resolve(100px - 100px)/2) resolve(-123px - resolve(100px - 100px)/2);
   content: "";
   display: inline-block;
   height: 100px;
@@ -53,14 +53,14 @@
 }
 
 .icon--tie {
-  background-position: (-214px - (100px - 100px)/2) (-223px - (100px - 100px)/2);
+  background-position: resolve(-214px - resolve(100px - 100px)/2) resolve(-223px - resolve(100px - 100px)/2);
   height: 100px;
   width: 100px;
 }
 
 @define-mixin icon--tie {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
-  background-position: (-214px - (100px - 100px)/2) (-223px - (100px - 100px)/2);
+  background-position: resolve(-214px - resolve(100px - 100px)/2) resolve(-223px - resolve(100px - 100px)/2);
   content: "";
   display: inline-block;
   height: 100px;
@@ -68,16 +68,17 @@
 }
 
 .icon--trendyminds {
-  background-position: (-314px - (157px - 157px)/2) (-323px - (37px - 37px)/2);
+  background-position: resolve(-314px - resolve(157px - 157px)/2) resolve(-323px - resolve(37px - 37px)/2);
   height: 37px;
   width: 157px;
 }
 
 @define-mixin icon--trendyminds {
   background: url('/assets/images/sprites/sprite.svg') no-repeat;
-  background-position: (-314px - (157px - 157px)/2) (-323px - (37px - 37px)/2);
+  background-position: resolve(-314px - resolve(157px - 157px)/2) resolve(-323px - resolve(37px - 37px)/2);
   content: "";
   display: inline-block;
   height: 37px;
   width: 157px;
 }
+

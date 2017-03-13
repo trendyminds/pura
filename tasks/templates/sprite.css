@@ -11,14 +11,14 @@
 
 {{/first}}
 {{#selector.shape}}.icon--{{base}}{{/selector.shape}} {
-  background-position: background-position: resolve({{position.absolute.x}}px - resolve({{width.outer}}px - {{width.inner}}px)/2) resolve({{position.absolute.y}}px - resolve({{height.outer}}px - {{height.inner}}px)/2);
+  background-position: resolve({{position.absolute.x}}px - resolve({{width.outer}}px - {{width.inner}}px)/2) resolve({{position.absolute.y}}px - resolve({{height.outer}}px - {{height.inner}}px)/2);
   height: {{height.outer}}px;
   width: {{width.outer}}px;
 }
 
-{{#selector.shape}}@mixin icon--{{base}}{{/selector.shape}} {
+{{#selector.shape}}@define-mixin icon--{{base}}{{/selector.shape}} {
   background: url('/assets/images/sprites/{{{sprite}}}') no-repeat;
-  background-position: background-position: resolve({{position.absolute.x}}px - resolve({{width.outer}}px - {{width.inner}}px)/2) resolve({{position.absolute.y}}px - resolve({{height.outer}}px - {{height.inner}}px)/2);
+  background-position: resolve({{position.absolute.x}}px - resolve({{width.outer}}px - {{width.inner}}px)/2) resolve({{position.absolute.y}}px - resolve({{height.outer}}px - {{height.inner}}px)/2);
   content: "";
   display: inline-block;
   height: {{height.outer}}px;
