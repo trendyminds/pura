@@ -28,6 +28,7 @@
     "listr": "^0.11.0",
     "node-version-assets": "^1.2.0",
     "postcss-cli": "^3.0.0-beta",
+    "postcss-color-function": "^3.0.0",
     "postcss-easy-import": "^2.0.0",
     "postcss-hexrgba": "^0.2.1",
     "postcss-math": "^0.0.7",
