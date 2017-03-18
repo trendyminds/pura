@@ -1,4 +1,4 @@
-# Project Starter
+# Pura
 An opinionated, but lightweight project starter kit. Powered by ES2015, Node.js, Webpack and more!
 
 ## Requirements

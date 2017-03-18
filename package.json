@@ -1,5 +1,5 @@
 {
-  "name": "project-generator",
+  "name": "pura",
   "version": "3.0.0",
   "description": "",
   "main": "index.js",
@@ -34,7 +34,6 @@
     "postcss-mixins": "^5.4.1",
     "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^3.0.0",
-    "precss": "^1.4.0",
     "stylelint": "^7.9.0",
     "stylelint-trendyminds-standard": "^1.1.0",
     "svg-sprite": "^1.3.6",
