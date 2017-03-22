@@ -20,10 +20,6 @@ const tasks = new Listr([
           task: () => execa.shell("./tasks/subtasks/scriptsWatch.sh")
         },
         {
-          title: '🏞  Compiling sprite changes',
-          task: () => execa.shell("node ./tasks/subtasks/watchSprite.js")
-        },
-        {
           title: `🖥  Running Browsersync at http://localhost:3000 and ${externalIp}`,
           task: () => execa("./tasks/subtasks/browsersync.sh")
         }

@@ -37,14 +37,12 @@
     "postcss-simple-vars": "^3.0.0",
     "stylelint": "^7.9.0",
     "stylelint-trendyminds-standard": "^1.1.0",
-    "svg-sprite": "^1.3.6",
     "webpack": "^2.2.1",
     "xo": "^0.17.1"
   },
   "dependencies": {
     "normalize.css": "^5.0.0",
-    "picturefill": "^3.0.2",
-    "svg-injector": "^1.1.3"
+    "picturefill": "^3.0.2"
   },
   "browserslist": [
     "last 2 versions"

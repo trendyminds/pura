@@ -23,10 +23,6 @@ const tasks = new Listr([
           task: () => execa.shell("./tasks/subtasks/stylesProd.sh")
         },
         {
-          title: 'Build new spritesheet',
-          task: () => execa.shell("./tasks/subtasks/createSprite.sh")
-        },
-        {
           title: 'Purge current dist/ directory',
           task: () => execa.shell("./tasks/subtasks/cleanDist.sh")
         }
@@ -39,18 +35,7 @@ const tasks = new Listr([
   },
   {
     title: '📝  Rev assets',
-    task: () => {
-      return new Listr([
-        {
-          title: 'Update sprite version',
-          task: () => execa.shell('node ./tasks/subtasks/versionSprite.js')
-        },
-        {
-          title: 'Update CSS and JS versions',
-          task: () => execa.shell('node ./tasks/subtasks/versionAssets.js')
-        }
-      ])
-    },
+    task: () => execa.shell('node ./tasks/subtasks/versionAssets.js')
   },
   {
     title: '🏁  Tidy up',

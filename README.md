@@ -23,4 +23,3 @@ Do not use `npm` to install packages. Instead, use `yarn add [package]`. [Yarn C
 |:-------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------|
 | [Settings](https://github.com/trendyminds/pura/wiki/Settings)                         | When you need to change project-wide settings in your project         |
 | [Webpack & JS Modules](https://github.com/trendyminds/pura/wiki/Webpack-&-JS-Modules) | How to utilize Webpack for functionality like code splitting and more |
-| [Icons & Sprites](https://github.com/trendyminds/pura/wiki/Icons-&-Sprites)           | Add new icons to the spritesheet that can be used via HTML or CSS     |
