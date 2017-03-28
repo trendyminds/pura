@@ -72,7 +72,6 @@
     }
   },
   "stylelint": {
-    "ignoreFiles": "./app/assets/styles/base/_sprite.css",
     "extends": "stylelint-trendyminds-standard"
   }
 }
