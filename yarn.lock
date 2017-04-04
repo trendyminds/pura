@@ -4546,9 +4546,9 @@ postcss-load-plugins@^2.3.0:
     cosmiconfig "^2.1.1"
     object-assign "^4.1.0"
 
-postcss-math@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/postcss-math/-/postcss-math-0.0.7.tgz#efe07f0ab11c334c062d98370922c603db4978a8"
+postcss-math@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/postcss-math/-/postcss-math-0.0.8.tgz#40907561d9ef0bc0773ac6ff2b55c14edf467673"
   dependencies:
     mathjs "^3.1.4"
     postcss "^5.0.19"
@@ -4714,13 +4714,13 @@ qs@6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.2.1.tgz#ce03c5ff0935bc1d9d69a9f14cbd18e568d67625"
 
-"qs@>= 0.4.0", qs@~6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
-
-qs@~6.3.0:
+"qs@>= 0.4.0", qs@~6.3.0:
   version "6.3.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.2.tgz#e75bd5f6e268122a2a0e0bda630b2550c166502c"
+
+qs@~6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
 querystring-es3@^0.2.0:
   version "0.2.1"
