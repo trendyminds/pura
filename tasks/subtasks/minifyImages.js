@@ -1,11 +1,11 @@
 const imagemin = require('imagemin');
-const imageminMozjpeg = require('imagemin-mozjpeg');
+const imageminJpegtran = require('imagemin-jpegtran');
 const imageminPngquant = require('imagemin-pngquant');
 const imageminSvgo = require('imagemin-svgo');
 
 imagemin(['dist/assets/images/**/*.{jpg,jpeg,png,svg}'], '.', {
   plugins: [
-    imageminMozjpeg({
+    imageminJpegtran({
       progressive: true
     }),
     imageminPngquant({
