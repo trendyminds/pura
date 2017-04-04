@@ -2,7 +2,7 @@
 Pura is an opinionated, but lightweight project starter kit. Powered by ES2015, Node.js, Webpack and more!
 
 ## Requirements
-- Node 7.7.1 (use [nvm](https://github.com/creationix/nvm) to manage your Node versions!)
+- Node 7.8.0 (use [nvm](https://github.com/creationix/nvm) to manage your Node versions!)
 - [Yarn](https://yarnpkg.com) `npm i -g yarn`
 
 ## Setting up
