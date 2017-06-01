@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "node ./tasks/deploy.js",
     "start": "node ./tasks/watch.js",
     "build": "node ./tasks/build.js",
+    "rev": "node ./tasks/rev.js",
     "dev": "npm start"
   },
   "author": "",
