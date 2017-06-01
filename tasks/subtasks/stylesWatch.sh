@@ -2,6 +2,6 @@
 
 ./node_modules/.bin/postcss\
   -c ./tasks/configs/postcss.config.js\
-  -o ./app/assets/_compiled/styles.css\
-  ./app/assets/styles/styles.css\
+  -o ./src/assets/_compiled/styles.css\
+  ./src/assets/styles/styles.css\
   -w

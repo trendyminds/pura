@@ -11,7 +11,7 @@ const tasks = new Listr([
     task: () => execa.shell("./tasks/subtasks/cleanAssets.sh")
   },
   {
-    title: '🚧  Compile build',
+    title: '🚧  Compile new assets',
     task: () => {
       return new Listr([
         {
@@ -21,35 +21,8 @@ const tasks = new Listr([
         {
           title: 'Compile CSS',
           task: () => execa.shell("./tasks/subtasks/stylesProd.sh")
-        },
-        {
-          title: 'Purge current dist/ directory',
-          task: () => execa.shell("./tasks/subtasks/cleanDist.sh")
         }
       ], { concurrent: true });
-    }
-  },
-  {
-    title: '🚚  Copy all files to dist/',
-    task: () => execa.shell('./tasks/subtasks/copyDist.sh')
-  },
-  {
-    title: '📝  Rev assets',
-    task: () => execa.shell('node ./tasks/subtasks/versionAssets.js')
-  },
-  {
-    title: '🏁  Tidy up',
-    task: () => {
-      return new Listr([
-        {
-          title: 'Minify production images',
-          task: () => execa.shell('node ./tasks/subtasks/minifyImages.js')
-        },
-        {
-          title: 'Remove temporary files/folders',
-          task: () => execa.shell('./tasks/subtasks/cleanDistAssets.sh')
-        }
-      ], { concurrent: true })
     }
   }
 ]);

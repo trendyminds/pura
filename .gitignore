@@ -33,3 +33,6 @@ dwsync.xml
 # Craft directories
 **/craft/storage/
 **/uploads/
+
+# Compiled directories
+src/assets/_compiled

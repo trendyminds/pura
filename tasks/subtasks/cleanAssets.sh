@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-rm -rf ./app/assets/_compiled;
+rm -rf ./src/assets/_compiled;
