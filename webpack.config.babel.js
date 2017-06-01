@@ -13,8 +13,8 @@ module.exports = {
   },
 
   output: {
-    path: __dirname + '/src/assets/_compiled',
-    publicPath: '/assets/_compiled/',
+    path: __dirname + '/src/_compiled',
+    publicPath: '/_compiled/',
     filename: '[name].js',
     chunkFilename: '_chunk/[name]_[chunkhash].js'
   },

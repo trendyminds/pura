@@ -35,4 +35,4 @@ dwsync.xml
 **/uploads/
 
 # Compiled directories
-src/assets/_compiled
+src/_compiled
