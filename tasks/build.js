@@ -21,6 +21,10 @@ const tasks = new Listr([
         {
           title: 'Compile CSS',
           task: () => execa.shell("./tasks/subtasks/stylesProd.sh")
+        },
+        {
+          title: 'Minify Images',
+          task: () => execa.shell('node ./tasks/subtasks/minifyImages.js')
         }
       ], { concurrent: true });
     }
