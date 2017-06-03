@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "node ./tasks/deploy.js",
     "start": "node ./tasks/watch.js",
     "build": "node ./tasks/build.js",
-    "rev": "node ./tasks/rev.js",
     "dev": "npm start"
   },
   "author": "",
@@ -21,7 +21,8 @@
     "globby": "^6.1.0",
     "imagemin": "5.1.2",
     "imagemin-jpegtran": "^5.0.2",
-    "imagemin-pngcrush": "^5.1.0",
+    "imagemin-pngquant": "^5.0.1",
+    "imagemin-svgo": "^5.2.2",
     "listr": "^0.12.0",
     "node-version-assets": "^1.2.0",
     "postcss-cli": "^4.0.0",
