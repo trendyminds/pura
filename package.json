@@ -1,6 +1,6 @@
 {
   "name": "pura",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "scripts": {
     "deploy": "node ./tasks/deploy.js",
     "start": "node ./tasks/watch.js",
