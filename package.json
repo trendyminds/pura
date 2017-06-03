@@ -1,15 +1,12 @@
 {
   "name": "pura",
   "version": "3.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "deploy": "node ./tasks/deploy.js",
     "start": "node ./tasks/watch.js",
     "build": "node ./tasks/build.js",
     "dev": "npm start"
   },
-  "author": "",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^7.1.1",
