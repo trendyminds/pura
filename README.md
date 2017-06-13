@@ -12,8 +12,8 @@ Pura is an opinionated, but lightweight project starter kit. Powered by ES2015, 
 ## Deploying/compiling the project
 By default, directories that contain compiled CSS and JavaScript are ignored. You may change this by altering the `.gitignore`. However, **we recommend not committing compiled assets to your project** and letting your continuous integration/deployment tool compile your project before deployment. This is for a couple reasons:
 
-1. 📃 You no longer need to track giant, minified files in Git
-2. ↩️ When you have merge conflicts they will _only_ occur in the source files and be simpler to resolve
+1. 🌀 You no longer need to track giant, minified files in Git
+2. ⚠️ When you have merge conflicts they will _only_ occur in the source files and be simpler to resolve
 3. ⏱ You no longer need to run a `build` task before deploying changes
 
 ## Tasks
