@@ -25,7 +25,6 @@
     "postcss-color-function": "^4.0.0",
     "postcss-easy-import": "^2.0.0",
     "postcss-hexrgba": "^0.2.1",
-    "postcss-math": "^0.0.8",
     "postcss-mixins": "^6.0.0",
     "postcss-nested": "^2.0.2",
     "postcss-simple-vars": "^4.0.0",
