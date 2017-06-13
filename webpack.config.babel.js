@@ -8,13 +8,13 @@ module.exports = {
   devtool: PROD ? false : 'eval-cheap-module-source-map',
 
   entry: {
-    app: './app/assets/scripts/app.js',
+    app: './src/assets/scripts/app.js',
     vendor: ['picturefill']
   },
 
   output: {
-    path: __dirname + '/app/assets/_compiled',
-    publicPath: '/assets/_compiled/',
+    path: __dirname + '/src/_compiled',
+    publicPath: '/_compiled/',
     filename: '[name].js',
     chunkFilename: '_chunk/[name]_[chunkhash].js'
   },
