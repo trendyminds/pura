@@ -2,9 +2,9 @@
   "name": "pura",
   "version": "4.0.0",
   "scripts": {
-    "deploy": "node ./tasks/deploy.js",
-    "start": "node ./tasks/watch.js",
-    "build": "node ./tasks/build.js",
+    "deploy": "./tasks/deploy.sh",
+    "start": "./tasks/watch.sh",
+    "build": "./tasks/build.sh",
     "dev": "npm start"
   },
   "license": "MIT",
@@ -20,7 +20,6 @@
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-pngquant": "^5.0.1",
     "imagemin-svgo": "^5.2.2",
-    "listr": "^0.12.0",
     "node-version-assets": "^1.2.0",
     "postcss-cli": "^4.0.0",
     "postcss-color-function": "^4.0.0",
