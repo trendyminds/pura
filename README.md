@@ -18,10 +18,10 @@ By default, directories that contain compiled CSS and JavaScript are ignored. Yo
 
 ## Tasks
 
-| Task                      | Description                                                                                        |
-|:--------------------------|:---------------------------------------------------------------------------------------------------|
-| yarn start/yarn dev       | Watch for changes to new files.                                                                    |
-| yarn build && yarn deploy | **Only run in your deployment process!** Compiles CSS and JS files. Minifies images and revs files |
+| Task                        | Description                                                                              |
+|:----------------------------|:-----------------------------------------------------------------------------------------|
+| `yarn start` or `yarn dev`  | Watch for changes to new files.                                                          |
+| `yarn build && yarn deploy` | **Only run in your deployment process!** Compiles CSS/JS, minifies images and revs files |
 
 ## Previewing the compiled version of the site locally
 There might be an occasion where you'd like to see what the compiled/minified/revved version of the site looks like on your local machine. To do this, you must:
