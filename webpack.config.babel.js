@@ -1,6 +1,5 @@
 import path from 'path';
 import webpack from 'webpack';
-import CommonsChunkPlugin from 'webpack/lib/optimize/CommonsChunkPlugin';
 
 const PROD = process.env.NODE_ENV || 0;
 
@@ -27,7 +26,8 @@ module.exports = {
       }
     }),
 
-    new CommonsChunkPlugin({
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'app',
       children: true,
       minChunks: 2
     })
