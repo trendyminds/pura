@@ -3,7 +3,7 @@ const imageminJpegtran = require('imagemin-jpegtran');
 const imageminPngquant = require('imagemin-pngquant');
 const imageminSvgo = require('imagemin-svgo');
 
-imagemin(['dist/assets/images/**/*.{jpg,jpeg,png,svg}'], '.', {
+imagemin(['src/assets/images/**/*.{jpg,jpeg,png,svg}'], '.', {
   plugins: [
     imageminJpegtran({
       progressive: true
