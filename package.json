@@ -1,6 +1,6 @@
 {
   "name": "pura",
-  "version": "4.0.4",
+  "version": "4.1.0",
   "scripts": {
     "test": "./tasks/subtasks/lint.sh",
     "deploy": "./tasks/deploy.sh",
@@ -36,7 +36,8 @@
   },
   "dependencies": {
     "normalize.css": "^7.0.0",
-    "picturefill": "^3.0.2"
+    "picturefill": "^3.0.2",
+    "promise-polyfill": "^6.1.0"
   },
   "browserslist": [
     "last 2 versions"
