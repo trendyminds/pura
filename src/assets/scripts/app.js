@@ -1,6 +1,5 @@
 import Promise from 'promise-polyfill';
 
-// Add promise-polyfill to window
 if (!window.Promise) {
   window.Promise = Promise;
 }
