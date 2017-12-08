@@ -1,6 +1,6 @@
 {
   "name": "pura",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "scripts": {
     "test": "./tasks/subtasks/lint.sh",
     "deploy": "./tasks/deploy.sh",
