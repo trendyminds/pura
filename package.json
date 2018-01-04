@@ -1,6 +1,6 @@
 {
   "name": "pura",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "scripts": {
     "test": "./tasks/subtasks/lint.sh",
     "deploy": "./tasks/deploy.sh",
@@ -30,7 +30,7 @@
     "postcss-nested": "^2.0.4",
     "postcss-simple-vars": "^4.0.0",
     "stylelint": "^8.4.0",
-    "stylelint-trendyminds-standard": "^2.0.0",
+    "stylelint-trendyminds-standard": "^2.1.0",
     "webpack": "^3.3.0",
     "xo": "^0.18.2"
   },
