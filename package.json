@@ -1,6 +1,6 @@
 {
   "name": "pura",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "scripts": {
     "test": "./tasks/subtasks/lint.sh",
     "deploy": "./tasks/deploy.sh",
@@ -29,15 +29,15 @@
     "postcss-mixins": "^6.0.1",
     "postcss-nested": "^2.0.4",
     "postcss-simple-vars": "^4.0.0",
-    "stylelint": "^7.13.0",
-    "stylelint-trendyminds-standard": "^1.1.0",
+    "stylelint": "^8.4.0",
+    "stylelint-trendyminds-standard": "^2.0.0",
     "webpack": "^3.3.0",
     "xo": "^0.18.2"
   },
   "dependencies": {
     "normalize.css": "^7.0.0",
     "picturefill": "^3.0.2",
-    "promise-polyfill": "^6.1.0"
+    "promise-polyfill": "^7.0.0"
   },
   "browserslist": [
     "last 2 versions"
