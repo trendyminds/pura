@@ -29,7 +29,7 @@
     "postcss-mixins": "^6.0.1",
     "postcss-nested": "^3.0.0",
     "postcss-simple-vars": "^4.0.0",
-    "stylelint": "^8.4.0",
+    "stylelint": "^9.1.1",
     "stylelint-trendyminds-standard": "^2.1.0",
     "webpack": "^3.3.0",
     "xo": "^0.18.2"
