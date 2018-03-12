@@ -22,7 +22,7 @@
     "imagemin-pngquant": "^5.0.1",
     "imagemin-svgo": "^6.0.0",
     "node-version-assets": "^1.2.0",
-    "postcss-cli": "^4.1.0",
+    "postcss-cli": "^5.0.0",
     "postcss-color-function": "^4.0.0",
     "postcss-easy-import": "^3.0.0",
     "postcss-hexrgba": "^1.0.0",
