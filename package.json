@@ -52,6 +52,10 @@
     "envs": [
       "browser"
     ],
+    "globals": [
+      "picturefill",
+      "$"
+    ],
     "rules": {
       "new-cap": [
         "error",
@@ -60,6 +64,9 @@
         }
       ],
       "no-new": 0,
+      "no-useless-constructor": 0,
+      "no-return-assign": 0,
+      "no-negated-condition": 0,
       "unicorn/filename-case": 0,
       "unicorn/explicit-length-check": 0,
       "import/no-unassigned-import": 0,
