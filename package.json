@@ -1,6 +1,6 @@
 {
   "name": "pura",
-  "version": "4.2.1",
+  "version": "5.0.0",
   "scripts": {
     "test": "./tasks/subtasks/lint.sh",
     "deploy": "./tasks/deploy.sh",
@@ -10,12 +10,12 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
+    "autoprefixer": "^8.1.0",
     "babel-core": "^6.24.1",
-    "babel-loader": "^7.1.1",
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.0",
-    "browser-sync": "^2.18.12",
-    "clean-css-cli": "^4.1.6",
+    "browser-sync": "^2.23.6",
+    "clean-css-cli": "^4.1.11",
     "globby": "^6.1.0",
     "imagemin": "5.1.2",
     "imagemin-jpegtran": "^5.0.2",
@@ -35,7 +35,7 @@
     "xo": "^0.18.2"
   },
   "dependencies": {
-    "normalize.css": "^7.0.0",
+    "normalize.css": "^8.0.0",
     "picturefill": "^3.0.2",
     "promise-polyfill": "^7.0.0"
   },
