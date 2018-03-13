@@ -17,6 +17,8 @@
     "babel-preset-env": "^1.6.0",
     "browser-sync": "^2.23.6",
     "clean-css-cli": "^4.1.11",
+    "eslint-config-xo-react": "^0.16.0",
+    "eslint-plugin-react": "^7.7.0",
     "globby": "^6.1.0",
     "imagemin": "5.1.2",
     "imagemin-jpegtran": "^5.0.2",
@@ -55,6 +57,7 @@
     ]
   },
   "xo": {
+    "extends": "xo-react",
     "space": true,
     "envs": [
       "browser"
@@ -77,6 +80,8 @@
       "unicorn/filename-case": 0,
       "unicorn/explicit-length-check": 0,
       "import/no-unassigned-import": 0,
+      "react/jsx-tag-spacing": 0,
+      "react/no-unescaped-entities": 0,
       "no-alert": 0
     }
   },
