@@ -1,6 +1,6 @@
 {
   "name": "pura",
-  "version": "4.2.1",
+  "version": "5.0.0",
   "scripts": {
     "test": "./tasks/subtasks/lint.sh",
     "deploy": "./tasks/deploy.sh",
@@ -10,34 +10,40 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
+    "autoprefixer": "^8.1.0",
     "babel-core": "^6.24.1",
-    "babel-loader": "^7.1.1",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.0",
-    "browser-sync": "^2.18.12",
-    "clean-css-cli": "^4.1.6",
+    "browser-sync": "^2.23.6",
+    "clean-css-cli": "^4.1.11",
+    "eslint-config-xo-react": "^0.16.0",
+    "eslint-plugin-react": "^7.7.0",
     "globby": "^6.1.0",
     "imagemin": "5.1.2",
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-pngquant": "^5.0.1",
-    "imagemin-svgo": "^5.2.2",
+    "imagemin-svgo": "^6.0.0",
     "node-version-assets": "^1.2.0",
-    "postcss-cli": "^4.1.0",
+    "postcss-cli": "^5.0.0",
     "postcss-color-function": "^4.0.0",
-    "postcss-easy-import": "^2.0.0",
-    "postcss-hexrgba": "^0.2.1",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-hexrgba": "^1.0.0",
     "postcss-mixins": "^6.0.1",
-    "postcss-nested": "^2.0.4",
+    "postcss-nested": "^3.0.0",
     "postcss-simple-vars": "^4.0.0",
-    "stylelint": "^8.4.0",
+    "stylelint": "^9.1.1",
     "stylelint-trendyminds-standard": "^2.1.0",
     "webpack": "^3.3.0",
     "xo": "^0.18.2"
   },
   "dependencies": {
-    "normalize.css": "^7.0.0",
+    "normalize.css": "^8.0.0",
     "picturefill": "^3.0.2",
-    "promise-polyfill": "^7.0.0"
+    "promise-polyfill": "^7.0.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "browserslist": [
     "last 2 versions"
@@ -45,12 +51,20 @@
   "babel": {
     "presets": [
       "env"
+    ],
+    "plugins": [
+      "transform-react-jsx"
     ]
   },
   "xo": {
+    "extends": "xo-react",
     "space": true,
     "envs": [
       "browser"
+    ],
+    "globals": [
+      "picturefill",
+      "$"
     ],
     "rules": {
       "new-cap": [
@@ -60,9 +74,14 @@
         }
       ],
       "no-new": 0,
+      "no-useless-constructor": 0,
+      "no-return-assign": 0,
+      "no-negated-condition": 0,
       "unicorn/filename-case": 0,
       "unicorn/explicit-length-check": 0,
       "import/no-unassigned-import": 0,
+      "react/jsx-tag-spacing": 0,
+      "react/no-unescaped-entities": 0,
       "no-alert": 0
     }
   },
