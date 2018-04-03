@@ -1,55 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 
 export default class ReactModule extends React.Component {
   constructor(props) {
     super(props);
-
-    this.key = 'AZtqQhF9PrR9avRirhnaz2QNHbDFxV';
-    this.data = '';
-
-    this.state = {
-      isLoading: false,
-      dataComplete: false
-    };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-
-    this.setState({isLoading: true});
-
-    axios.post(`https://lighthouse-tmi.herokuapp.com/run?url=${this.field.value}&auth=${this.key}`).then(res => {
-      this.data = res.data;
-
-      this.setState({
-        isLoading: false,
-        dataComplete: true
-      });
-    });
   }
 
   render() {
     return (
       <div>
-        <h1>Test your site!</h1>
-        <p>Results provided by Google Lighthouse</p>
-
-        <form onSubmit={this.handleSubmit}>
-          <input ref={el => this.field = el} type="url" placeholder="Your website" disabled={this.state.isLoading} />
-        </form>
-
-        {this.state.isLoading &&
-          <p>Loading your results</p>
-        }
-
-        {this.state.dataComplete &&
-          <h1>Your score: {this.data.score}</h1>
-        }
+        <h2>{this.props.greeting} world!</h2>
+        <p>I'm a React component. Pura comes with <strong>React</strong> and <strong>ReactDOM</strong> installed by default.</p>
+        <p>However, if you don't need it that's okay, too! Just don't <code>import</code> it into your modules and you'll save on precious KB.</p>
       </div>
     );
   }
