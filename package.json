@@ -38,6 +38,7 @@
     "xo": "^0.18.2"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "normalize.css": "^8.0.0",
     "picturefill": "^3.0.2",
     "promise-polyfill": "^7.0.0",
