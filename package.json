@@ -47,7 +47,10 @@
     "postcss-simple-vars": "^4.0.0",
     "prettier": "1.13.4",
     "stylelint": "^9.1.1",
-    "stylelint-trendyminds-standard": "^2.1.0",
+    "stylelint-bem-no-element-nesting": "^1.0.6",
+    "stylelint-em-media-query": "^1.0.2",
+    "stylelint-no-mismatching-module-file": "^1.0.3",
+    "stylelint-no-multiple-top-level-modules": "^1.0.1",
     "webpack": "^3.3.0"
   },
   "dependencies": {
@@ -129,7 +132,8 @@
       "tmi/em-media-query": true,
       "tmi/bem-no-element-nesting": true,
       "media-feature-name-blacklist": [
-        "max-width", {
+        "max-width",
+        {
           "severity": "error",
           "message": "Unexpected 'max-width' media query. Use 'min-width' media queries for a mobile-first approach."
         }
@@ -146,13 +150,22 @@
       "unit-case": "lower",
       "value-keyword-case": "lower",
       "shorthand-property-no-redundant-values": true,
-      "selector-no-qualifying-type": [true, {
-        "ignore": ["attribute"]
-      }],
+      "selector-no-qualifying-type": [
+        true,
+        {
+          "ignore": [
+            "attribute"
+          ]
+        }
+      ],
       "selector-pseudo-element-colon-notation": "double",
       "selector-max-empty-lines": 0,
       "property-case": "lower",
-      "property-blacklist": ["font-smoothing", "text-rendering", "osx-font-smoothing"],
+      "property-blacklist": [
+        "font-smoothing",
+        "text-rendering",
+        "osx-font-smoothing"
+      ],
       "declaration-bang-space-before": "always",
       "declaration-bang-space-after": "never",
       "declaration-colon-space-after": "always-single-line",
@@ -177,30 +190,60 @@
       "media-feature-range-operator-space-before": "always",
       "at-rule-no-vendor-prefix": true,
       "block-no-empty": true,
-      "at-rule-empty-line-before": ["always", {
-        "except": ["first-nested"],
-        "ignore": ["after-comment"],
-        "ignoreAtRules": ["mixin", "import"]
-      }],
-      "rule-empty-line-before": ["always-multi-line", {
-        "except": ["first-nested"],
-        "ignore": ["after-comment"]
-      }],
+      "at-rule-empty-line-before": [
+        "always",
+        {
+          "except": [
+            "first-nested"
+          ],
+          "ignore": [
+            "after-comment"
+          ],
+          "ignoreAtRules": [
+            "mixin",
+            "import"
+          ]
+        }
+      ],
+      "rule-empty-line-before": [
+        "always-multi-line",
+        {
+          "except": [
+            "first-nested"
+          ],
+          "ignore": [
+            "after-comment"
+          ]
+        }
+      ],
       "number-leading-zero": "always",
       "function-parentheses-space-inside": "never",
       "function-comma-space-after": "always",
       "at-rule-name-space-after": "always",
       "declaration-colon-newline-after": "always-multi-line",
       "declaration-property-unit-blacklist": {
-        "font-size": ["px"],
-        "border-radius": ["px"],
-        "line-height": ["px"],
-        "transform": ["px"]
+        "font-size": [
+          "px"
+        ],
+        "border-radius": [
+          "px"
+        ],
+        "line-height": [
+          "px"
+        ],
+        "transform": [
+          "px"
+        ]
       },
       "max-empty-lines": 1,
-      "max-nesting-depth": [1, {
-        "ignoreAtRules": ["media"]
-      }],
+      "max-nesting-depth": [
+        1,
+        {
+          "ignoreAtRules": [
+            "media"
+          ]
+        }
+      ],
       "no-eol-whitespace": true,
       "no-extra-semicolons": true
     }
