@@ -26,9 +26,9 @@
     "clean-css-cli": "^4.1.11",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
     "globby": "^6.1.0",
     "husky": "^0.14.3",
@@ -71,9 +71,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "airbnb"
-    ],
-    "plugins": [
+      "airbnb",
       "prettier"
     ],
     "env": {
@@ -85,14 +83,17 @@
       "System": true
     },
     "rules": {
-      "prettier/prettier": "error",
       "quotes": [
         "error",
         "double"
       ],
       "no-console": 0,
+      "prefer-destructuring": 0,
       "no-new": 0,
+      "arrow-parens": 0,
+      "no-plusplus": 0,
       "comma-dangle": 0,
+      "class-methods-use-this": 0,
       "func-names": 0,
       "new-cap": [
         "error",
@@ -101,6 +102,9 @@
         }
       ],
       "react/no-unescaped-entities": 0,
+      "react/no-danger": 0,
+      "react/forbid-prop-types": 0,
+      "react/require-default-props": 0,
       "react/jsx-filename-extension": [
         1,
         {
