@@ -2,11 +2,18 @@
   "name": "pura",
   "version": "5.0.0",
   "scripts": {
+    "precommit": "lint-staged",
     "test": "./tasks/subtasks/lint.sh",
     "deploy": "./tasks/deploy.sh",
     "start": "./tasks/watch.sh",
     "build": "./tasks/build.sh",
     "dev": "npm start"
+  },
+  "lint-staged": {
+    "./src/assets/**/*.{js}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "license": "MIT",
   "devDependencies": {
@@ -24,10 +31,12 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
     "globby": "^6.1.0",
+    "husky": "^0.14.3",
     "imagemin": "5.1.2",
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-pngquant": "^5.0.1",
     "imagemin-svgo": "^6.0.0",
+    "lint-staged": "^7.1.3",
     "node-version-assets": "^1.2.0",
     "postcss-cli": "^5.0.0",
     "postcss-color-function": "^4.0.0",
@@ -85,7 +94,8 @@
       "comma-dangle": 0,
       "func-names": 0,
       "new-cap": [
-        "error", {
+        "error",
+        {
           "newIsCapExceptionPattern": "^module"
         }
       ],
