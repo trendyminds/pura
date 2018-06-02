@@ -10,7 +10,7 @@
     "dev": "npm start"
   },
   "lint-staged": {
-    "./src/assets/scripts/**/*.js": [
+    "./src/assets/scripts/**/*.{js,css}": [
       "prettier --write",
       "git add"
     ]
