@@ -1,6 +1,6 @@
 {
   "name": "pura",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "scripts": {
     "precommit": "lint-staged",
     "test": "./tasks/subtasks/lint.sh",
