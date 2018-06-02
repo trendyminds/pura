@@ -45,7 +45,7 @@
     "postcss-mixins": "^6.0.1",
     "postcss-nested": "^3.0.0",
     "postcss-simple-vars": "^4.0.0",
-    "prettier": "^1.13.4",
+    "prettier": "1.13.4",
     "stylelint": "^9.1.1",
     "stylelint-trendyminds-standard": "^2.1.0",
     "webpack": "^3.3.0"
@@ -91,6 +91,7 @@
         "double"
       ],
       "no-console": 0,
+      "no-new": 0,
       "comma-dangle": 0,
       "func-names": 0,
       "new-cap": [
