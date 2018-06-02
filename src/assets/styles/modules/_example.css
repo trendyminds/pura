@@ -1,4 +1,5 @@
 .example {
   color: tomato;
-  padding: .5rem
+  padding: .5rem;
+  margin: .25rem;
 }
