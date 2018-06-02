@@ -18,7 +18,7 @@ const ReactModule = props => (
 
 // Set default props for unset variables
 ReactModule.defaultProps = {
-  greeting: "Hi"
+  greeting: "Hello"
 };
 
 // Establish types for props to prevent renderering errors
