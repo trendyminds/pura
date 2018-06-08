@@ -3,7 +3,8 @@
   "version": "5.1.0",
   "scripts": {
     "precommit": "lint-staged",
-    "test": "./tasks/subtasks/lint.sh",
+    "test": "./node_modules/.bin/jest",
+    "lint": "./tasks/subtasks/lint.sh",
     "deploy": "./tasks/deploy.sh",
     "start": "./tasks/watch.sh",
     "build": "./tasks/build.sh",
