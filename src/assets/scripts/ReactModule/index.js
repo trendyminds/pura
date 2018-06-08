@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 
 const ReactModule = props => (
@@ -26,4 +25,4 @@ ReactModule.propTypes = {
   greeting: PropTypes.string
 };
 
-ReactDOM.render(<ReactModule greeting="Hello" />, $("[data-react-module]")[0]);
+export default ReactModule;

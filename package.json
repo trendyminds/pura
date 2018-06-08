@@ -24,6 +24,8 @@
     "babel-preset-env": "^1.6.0",
     "browser-sync": "^2.23.6",
     "clean-css-cli": "^4.1.11",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -36,6 +38,7 @@
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-pngquant": "^5.0.1",
     "imagemin-svgo": "^6.0.0",
+    "jest": "^23.1.0",
     "lint-staged": "^7.1.3",
     "node-version-assets": "^1.2.0",
     "postcss-cli": "^5.0.0",
@@ -83,7 +86,10 @@
     },
     "globals": {
       "$": true,
-      "System": true
+      "System": true,
+      "describe": true,
+      "it": true,
+      "expect": true
     },
     "rules": {
       "quotes": [
@@ -97,6 +103,12 @@
       "no-plusplus": 0,
       "comma-dangle": 0,
       "class-methods-use-this": 0,
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true
+        }
+      ],
       "func-names": 0,
       "new-cap": [
         "error",
@@ -247,5 +259,10 @@
       "no-eol-whitespace": true,
       "no-extra-semicolons": true
     }
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/enzyme.config.js"
+    ]
   }
 }
