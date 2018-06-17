@@ -1,5 +1,5 @@
 # Pura
-Pura is an opinionated, but lightweight project starter kit. Powered by ES2015, Node.js, Webpack and more!
+Pura is an opinionated project starter kit powered by ES2015, React, Node.js, Webpack and more!
 
 ## Requirements
 - Node 8.10.0 (use [nvm](https://github.com/creationix/nvm) to manage your Node versions!)
@@ -18,11 +18,11 @@ By default, directories that contain compiled CSS and JavaScript are ignored. Yo
 
 ## Tasks
 
-| Task                        | Description                                                                                                  |
-|:----------------------------|:-------------------------------------------------------------------------------------------------------------|
-| `yarn start` or `yarn dev`  | Watch for changes to new files.                                                                              |
-| `yarn test`                 | Lints your CSS and JS files. Useful when you want to ensure your build won't fail because of a linting error |
-| `yarn build && yarn deploy` | **Only run in your deployment process!** Compiles CSS/JS, minifies images and revs files                     |
+| Task | Description |
+|:-----|:------------|
+| `yarn start` | Watch for changes to new files. |
+| `yarn test` | Runs your test suite(s). |
+| `yarn build && yarn deploy` | **Only run in deploy process!** Compiles CSS/JS, minifies images and revs files |
 
 ## Previewing the compiled version of the site locally
 There might be an occasion where you'd like to see what the compiled/minified/revved version of the site looks like on your local machine. To do this, you must:

@@ -2,17 +2,15 @@
   "name": "pura",
   "version": "5.1.0",
   "scripts": {
+    "test": "jest",
     "precommit": "lint-staged",
-    "test": "./node_modules/.bin/jest",
-    "lint": "./tasks/subtasks/lint.sh",
-    "deploy": "./tasks/deploy.sh",
     "start": "./tasks/watch.sh",
     "build": "./tasks/build.sh",
-    "dev": "npm start"
+    "deploy": "./tasks/deploy.sh"
   },
   "lint-staged": {
     "./src/assets/**/*{js,jsx,css}": [
-      "./node_modules/.bin/prettier --write",
+      "prettier --write",
       "git add"
     ]
   },
