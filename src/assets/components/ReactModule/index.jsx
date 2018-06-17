@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const ReactModule = props => (
-  <div>
+  <div className="ReactModule">
     <h2>{props.greeting} world!</h2>
     <p>
       I'm a React component. Pura comes with <strong>React</strong> and{" "}

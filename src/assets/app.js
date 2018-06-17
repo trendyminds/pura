@@ -1,9 +1,9 @@
 import "promise-polyfill/src/polyfill";
 import React from "react";
 import ReactDOM from "react-dom";
-import "./Bling";
-import ReactModule from "./ReactModule";
-import MyModule from "./MyModule";
+import "./base/js/Bling";
+import ReactModule from "./components/ReactModule";
+import MyModule from "./components/MyModule";
 
 if ($("[data-my-module]").length) {
   new MyModule();

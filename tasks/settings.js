@@ -1,7 +1,7 @@
 module.exports = {
   "browsersync": {
     "files": [
-      "./src/_compiled/styles.css",
+      "./src/_compiled/app.css",
       "./src/_compiled/*.js",
       "./src/*.html"
     ],

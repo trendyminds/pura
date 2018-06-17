@@ -1,3 +1,3 @@
-const settings = require('../settings.js');
+const settings = require("../settings.js");
 
 module.exports = settings.browsersync;
