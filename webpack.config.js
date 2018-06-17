@@ -1,5 +1,4 @@
-import path from 'path';
-import webpack from 'webpack';
+const webpack = require('webpack');
 
 const PROD = process.env.NODE_ENV || 0;
 
