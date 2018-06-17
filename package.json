@@ -11,7 +11,7 @@
     "dev": "npm start"
   },
   "lint-staged": {
-    "./src/assets/**/*{js,css}": [
+    "./src/assets/**/*{js,jsx,css}": [
       "./node_modules/.bin/prettier --write",
       "git add"
     ]
