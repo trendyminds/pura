@@ -259,7 +259,7 @@
   },
   "jest": {
     "setupFiles": [
-      "<rootDir>/enzyme.config.js"
+      "<rootDir>/setupTests.js"
     ]
   }
 }
