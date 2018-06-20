@@ -1,5 +1,9 @@
 export default class MyModule {
-  constructor() {
-    console.log("Hello from MyModule!");
+  constructor(greeting = "Hi") {
+    this.greeting = greeting;
+  }
+
+  sayHello() {
+    return `${this.greeting} from MyModule!`;
   }
 }
