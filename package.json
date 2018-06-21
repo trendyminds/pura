@@ -62,6 +62,14 @@
   "browserslist": [
     "last 2 versions"
   ],
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "transform-react-jsx"
+    ]
+  },
   "jest": {
     "setupFiles": [
       "<rootDir>/tasks/configs/enzyme.config.js"
