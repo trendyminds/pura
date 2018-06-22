@@ -1,9 +1,9 @@
 @import "normalize.css";
-@import "base/variables";
-@import "base/mixins";
-@import "base/base";
-@import "base/typography";
-@import "modules/*";
+@import "base/css/Variables";
+@import "base/css/Mixins";
+@import "base/css/Base";
+@import "base/css/Typography";
+@import "components/**";
 
 /**
  * Example CSS used on Pura demo page
