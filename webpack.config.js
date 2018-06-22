@@ -1,38 +1,28 @@
-const webpack = require("webpack");
+const path = require("path");
 
 const PROD = process.env.NODE_ENV || 0;
 
 module.exports = {
+  mode: PROD ? "production" : "development",
   devtool: PROD ? false : "eval-cheap-module-source-map",
   entry: {
     app: "./src/assets/app.js",
     vendor: ["picturefill"]
   },
   output: {
-    path: __dirname + "/src/_compiled",
+    path: path.resolve(__dirname, "src/_compiled"),
     publicPath: "/_compiled/",
-    filename: "[name].js",
-    chunkFilename: "_chunk/[name]_[chunkhash].js"
+    filename: "[name].js"
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: PROD ? true : false,
-      output: {
-        comments: false
-      }
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: "app",
-      children: true,
-      minChunks: 2
-    })
-  ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: "babel-loader"
+        use: [
+          {
+            loader: "babel-loader"
+          }
+        ]
       }
     ]
   },
