@@ -22,7 +22,7 @@ By default, directories that contain compiled CSS and JavaScript are ignored. Yo
 |:-----|:------------|
 | `yarn start` | Watch for changes to new files. |
 | `yarn test` | Runs your test suite(s). |
-| `yarn build && yarn deploy` | **Only run in deploy process!** Compiles CSS/JS, minifies images and revs files |
+| `yarn build && yarn deploy` | **Only run in deploy process!** Compiles CSS/JS and revs files |
 
 ## Previewing the compiled version of the site locally
 There might be an occasion where you'd like to see what the compiled/minified/revved version of the site looks like on your local machine. To do this, you must:
