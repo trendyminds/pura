@@ -229,10 +229,7 @@
         }
       ],
       "number-leading-zero": "always",
-      "function-parentheses-space-inside": "never",
-      "function-comma-space-after": "always",
       "at-rule-name-space-after": "always",
-      "declaration-colon-newline-after": "always-multi-line",
       "declaration-property-unit-blacklist": {
         "font-size": [
           "px"
