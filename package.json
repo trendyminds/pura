@@ -1,8 +1,9 @@
 {
   "name": "pura",
-  "version": "5.1.2",
+  "version": "5.1.3",
   "scripts": {
     "test": "jest",
+    "lint": "./tasks/subtasks/lint.sh",
     "precommit": "lint-staged",
     "start": "./tasks/watch.sh",
     "build": "./tasks/build.sh",
