@@ -41,6 +41,16 @@ const config = {
 
 module.exports = (env, argv) => {
   if (argv.mode === "development") {
+    config.devServer = {
+      hot: true,
+      port: 3000,
+      proxy: {
+        "*": {
+          target: "http://pura.test/",
+          changeOrigin: true
+        }
+      }
+    };
     config.devtool = "eval-cheap-module-source-map";
     config.watch = true;
     config.module.rules.push({
