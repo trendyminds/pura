@@ -41,11 +41,6 @@ const config = {
 
 module.exports = (env, argv) => {
   if (argv.mode === "development") {
-    config.devServer = {
-      contentBase: path.join(__dirname, "src"),
-      compress: true,
-      port: 3000
-    };
     config.devtool = "eval-cheap-module-source-map";
     config.watch = true;
     config.module.rules.push({
