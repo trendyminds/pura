@@ -79,7 +79,7 @@
   },
   "jest": {
     "setupFiles": [
-      "<rootDir>/tasks/configs/enzyme.config.js"
+      "<rootDir>/enzyme.config.js"
     ]
   },
   "prettier": {},
