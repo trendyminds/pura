@@ -2,7 +2,7 @@
   "name": "pura",
   "version": "6.0.0",
   "scripts": {
-    "test": "echo 'no'",
+    "test": "echo 'Jest temporarily disabled'",
     "lint": "./tasks/subtasks/lint.sh",
     "start": "./tasks/watch.sh",
     "build": "./tasks/build.sh",
