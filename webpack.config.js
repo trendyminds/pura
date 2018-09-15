@@ -1,5 +1,7 @@
 const path = require("path");
+const PostCompile = require("post-compile-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const Version = require("node-version-assets");
 
 const PROD = process.env.NODE_ENV || 0;
 
@@ -18,6 +20,16 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css"
+    }),
+    new PostCompile(() => {
+      new Version({
+        assets: [
+          "./src/_compiled/app.css",
+          "./src/_compiled/app.js",
+          "./src/_compiled/vendor.js"
+        ],
+        grepFiles: ["./src/index.html"]
+      }).run();
     })
   ],
   module: {
