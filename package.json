@@ -4,8 +4,8 @@
   "scripts": {
     "test": "echo 'Jest temporarily disabled'",
     "lint": "stylelint ./src/assets/**/*.css && eslint --ext .jsx,.js src/assets/",
-    "start": "webpack -w",
-    "build": "NODE_ENV=production webpack -p"
+    "start": "webpack --mode=development",
+    "build": "webpack --mode=production"
   },
   "husky": {
     "hooks": {
@@ -27,6 +27,7 @@
     "autoprefixer": "^9.1.5",
     "babel-loader": "^8.0.2",
     "browser-sync": "^2.24.7",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
     "cssnano": "^4.1.0",
     "enzyme": "^3.6.0",
