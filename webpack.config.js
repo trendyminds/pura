@@ -31,28 +31,6 @@ const config = {
             presets: ["@babel/preset-env"]
           }
         }
-      },
-      {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              plugins: [
-                require("postcss-easy-import")({ prefix: "_" }),
-                require("postcss-mixins"),
-                require("postcss-simple-vars"),
-                require("postcss-nested"),
-                require("postcss-color-function"),
-                require("postcss-hexrgba"),
-                require("autoprefixer"),
-                require("cssnano")
-              ]
-            }
-          }
-        ]
       }
     ]
   },
@@ -65,6 +43,27 @@ module.exports = (env, argv) => {
   if (argv.mode === "development") {
     config.devtool = "eval-cheap-module-source-map";
     config.watch = true;
+    config.module.rules.push({
+      test: /\.css$/,
+      use: [
+        MiniCssExtractPlugin.loader,
+        "css-loader",
+        {
+          loader: "postcss-loader",
+          options: {
+            plugins: [
+              require("postcss-easy-import")({ prefix: "_" }),
+              require("postcss-mixins"),
+              require("postcss-simple-vars"),
+              require("postcss-nested"),
+              require("postcss-color-function"),
+              require("postcss-hexrgba"),
+              require("autoprefixer")
+            ]
+          }
+        }
+      ]
+    });
   }
 
   if (argv.mode === "production") {
@@ -80,6 +79,28 @@ module.exports = (env, argv) => {
         }).run();
       })
     );
+    config.module.rules.push({
+      test: /\.css$/,
+      use: [
+        MiniCssExtractPlugin.loader,
+        "css-loader",
+        {
+          loader: "postcss-loader",
+          options: {
+            plugins: [
+              require("postcss-easy-import")({ prefix: "_" }),
+              require("postcss-mixins"),
+              require("postcss-simple-vars"),
+              require("postcss-nested"),
+              require("postcss-color-function"),
+              require("postcss-hexrgba"),
+              require("autoprefixer"),
+              require("cssnano")
+            ]
+          }
+        }
+      ]
+    });
   }
 
   return config;
