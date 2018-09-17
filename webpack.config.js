@@ -6,13 +6,18 @@ const Version = require("node-version-assets");
 
 const config = {
   entry: {
-    app: "./src/assets/app.js",
-    vendor: ["picturefill"]
+    app: "./src/assets/app.js"
   },
   output: {
     path: path.resolve(__dirname, "src/_compiled"),
     publicPath: "/_compiled/",
     filename: "[name].js"
+  },
+  optimization: {
+    runtimeChunk: true,
+    splitChunks: {
+      chunks: "all"
+    }
   },
   plugins: [
     new CleanWebpackPlugin(["src/_compiled"]),
@@ -41,16 +46,6 @@ const config = {
 
 module.exports = (env, argv) => {
   if (argv.mode === "development") {
-    config.devServer = {
-      hot: true,
-      port: 3000,
-      proxy: {
-        "*": {
-          target: "http://pura.test/",
-          changeOrigin: true
-        }
-      }
-    };
     config.devtool = "eval-cheap-module-source-map";
     config.watch = true;
     config.module.rules.push({
@@ -83,7 +78,8 @@ module.exports = (env, argv) => {
           assets: [
             "./src/_compiled/app.css",
             "./src/_compiled/app.js",
-            "./src/_compiled/vendor.js"
+            "./src/_compiled/vendors~app.js",
+            "./src/_compiled/runtime~app.js"
           ],
           grepFiles: ["./src/index.html"]
         }).run();
