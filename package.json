@@ -5,7 +5,8 @@
     "test": "echo 'Jest temporarily disabled'",
     "lint": "stylelint ./src/assets/**/*.css && eslint --ext .jsx,.js src/assets/",
     "start": "webpack --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "deploy": "webpack --config webpack.prod.js --env.deploy"
   },
   "husky": {
     "hooks": {
