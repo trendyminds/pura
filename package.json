@@ -74,7 +74,7 @@
     "regenerator-runtime": "^0.12.1"
   },
   "browserslist": [
-    "last 2 versions"
+    "last 1 version"
   ],
   "babel": {
     "presets": [
