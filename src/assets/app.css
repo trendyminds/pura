@@ -1,8 +1,8 @@
 @import "normalize.css";
-@import "./base/css/Variables.css";
-@import "./base/css/Mixins.css";
-@import "./base/css/Base.css";
-@import "./base/css/Typography.css";
+@import "base/css/Variables";
+@import "base/css/Mixins";
+@import "base/css/Base";
+@import "base/css/Typography";
 @import "components/**";
 
 /**
