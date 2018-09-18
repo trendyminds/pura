@@ -7,7 +7,7 @@ module.exports = {
     app: "./src/assets/app.js"
   },
   output: {
-    path: path.resolve(__dirname, "src/_compiled"),
+    path: path.resolve(__dirname, "../src/_compiled"),
     publicPath: "/_compiled/",
     filename: "[name].js"
   },
@@ -18,7 +18,9 @@ module.exports = {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(["src/_compiled"]),
+    new CleanWebpackPlugin(["../src/_compiled"], {
+      allowExternal: true
+    }),
     new MiniCssExtractPlugin({
       filename: "[name].css"
     })

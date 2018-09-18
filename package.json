@@ -4,9 +4,9 @@
   "scripts": {
     "test": "jest",
     "lint": "stylelint ./src/assets/**/*.css && eslint --ext .jsx,.js src/assets/",
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "deploy": "npm run test && webpack --config webpack.prod.js --env.deploy"
+    "start": "webpack-dev-server --config config/webpack.dev.js",
+    "build": "webpack --config config/webpack.prod.js",
+    "deploy": "npm run test && webpack --config config/webpack.prod.js --env.deploy"
   },
   "husky": {
     "hooks": {
@@ -86,7 +86,7 @@
   },
   "jest": {
     "setupFiles": [
-      "<rootDir>/enzyme.config.js"
+      "<rootDir>/config/enzyme.config.js"
     ]
   },
   "prettier": {},
