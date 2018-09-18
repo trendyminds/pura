@@ -4,7 +4,7 @@
   "scripts": {
     "test": "echo 'Jest temporarily disabled'",
     "lint": "stylelint ./src/assets/**/*.css && eslint --ext .jsx,.js src/assets/",
-    "start": "webpack --config webpack.dev.js",
+    "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "deploy": "webpack --config webpack.prod.js --env.deploy"
   },
@@ -53,6 +53,7 @@
     "postcss-nested": "^4.1.0",
     "postcss-simple-vars": "^5.0.1",
     "prettier": "1.14.2",
+    "style-loader": "^0.23.0",
     "stylelint": "^9.1.1",
     "stylelint-bem-no-element-nesting": "^1.0.6",
     "stylelint-em-media-query": "^1.0.2",

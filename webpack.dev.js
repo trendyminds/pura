@@ -1,5 +1,5 @@
 const merge = require("webpack-merge");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require("webpack");
 const common = require("./webpack.common.js");
 
 const postCSSPlugins = [
@@ -16,12 +16,23 @@ module.exports = merge(common, {
   mode: "development",
   devtool: "eval-cheap-module-source-map",
   watch: true,
+  devServer: {
+    hot: true,
+    port: 3000,
+    proxy: {
+      "*": {
+        target: "http://pura.test/",
+        changeOrigin: true
+      }
+    }
+  },
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   module: {
     rules: [
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          "style-loader",
           "css-loader",
           {
             loader: "postcss-loader",
