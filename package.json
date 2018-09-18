@@ -6,7 +6,7 @@
     "lint": "stylelint ./src/assets/**/*.css && eslint --ext .jsx,.js src/assets/",
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "deploy": "webpack --config webpack.prod.js --env.deploy"
+    "deploy": "npm run test && webpack --config webpack.prod.js --env.deploy"
   },
   "husky": {
     "hooks": {
