@@ -5,8 +5,8 @@
     "test": "jest",
     "lint": "stylelint ./src/assets/**/*.css && eslint --ext .jsx,.js src/assets/",
     "start": "webpack-dev-server --config config/webpack.dev.js",
-    "build": "webpack --config config/webpack.prod.js",
-    "deploy": "npm run test && webpack --config config/webpack.prod.js --env.deploy"
+    "build": "npm run lint && webpack --config config/webpack.prod.js",
+    "deploy": "npm run test && npm run lint && webpack --config config/webpack.prod.js --env.deploy"
   },
   "husky": {
     "hooks": {
@@ -118,6 +118,7 @@
       "arrow-parens": 0,
       "no-plusplus": 0,
       "comma-dangle": 0,
+      "no-underscore-dangle": 0,
       "class-methods-use-this": 0,
       "import/no-extraneous-dependencies": [
         "error",
