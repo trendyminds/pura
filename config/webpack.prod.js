@@ -24,7 +24,7 @@ module.exports = env => {
       new PostCompile(() => {
         new Version({
           assets: [
-            "./src/_compiled/app.css",
+            "./src/_compiled/main.css",
             "./src/_compiled/main.js",
             "./src/_compiled/vendors~main.js",
             "./src/_compiled/runtime~main.js"
