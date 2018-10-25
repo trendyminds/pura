@@ -25,9 +25,9 @@ module.exports = env => {
         new Version({
           assets: [
             "./src/_compiled/app.css",
-            "./src/_compiled/app.js",
-            "./src/_compiled/vendors~app.js",
-            "./src/_compiled/runtime~app.js"
+            "./src/_compiled/main.js",
+            "./src/_compiled/vendors~main.js",
+            "./src/_compiled/runtime~main.js"
           ],
           grepFiles: ["./src/index.html"]
         }).run();
