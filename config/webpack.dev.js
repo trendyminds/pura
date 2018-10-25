@@ -21,13 +21,7 @@ module.exports = merge(common, {
       "Access-Control-Allow-Origin": "*"
     },
     hot: true,
-    port: 3000,
-    proxy: {
-      "*": {
-        target: "http://pura.test/",
-        changeOrigin: true
-      }
-    }
+    port: 3000
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   module: {
