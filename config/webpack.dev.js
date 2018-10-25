@@ -17,6 +17,9 @@ module.exports = merge(common, {
   devtool: "eval-cheap-module-source-map",
   watch: true,
   devServer: {
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    },
     hot: true,
     port: 3000,
     proxy: {
