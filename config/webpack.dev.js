@@ -14,6 +14,10 @@ const postCSSPlugins = [
 ];
 
 module.exports = merge(common, {
+  entry: [
+    "webpack-dev-server/client?http://localhost:3000/",
+    "webpack/hot/only-dev-server"
+  ],
   mode: "development",
   devtool: "eval-cheap-module-source-map",
   watch: true,
