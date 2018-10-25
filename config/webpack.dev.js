@@ -1,3 +1,4 @@
+const path = require("path");
 const merge = require("webpack-merge");
 const webpack = require("webpack");
 const common = require("./webpack.common.js");
@@ -13,18 +14,20 @@ const postCSSPlugins = [
 ];
 
 module.exports = merge(common, {
+  entry: [
+    "webpack-dev-server/client?http://localhost:3000/",
+    "webpack/hot/only-dev-server"
+  ],
   mode: "development",
   devtool: "eval-cheap-module-source-map",
   watch: true,
   devServer: {
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    },
     hot: true,
     port: 3000,
-    proxy: {
-      "*": {
-        target: "http://pura.test/",
-        changeOrigin: true
-      }
-    }
+    contentBase: path.join(__dirname, "../src")
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   module: {

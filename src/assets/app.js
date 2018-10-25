@@ -18,3 +18,9 @@ if ($("[data-react-module]").length) {
     $("[data-react-module]")[0]
   );
 }
+
+/**
+ * Enable hot module reloading
+ * During development this line allows your JavaScript to refresh without a full page reload
+ */
+if (module.hot) module.hot.accept();
