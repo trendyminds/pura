@@ -1,6 +1,6 @@
 {
   "name": "pura",
-  "version": "6.1.0",
+  "version": "6.2.0",
   "scripts": {
     "test": "jest",
     "lint": "stylelint ./src/assets/**/*.css && eslint --ext .jsx,.js src/assets/",
