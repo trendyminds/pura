@@ -16,8 +16,8 @@ module.exports = {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(["../src/_compiled"], {
-      allowExternal: true
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: "../src/_compiled"
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css"
