@@ -27,6 +27,7 @@ module.exports = merge(common, {
     },
     hot: true,
     port: 3000,
+    disableHostCheck: true,
     contentBase: path.join(__dirname, "../src")
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
