@@ -41,13 +41,15 @@ module.exports = merge(common, {
           {
             loader: "css-loader",
             options: {
-              url: false
+              url: false,
+              sourceMap: true
             }
           },
           {
             loader: "postcss-loader",
             options: {
-              plugins: postCSSPlugins
+              plugins: postCSSPlugins,
+              sourceMap: true
             }
           }
         ]
