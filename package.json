@@ -2,7 +2,7 @@
   "name": "pura",
   "version": "6.5.0",
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "lint": "stylelint ./src/assets/**/*.css && eslint --ext .jsx,.js src/assets/",
     "start": "webpack-dev-server --config config/webpack.dev.js",
     "build": "npm run lint && webpack --config config/webpack.prod.js",
