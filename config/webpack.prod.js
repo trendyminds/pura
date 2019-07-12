@@ -2,7 +2,6 @@ const merge = require("webpack-merge");
 const PostCompile = require("post-compile-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Version = require("node-version-assets");
-const common = require("./webpack.common.js");
 
 const postCSSPlugins = [
   require("postcss-easy-import")({ prefix: "_" }),
@@ -14,6 +13,8 @@ const postCSSPlugins = [
   require("autoprefixer"),
   require("cssnano")
 ];
+
+const common = require("./webpack.common.js");
 
 module.exports = env => {
   const opt = env || {};
