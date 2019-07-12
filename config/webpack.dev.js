@@ -19,7 +19,7 @@ module.exports = merge(common, {
     "webpack/hot/only-dev-server"
   ],
   mode: "development",
-  devtool: "eval-cheap-module-source-map",
+  devtool: "eval-source-map",
   watch: true,
   devServer: {
     headers: {
