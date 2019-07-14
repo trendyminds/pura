@@ -52,7 +52,7 @@
     "postcss-mixins": "^6.2.1",
     "postcss-nested": "^4.1.2",
     "postcss-simple-vars": "^5.0.2",
-    "prettier": "^1.18.2",
+    "prettier": "1.18.2",
     "style-loader": "^0.23.1",
     "stylelint": "^10.1.0",
     "stylelint-bem-no-element-nesting": "^1.0.6",
