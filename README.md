@@ -2,7 +2,7 @@
 Pura is an opinionated project starter kit powered by Node.js, Webpack, PostCSS, React and more!
 
 ## ⭐️ Requirements
-Node 10.15.3 (use [nvm](https://github.com/creationix/nvm) to manage your Node versions!)
+Node 10.16.0 (use [nvm](https://github.com/creationix/nvm) to manage your Node versions!)
 
 ## 🛠 Setting up
 1. Clone/download to your machine

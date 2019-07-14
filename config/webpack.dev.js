@@ -19,7 +19,7 @@ module.exports = merge(common, {
     "webpack/hot/only-dev-server"
   ],
   mode: "development",
-  devtool: "eval-cheap-module-source-map",
+  devtool: "eval-source-map",
   watch: true,
   devServer: {
     headers: {
@@ -28,6 +28,7 @@ module.exports = merge(common, {
     hot: true,
     port: 3000,
     disableHostCheck: true,
+    overlay: true,
     contentBase: path.join(__dirname, "../src")
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
@@ -40,13 +41,15 @@ module.exports = merge(common, {
           {
             loader: "css-loader",
             options: {
-              url: false
+              url: false,
+              sourceMap: true
             }
           },
           {
             loader: "postcss-loader",
             options: {
-              plugins: postCSSPlugins
+              plugins: postCSSPlugins,
+              sourceMap: true
             }
           }
         ]
