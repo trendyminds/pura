@@ -5,8 +5,14 @@
  *  box-sizing, body background/font-family and more.
  */
 
-* {
+html {
   box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
 }
 
 img {
