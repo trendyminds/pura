@@ -5,7 +5,7 @@ Pura is an opinionated project starter kit powered by Node.js, Webpack, PostCSS,
 Node 12.11.0 (use [nvm](https://github.com/creationix/nvm) to manage your Node versions!)
 
 ## 📊 Browser support
-Pura supports the following browsers: Chrome, Firefox, Safari and Edge. Internet Explorer is no longer supported as of version 7.0. If you need Internet Explorer support then [add the packages removed in this commit](#).
+Pura supports the following browsers: Chrome, Firefox, Safari and Edge. Internet Explorer is no longer supported as of version 7.0. If you need Internet Explorer support then [add the packages removed in this commit](https://github.com/trendyminds/pura/pull/64/commits/2eee352e802876f454eaab6be06ca4fbf7055dae).
 
 ## 🛠 Setting up
 1. Clone/download to your machine
