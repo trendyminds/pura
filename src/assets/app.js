@@ -1,6 +1,3 @@
-import "promise-polyfill/src/polyfill";
-import "regenerator-runtime/runtime";
-import "picturefill";
 import React from "react";
 import ReactDOM from "react-dom";
 import "./base/js/Bling";
