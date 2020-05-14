@@ -83,11 +83,6 @@
       "@babel/plugin-transform-runtime"
     ]
   },
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/config/enzyme.config.js"
-    ]
-  },
   "prettier": {},
   "eslintConfig": {
     "extends": [
