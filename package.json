@@ -1,9 +1,9 @@
 {
   "name": "pura",
-  "version": "7.0.1",
+  "version": "8.0.0",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "lint": "stylelint ./src/assets/**/*.css && eslint --ext .jsx,.js src/assets/",
+    "lint": "stylelint ./src/assets/**/*.css && eslint src/assets/**/*.{js,jsx}",
     "start": "webpack-dev-server --config config/webpack.dev.js",
     "build": "npm run lint && webpack --config config/webpack.prod.js",
     "deploy": "npm run test && npm run lint && webpack --config config/webpack.prod.js --env.deploy"
@@ -22,56 +22,54 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
-    "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@babel/preset-react": "^7.0.0",
-    "autoprefixer": "^9.6.1",
-    "babel-loader": "^8.0.6",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "autoprefixer": "^9.7.6",
+    "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^3.2.0",
+    "css-loader": "^3.5.3",
     "cssnano": "^4.1.10",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "eslint": "^6.5.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.3.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3",
-    "husky": "^3.0.7",
-    "jest": "^24.9.0",
-    "lint-staged": "^9.4.0",
-    "mini-css-extract-plugin": "^0.8.0",
+    "eslint-plugin-react": "^7.20.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.2",
+    "mini-css-extract-plugin": "^0.9.0",
     "node-version-assets": "^1.2.2",
     "post-compile-webpack-plugin": "^0.1.2",
     "postcss-color-function": "^4.1.0",
     "postcss-each": "^0.10.0",
     "postcss-easy-import": "^3.0.0",
-    "postcss-hexrgba": "^1.0.2",
+    "postcss-hexrgba": "^2.0.0",
     "postcss-loader": "^3.0.0",
-    "postcss-mixins": "^6.2.2",
-    "postcss-nested": "^4.1.2",
+    "postcss-mixins": "^6.2.3",
+    "postcss-nested": "^4.2.1",
     "postcss-simple-vars": "^5.0.2",
-    "prettier": "1.18.2",
-    "style-loader": "^1.0.0",
-    "stylelint": "^11.0.0",
+    "prettier": "2.0.5",
+    "style-loader": "^1.2.1",
+    "stylelint": "^13.3.3",
     "stylelint-bem-no-element-nesting": "^1.0.6",
     "stylelint-em-media-query": "^1.0.2",
     "stylelint-no-mismatching-module-file": "^1.0.3",
     "stylelint-no-multiple-top-level-modules": "^1.0.1",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "@babel/runtime": "^7.6.2",
+    "@babel/runtime": "^7.9.6",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "browserslist": [
     "last 1 version"
@@ -85,11 +83,6 @@
       "@babel/plugin-transform-runtime"
     ]
   },
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/config/enzyme.config.js"
-    ]
-  },
   "prettier": {},
   "eslintConfig": {
     "extends": [
@@ -97,48 +90,20 @@
       "prettier",
       "prettier/react"
     ],
+    "ignorePatterns": [
+      "*.test.js",
+      "*.test.jsx"
+    ],
     "env": {
       "browser": true,
       "node": true
     },
-    "globals": {
-      "$": true,
-      "System": true,
-      "describe": true,
-      "it": true,
-      "expect": true
-    },
     "rules": {
-      "quotes": [
-        "error",
-        "double"
-      ],
       "no-console": 0,
       "prefer-destructuring": 0,
       "no-new": 0,
-      "arrow-parens": 0,
-      "no-plusplus": 0,
-      "comma-dangle": 0,
-      "no-underscore-dangle": 0,
-      "class-methods-use-this": 0,
-      "import/no-extraneous-dependencies": [
-        "error",
-        {
-          "devDependencies": true
-        }
-      ],
-      "func-names": 0,
-      "new-cap": [
-        "error",
-        {
-          "newIsCapExceptionPattern": "^module"
-        }
-      ],
       "react/no-unescaped-entities": 0,
-      "react/no-danger": 0,
-      "react/destructuring-assignment": 0,
-      "react/forbid-prop-types": 0,
-      "react/require-default-props": 0,
+      "react/prop-types": 1,
       "react/jsx-filename-extension": [
         1,
         {
